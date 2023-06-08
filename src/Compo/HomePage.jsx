@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import suprise from './suprise.jpg'
 
 
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ export default function HomePage(props) {
                 <Link to={"/bracelet"}>
                   {" "}
                   <div
-                    style={{ height: "230px" }}
+                    style={{ height: "200px",marginTop:'10px'}}
                     onClick={() => {
                       props.chosenBraceletCompo(10);
                     }}
@@ -197,16 +198,17 @@ export default function HomePage(props) {
 
         <div className="mediaSaleDiv">
           <div style={{ margin: "0 auto", width: "100%" }}>
-            <p
+            <h2
               style={{
                 width: "100%",
-                fontSize: "35px",
+                color:'rgb(28, 3, 100)',
+                fontSize: "25px",
                 fontStyle: "rubik",
                 marginTop: "0px",
               }}
             >
-              !! רק אצלנו
-            </p>
+              ??אפשר לא לאהוב הפתעות
+            </h2>
           </div>
 
           <div
@@ -215,22 +217,21 @@ export default function HomePage(props) {
               paddingBottom: "10px",
               display: "flex",
               flexDirection: "column",
-              border: "2px solid #adcbd3",
               margin: "0 auto",
             }}
           >
             <div>
-              <p
+              <h1
                 style={{
-                  fontSize: "30px",
+                  fontSize: "27px",
                   fontFamily: "Times New Roman",
                   marginBottom: "20px",
                 }}
               >
-                {props.arrChains[0].name}
-              </p>
+                !{props.arrChains[0].name}
+              </h1>
             </div>
-            <div style={{ height: "100px" }}> {props.arrChains[0].photo}</div>
+            <div style={{ height: "100px" }}> {<img style={{width:'80%',height:'75%',marginTop:'10px'}} src={suprise} alt="logo" />}</div>
             <div>
                 <p
                 style={{ fontSize: "20px", marginTop: "0px" }}

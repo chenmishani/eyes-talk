@@ -255,7 +255,7 @@ border-radius: 20%;
 
 .humburger{
     width: 90px;
-    right: 1;
+    right: 0;
     display: flex;
     flex-direction: column;
     border: 1px solid white;

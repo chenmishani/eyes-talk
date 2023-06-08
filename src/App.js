@@ -83,7 +83,7 @@ import d3s from './Compo/photos/d3s.JPG'
 function App() {
   
   const [arrChains,setarrChains]= useState([
-{photo: <img style={{width:'80%',height:'90%'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
+{photo: <img style={{width:'90%',height:'80%',marginTop:'0px'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
 {photo: <img style={{width:'80%',height:'90%'}} src={d1} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D1',price:150,color:'כחול,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d2} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D2',price:150,color:'ירוק כהה,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d3} alt="logo" />, photo1: <img style={{width:'200px'}} src={d3s} alt="logo" />,name:'D3',price:150,color:'ורוד,לבן,צהוב,שחור'},

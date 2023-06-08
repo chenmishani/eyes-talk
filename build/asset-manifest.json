@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eyes-talk/static/css/main.98d472f5.css",
-    "main.js": "/eyes-talk/static/js/main.2044bbac.js",
+    "main.css": "/eyes-talk/static/css/main.6c98e0ac.css",
+    "main.js": "/eyes-talk/static/js/main.ed2b3d75.js",
     "static/js/787.8633ae1f.chunk.js": "/eyes-talk/static/js/787.8633ae1f.chunk.js",
     "static/media/y6s.JPG": "/eyes-talk/static/media/y6s.126fcbf1fba3c611697a.JPG",
     "static/media/y2s.JPG": "/eyes-talk/static/media/y2s.bb2a57998f6d6ff98550.JPG",
@@ -30,8 +30,7 @@
     "static/media/d1.png": "/eyes-talk/static/media/d1.3e4069504229650317e0.png",
     "static/media/y14.png": "/eyes-talk/static/media/y14.e69bda4533005a7c480d.png",
     "static/media/y12.png": "/eyes-talk/static/media/y12.859d9e2945a76d8ca368.png",
-    "static/media/y7.png": "/eyes-talk/static/media/y7.97d74fbbc66107d141a8.png",
-    "static/media/y13.png": "/eyes-talk/static/media/y13.2dafb11ca2244a1c285d.png",
+    "static/media/y7.png": "/eyes-talk/static/media/y7.2dafb11ca2244a1c285d.png",
     "static/media/a2.png": "/eyes-talk/static/media/a2.aa75aa86c46ac88fa0ba.png",
     "static/media/y8.png": "/eyes-talk/static/media/y8.4e992d6c1c5a6dc0fba2.png",
     "static/media/y10.png": "/eyes-talk/static/media/y10.3c6ab3040562f78c3365.png",
@@ -52,14 +51,16 @@
     "static/media/a4.png": "/eyes-talk/static/media/a4.6de1296a08126cd6d0c7.png",
     "static/media/a6.png": "/eyes-talk/static/media/a6.4622e4a2e57cf3e2fb7f.png",
     "static/media/l4.png": "/eyes-talk/static/media/l4.e0619fe543b44e24dcb8.png",
+    "static/media/y13.png": "/eyes-talk/static/media/y13.dc381b6863ed70060c33.png",
     "static/media/InstagramLogo.png": "/eyes-talk/static/media/InstagramLogo.17aa4e36c896f4129596.png",
+    "static/media/suprise.jpg": "/eyes-talk/static/media/suprise.dcaa74f663c2fc37907d.jpg",
     "index.html": "/eyes-talk/index.html",
-    "main.98d472f5.css.map": "/eyes-talk/static/css/main.98d472f5.css.map",
-    "main.2044bbac.js.map": "/eyes-talk/static/js/main.2044bbac.js.map",
+    "main.6c98e0ac.css.map": "/eyes-talk/static/css/main.6c98e0ac.css.map",
+    "main.ed2b3d75.js.map": "/eyes-talk/static/js/main.ed2b3d75.js.map",
     "787.8633ae1f.chunk.js.map": "/eyes-talk/static/js/787.8633ae1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98d472f5.css",
-    "static/js/main.2044bbac.js"
+    "static/css/main.6c98e0ac.css",
+    "static/js/main.ed2b3d75.js"
   ]
 }
