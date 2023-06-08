@@ -42,9 +42,11 @@ import y13 from './Compo/chains/y13.png'
 import y14 from './Compo/chains/y14.png'
 import suprise from './Compo/suprise.jpg'
 
-import sale1 from './Compo/sale1.png'
-import sale2 from './Compo/sale2.png'
-import sale3 from './Compo/sale3.png'
+import sale1 from './Compo/photos/sale1.JPG'
+import sale2 from './Compo/photos/sale2.JPG'
+import sale3 from './Compo/photos/sale3.JPG'
+
+
 
 import l1 from './Compo/bracelets/l1.png'
 import l2 from './Compo/bracelets/l2.png'
@@ -85,7 +87,7 @@ import a1s from './Compo/photos/a1s.JPG'
 function App() {
   
   const [arrChains,setarrChains]= useState([
-{photo: <img style={{width:'90%',height:'80%',marginTop:'0px'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
+{photo: <img style={{width:'60%',height:'40%',marginTop:'20px'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
 {photo: <img style={{width:'80%',height:'90%'}} src={d1} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D1',price:150,color:'כחול,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d2} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D2',price:150,color:'ירוק כהה,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d3} alt="logo" />, photo1: <img style={{width:'200px'}} src={d3s} alt="logo" />,name:'D3',price:150,color:'ורוד,לבן,צהוב,שחור'},
@@ -128,9 +130,9 @@ const [arrBracelets,setArrBracelets]= useState([
 
 
 const [arrSales,setArrSales]=useState([
-  {photo: <img style={{width:'90%',height:'80%'}} src={sale1} alt="logo" />, name:'שני שרשראות במבצע',price:200},
-  {photo: <img style={{width:'90%',height:'80%'}} src={sale2} alt="logo" />, name:'שני שרשראות במבצע',price:200},
-  {photo: <img style={{width:'90%',height:'80%'}} src={sale3} alt="logo" />, name:'שני שרשראות במבצע',price:200}
+  {photo: <img style={{width:'70%',height:'100%',marginTop:'10px'}} src={sale1} alt="logo" />, name:'שרשרת וצמיד במבצע',price:200},
+  {photo: <img style={{width:'70%',height:'100%',marginTop:'10px'}} src={sale2} alt="logo" />, name:'שרשרת וצמיד במבצע',price:200},
+  {photo: <img style={{width:'70%',height:'100%',marginTop:'10px'}} src={sale3} alt="logo" />, name:'שרשרת וצמיד במבצע',price:200}
 ])
 
 const [num,setNum]=useState(0)

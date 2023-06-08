@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {AiOutlineRightCircle} from "react-icons/ai";
 import {AiOutlineLeftCircle} from "react-icons/ai";
+import suprise from './suprise.jpg'
 
 export default function ChosenChain(props) {
 
@@ -22,8 +23,12 @@ export default function ChosenChain(props) {
       return (
 
 <div className="chosenProductDiv">
-          <div>{props.chosenChain.photo}</div>
-          <div>
+             <div style={{margin:'0 auto'}}>
+          <div style={{display:'flex',flexDirection:'row',width:'100%'}}>
+          <div style={{}}><img style={{width:'50%'}} src={suprise} alt="logo"  /></div>
+          </div>
+          </div>
+          <div style={{margin:'0 auto'}}>
             <h1>{props.chosenChain.name}</h1>
             <p>
               {" "}
@@ -53,8 +58,8 @@ export default function ChosenChain(props) {
           <div style={{ display:'flex',justifyContent:'center',alignItems:'center'}}><div onClick={()=>{setFlag(!flag)}}>{right}</div></div>
           </div>
           </div>
-          <div style={{margin:'0 auto'}}>
-            <h1>{props.chosenChain.name}</h1>
+          <div >
+            <h1 >{props.chosenChain.name}</h1>
             <p style={{ marginTop: "50px" }}>
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>

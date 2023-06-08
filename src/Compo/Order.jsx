@@ -5,10 +5,7 @@ import emailjs from '@emailjs/browser';
 
 export default function Order(props) {
   
-  const [name,setName]=useState('')
-  const [phone,setPhone]=useState(0)
-  const [city,setCity]=useState('')
-  const [adress,setAdress]=useState('')
+
 
   const nav=useNavigate()
 
@@ -43,10 +40,10 @@ export default function Order(props) {
       <input className='inp' type="text" placeholder='עיר' name='user_city' required />
       <input className='inp' type="text" placeholder='כתובת' name='user_adress' required />
       <input className='inp2' type="text" name='user_product' value={props.cart.map((val)=>{return val.name})}    />
-      <button type='submit' className='btn5'>send</button>
+      <button type='submit' className='btn5'>סיום</button>
 
       </form>
-    {/* {prodactName()} */}
+    
     
     </div>
     </div>

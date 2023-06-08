@@ -234,7 +234,8 @@ export default function HomePage(props) {
                 !{props.arrChains[0].name}
               </h1>
             </div>
-            <div style={{ height: "100px" }}> {<img style={{width:'80%',height:'75%',marginTop:'10px'}} src={suprise} alt="logo" />}</div>
+                <Link to={"/chain"}>  <div style={{ height: "100px" }}  onClick={() => {props.chosenChainCompo(0)}}>
+                   {<img style={{width:'80%',height:'75%',marginTop:'10px'}} src={suprise} alt="logo" />}</div></Link>
             <div>
                 <p
                 style={{ fontSize: "20px", marginTop: "0px" }}
@@ -497,7 +498,7 @@ export default function HomePage(props) {
                 <Link to={"/chain"}>
                   {" "}
                   <div
-                    style={{ height: "230px" }}
+                    style={{ height: "230px"}}
                     onClick={() => {
                       props.chosenChainCompo(0);
                     }}
@@ -854,6 +855,7 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
+                    marginTop:'50px'
                   }}
                 >
                   {props.saleArr[0].name}
@@ -893,6 +895,7 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
+                    marginTop:'50px'
                   }}
                 >
                   {props.saleArr[1].name}
@@ -932,6 +935,7 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
+                    marginTop:'50px'
                   }}
                 >
                   {props.saleArr[2].name}
