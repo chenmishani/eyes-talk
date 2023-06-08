@@ -12,7 +12,7 @@ export default function HomePage(props) {
           <div style={{ margin: "0 auto" }}>
             <p
               style={{
-                width: "100%",
+                width: "101%",
                 fontSize: "35px",
                 fontStyle: "rubik",
                 marginTop: "0px",
