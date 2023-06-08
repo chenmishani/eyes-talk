@@ -1,0 +1,350 @@
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;   
+
+}
+
+
+
+.webTitleDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cartLogo{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    margin-left: 25px;
+    mix-blend-mode: multiply;
+}
+
+.btn{
+    width: 150px;
+   font-size: 20px;
+   font-family: "Times New Roman", Times, 'rubik';
+   background-color: #adcbd3;
+   border: 1px solid black;
+  margin-top: 200px;
+ 
+
+}
+.logoDiv{
+    margin: 0 auto;
+   
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+    mix-blend-mode: multiply;
+  
+}
+
+.title{
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;    
+    margin-right: 480px;
+}
+
+.bar2{
+    display: flex;
+    justify-content: space-between;
+    width: 655px;    
+    margin-left: 7%;
+
+}
+
+.photo{
+    width: 350px;
+    height: 220px;
+    margin: 5px;
+    mix-blend-mode: multiply;
+}
+
+.subtitle{
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 50px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.productList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: white;
+    padding-bottom: 10px;
+ 
+
+}
+
+.name{
+    font-size: 30PX;
+    margin-top: 40px;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.btn1{
+    width: 50%;
+    height: 80%;
+   margin-bottom: 20px;
+   margin-top: '50px';
+   font-size: 150%;
+   font-family: "Times New Roman", Times, serif;
+   background-color:white;
+   border: 1px solid black;
+   color: black;
+   border-radius: 20%;
+   
+   }
+
+
+.btn2{
+ width: 60%;
+ height: 80%;
+margin-bottom: 20px;
+margin-top: '50px';
+font-size: 100%;
+font-family: "Times New Roman", Times, serif;
+background-color:white;
+border: 1px solid black;
+color: black;
+border-radius: 20%;
+
+}
+
+.btn3{
+    width: 50%;
+    height: 20px;
+   margin-bottom: 20px;
+   margin-top: '50px';
+   font-size: 100%;
+   font-family: "Times New Roman", Times, serif;
+   background-color:white;
+   border: 1px solid black;
+   color: black;
+   border-radius: 20%;
+   
+   }
+
+   .btn4{
+    width: 80%;
+    height: 50px;
+   margin-bottom: 20px;
+   margin-top: '50px';
+   font-size: 100%;
+   font-family: "Times New Roman", Times, serif;
+   background-color:white;
+   border: 1px solid black;
+   color: black;
+   border-radius: 20%;
+   
+   }
+
+   .btn5{
+    width: 15%;
+    height: 30px;
+    margin: 0  auto;
+   margin-top: 20px;
+   font-size: 100%;
+   font-family: "Times New Roman", Times, serif;
+   background-color:white;
+   border: 1px solid black;
+   color: black;
+   border-radius: 20%;
+   
+   }
+
+.divNum{
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.video{
+    width: 350px;
+    height: 260px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+   
+}
+
+.saleDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 82%;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 2px solid black;
+        background-color: white;
+        padding: 10px;
+    
+}
+
+.mediaSaleDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 82%;
+    margin: 10px auto;
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+}
+
+.mediaBar{
+    display: none;
+   
+}
+
+.mediaMainDiv{
+    display: none   ;
+}
+
+@media (max-width:768px){ 
+    .webTitleDiv,.mainDiv{
+    display: none;    
+    }    
+    .title{
+        font-size: 30px;
+    }
+
+
+    .burgerBtn,.mediaBar,.mediaMainDiv{
+        display: block;
+    }
+
+
+}
+
+
+
+.mediaCartLogo{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 10px;
+    mix-blend-mode: multiply;
+}
+
+
+.mediaLogo{
+    width: 130px;
+    height: 70px;
+    margin-top: 10px;
+    mix-blend-mode: multiply;   
+}
+
+.humburger{
+    width: 90px;
+    right: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    background-color: black;
+    height: 300px;
+    position: absolute;
+   
+  }
+  
+  .humburgerBtn{
+    font-size: 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    margin-top: 40px;
+  }
+
+  .humburger:active{
+    text-decoration: underline;
+  }
+
+  .supriseBtn{
+    width: 220px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color:#adcbd3;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .cartDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content:center
+  }
+
+  .chosenProductDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: white;
+    padding-right: 30px;
+    padding-left: 30px; 
+    padding-top: 30px;
+
+}
+
+.mediaChain{
+    display: none;
+}
+
+.homePageProduct{
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #adcbd3;
+    width:17%;
+    margin:10px 0 auto;
+} 
+
+.meadiaHomePageProduct{
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #adcbd3;
+    width:45%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.inp{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 30%;
+    height: 15%;
+    font-size: 100%;
+    text-align: center;
+}
+
+.inp2{
+    color: white;
+    background-color: white;
+    border: none;
+    margin-top: 10px;
+    font-size: 90%;
+    text-align: center;
+}
