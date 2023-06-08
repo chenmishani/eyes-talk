@@ -14,6 +14,7 @@ import ChosenChain from './Compo/ChosenChain';
 import ChosenBracelet from './Compo/ChosenBracelet';
 import Order from './Compo/Order';
 import Contact from './Compo/Contact';
+import Humburger from "./Compo//Humburger";
 
 
 import d1 from './Compo/chains/d1.png'
@@ -87,11 +88,11 @@ import a1s from './Compo/photos/a1s.JPG'
 function App() {
   
   const [arrChains,setarrChains]= useState([
-{photo: <img style={{width:'60%',height:'40%',marginTop:'20px'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
+{photo: <img style={{width:'60%',height:'55%',marginTop:'5%'}} src={suprise} alt="logo" />, name:'שרשרת בהפתעה',price:200 ,src:{suprise}},
 {photo: <img style={{width:'80%',height:'90%'}} src={d1} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D1',price:150,color:'כחול,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d2} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D2',price:150,color:'ירוק כהה,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d3} alt="logo" />, photo1: <img style={{width:'200px'}} src={d3s} alt="logo" />,name:'D3',price:150,color:'ורוד,לבן,צהוב,שחור'},
-{photo: <img style={{width:'80%',height:'90%'}} src={d4} alt="logo" />, photo1: <img style={{width:'200px'}} src={d4s} alt="logo" />,name:'פלאיה',price:150,color:'ירוק,לבן'},
+{photo: <img style={{width:'80%',height:'90%'}} src={d4} alt="logo" />, photo1: <img style={{width:'200px'}} src={d4s} alt="logo" />,name:'D4',price:150,color:'ירוק,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d5} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D5',price:150,color:'תכלת,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d6} alt="logo" />, photo1: <img style={{width:'200px'}} src={d6s} alt="logo" />,name:'D6',price:150,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d7} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D7',price:150,color:'חום,לבן'},
@@ -138,6 +139,8 @@ const [arrSales,setArrSales]=useState([
 const [num,setNum]=useState(0)
 const [temp,settemp]=useState(0)
 const [cart,setcart]= useState([])
+
+
 
 
 const addChain=(index)=>{
@@ -198,13 +201,17 @@ const chosenBraceletCompo =(i)=>{
  
 }
 
+const [flag,setFlag]= useState(false)
+
+
+
   return (
 
     <div className="App" >
        <BrowserRouter>
-       <Title cart={cart} num={num}/>
+       <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
     <Routes>
-    <Route path='/eyes-talk' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} addBracletes={addBracelets} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale}/>} /> 
+    <Route path='/eyes-talk' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} addBracletes={addBracelets} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets}/>} /> 
     <Route path='/Cart' element= {<CartList cart={cart} temp={temp} deleteCart={deleteCart}/>} /> 

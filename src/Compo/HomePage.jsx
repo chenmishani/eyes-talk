@@ -159,7 +159,7 @@ export default function HomePage(props) {
                     <div
                     style={{ height: "200px",marginTop:'20px'}}
                     onClick={() => {
-                      props.chosenChainCompo(1);
+                      props.chosenChainCompo(8);
                     }}
                   >
                    <img style={{width:'90%',height:'90%'}} src={d8s} alt="logo" />
@@ -186,7 +186,7 @@ export default function HomePage(props) {
                 <button
                   className="btn2"
                   onClick={() => {
-                    props.addChain(1);
+                    props.addChain(8);
                   }}
                 >
                   הוספה לסל
@@ -495,17 +495,8 @@ export default function HomePage(props) {
 
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
-                <Link to={"/chain"}>
-                  {" "}
-                  <div
-                    style={{ height: "230px"}}
-                    onClick={() => {
-                      props.chosenChainCompo(0);
-                    }}
-                  >
-                    {props.arrChains[0].photo}
-                  </div>
-                </Link>
+              <Link to={"/chain"}>  <div style={{ height: "230px" }}  onClick={() => {props.chosenChainCompo(0)}}>
+                   {<img style={{width:'85%',height:'50%',marginTop:'50px'}} src={suprise} alt="logo" />}</div></Link>
               </div>
               <div>
                 <p style={{ fontSize: "100%", marginTop: "0px" }}>

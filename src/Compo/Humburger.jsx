@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default function Humburger() {
+export default function Humburger(props) {
   return (
     
         <div className='humburger'>
-          <Link to={'/Bracelets'}> <button className='humburgerBtn'>צמידים</button> </Link>
-          <Link to={'/chains'}>  <button className='humburgerBtn' >שרשראות</button> </Link>
-          <Link to={'/contact'} > <button className='humburgerBtn'>צור קשר</button></Link>
-          <Link to={'/eyes-talk'}> <button className='humburgerBtn'>בית</button></Link>
+          <Link to={'/Bracelets'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צמידים</button> </Link>
+          <Link to={'/chains'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשראות</button> </Link>
+          <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
+          <Link to={'/eyes-talk'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
           
         </div>
        

@@ -34,13 +34,13 @@ export default function Title(props){
   }
  
   const showCompo=()=>{
-    if(open===true){
-      return <div> <Humburger/> </div> 
+    if(props.flag===true){
+      return <div> <Humburger flag={props.flag} setFlag={props.setFlag}/> </div> 
     }
   }
 
-  const burgerIcon = <CgMenuRound size='40px' onClick={()=>{setOpen(!open)}}/>
-  const closeIcon = <CgCloseO size='40px' onClick={()=>{setOpen(!open)}} />
+  const burgerIcon = <CgMenuRound size='40px' onClick={()=>{props.setFlag(!props.flag)}}/>
+  const closeIcon = <CgCloseO size='40px' onClick={()=>{props.setFlag(!props.flag)}} />
   const whatsappLogo=<FaWhatsapp size='38px'/>
 
     return (
@@ -57,7 +57,7 @@ export default function Title(props){
         <img  className='mediaCartLogo' onClick={()=>{nav('/Cart')}} src={cart} alt="cart" />
         <div className="divNum"><h1 style={{fontSize:'15px'}}>{props.num}</h1></div>
         </div>
-          <div style={{width:'100%'}}>
+          <div style={{width:'100%',marginTop:'40px'}}>
         <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
         <div style={{width:'100%',margin:'0 auto'}}>
           <div style={{margin:'0 auto'}}><img onClick={()=>{nav('/eyes-talk')}}className='mediaLogo' src={logo} alt="logo" /></div>
