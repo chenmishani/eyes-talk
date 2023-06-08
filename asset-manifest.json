@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eyes-talk/static/css/main.f0368a3f.css",
-    "main.js": "/eyes-talk/static/js/main.ae0c6355.js",
+    "main.js": "/eyes-talk/static/js/main.796c9ede.js",
     "static/js/787.8633ae1f.chunk.js": "/eyes-talk/static/js/787.8633ae1f.chunk.js",
     "static/media/y6s.JPG": "/eyes-talk/static/media/y6s.126fcbf1fba3c611697a.JPG",
     "static/media/y2s.JPG": "/eyes-talk/static/media/y2s.bb2a57998f6d6ff98550.JPG",
@@ -9,15 +9,15 @@
     "static/media/d3s.JPG": "/eyes-talk/static/media/d3s.fdc2cba3b1f8b8a3cc8b.JPG",
     "static/media/d10s.JPG": "/eyes-talk/static/media/d10s.f370b1eab073f0e6df0f.JPG",
     "static/media/d6s.JPG": "/eyes-talk/static/media/d6s.f314c524f1cf222f404c.JPG",
+    "static/media/sale2.JPG": "/eyes-talk/static/media/sale2.f3706b1c582dec36c101.JPG",
+    "static/media/sale3.JPG": "/eyes-talk/static/media/sale3.761aeb84762cf4c8ba94.JPG",
     "static/media/d4s.JPG": "/eyes-talk/static/media/d4s.249fab8b2ee0e3d8d9ea.JPG",
     "static/media/l1s.JPG": "/eyes-talk/static/media/l1s.47dab9253190d247b359.JPG",
+    "static/media/y12s.JPG": "/eyes-talk/static/media/y12s.46ce6caac25a9c778c88.JPG",
     "static/media/d8s.JPG": "/eyes-talk/static/media/d8s.89ef15a20201736ab85b.JPG",
     "static/media/a1s.JPG": "/eyes-talk/static/media/a1s.580912d1ff9467d9477f.JPG",
     "static/media/y9s.JPG": "/eyes-talk/static/media/y9s.fc27d0e777d0e08f9457.JPG",
-    "static/media/y12s.JPG": "/eyes-talk/static/media/y12s.4d2695550995ceb434cc.JPG",
-    "static/media/sale3.png": "/eyes-talk/static/media/sale3.cfecf349e4b35ceecbbf.png",
-    "static/media/sale2.png": "/eyes-talk/static/media/sale2.ae8e7edd119429530e69.png",
-    "static/media/sale1.png": "/eyes-talk/static/media/sale1.4281f7eed556ccebcc61.png",
+    "static/media/sale1.JPG": "/eyes-talk/static/media/sale1.4d2695550995ceb434cc.JPG",
     "static/media/l1.png": "/eyes-talk/static/media/l1.314d33bd8e7bb6fba828.png",
     "static/media/l2.png": "/eyes-talk/static/media/l2.590e78e35160562a25d9.png",
     "static/media/d5.png": "/eyes-talk/static/media/d5.48a8d9158ba5e73d43c1.png",
@@ -58,11 +58,11 @@
     "static/media/suprise.jpg": "/eyes-talk/static/media/suprise.dcaa74f663c2fc37907d.jpg",
     "index.html": "/eyes-talk/index.html",
     "main.f0368a3f.css.map": "/eyes-talk/static/css/main.f0368a3f.css.map",
-    "main.ae0c6355.js.map": "/eyes-talk/static/js/main.ae0c6355.js.map",
+    "main.796c9ede.js.map": "/eyes-talk/static/js/main.796c9ede.js.map",
     "787.8633ae1f.chunk.js.map": "/eyes-talk/static/js/787.8633ae1f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0368a3f.css",
-    "static/js/main.ae0c6355.js"
+    "static/js/main.796c9ede.js"
   ]
 }
