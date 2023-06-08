@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eyes-talk/static/css/main.8dad544a.css",
-    "main.js": "/eyes-talk/static/js/main.ed2b3d75.js",
+    "main.css": "/eyes-talk/static/css/main.ec50a80c.css",
+    "main.js": "/eyes-talk/static/js/main.2a2cde95.js",
     "static/js/787.8633ae1f.chunk.js": "/eyes-talk/static/js/787.8633ae1f.chunk.js",
     "static/media/y6s.JPG": "/eyes-talk/static/media/y6s.126fcbf1fba3c611697a.JPG",
     "static/media/y2s.JPG": "/eyes-talk/static/media/y2s.bb2a57998f6d6ff98550.JPG",
@@ -55,12 +55,12 @@
     "static/media/InstagramLogo.png": "/eyes-talk/static/media/InstagramLogo.17aa4e36c896f4129596.png",
     "static/media/suprise.jpg": "/eyes-talk/static/media/suprise.dcaa74f663c2fc37907d.jpg",
     "index.html": "/eyes-talk/index.html",
-    "main.8dad544a.css.map": "/eyes-talk/static/css/main.8dad544a.css.map",
-    "main.ed2b3d75.js.map": "/eyes-talk/static/js/main.ed2b3d75.js.map",
+    "main.ec50a80c.css.map": "/eyes-talk/static/css/main.ec50a80c.css.map",
+    "main.2a2cde95.js.map": "/eyes-talk/static/js/main.2a2cde95.js.map",
     "787.8633ae1f.chunk.js.map": "/eyes-talk/static/js/787.8633ae1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dad544a.css",
-    "static/js/main.ed2b3d75.js"
+    "static/css/main.ec50a80c.css",
+    "static/js/main.2a2cde95.js"
   ]
 }
