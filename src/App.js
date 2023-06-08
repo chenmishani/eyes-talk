@@ -211,7 +211,7 @@ const [flag,setFlag]= useState(false)
        <BrowserRouter>
        <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
     <Routes>
-    <Route path='/eyes-talk' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} addBracletes={addBracelets} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
+    <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} addBracletes={addBracelets} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets}/>} /> 
     <Route path='/Cart' element= {<CartList cart={cart} temp={temp} deleteCart={deleteCart}/>} /> 

@@ -60,7 +60,7 @@ export default function Title(props){
           <div style={{width:'100%',marginTop:'40px'}}>
         <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
         <div style={{width:'100%',margin:'0 auto'}}>
-          <div style={{margin:'0 auto'}}><img onClick={()=>{nav('/eyes-talk')}}className='mediaLogo' src={logo} alt="logo" /></div>
+          <div style={{margin:'0 auto'}}><img onClick={()=>{nav('/')}}className='mediaLogo' src={logo} alt="logo" /></div>
             </div>
         </div>
        
@@ -90,7 +90,7 @@ export default function Title(props){
         </div>
         <div className="logoDiv"> 
         <div><h1 className="title">EYES  TALK</h1></div>
-        <div><img onClick={()=>{nav('/eyes-talk')}} className='logo' src={logo} alt="logo" /></div>
+        <div><img onClick={()=>{nav('/')}} className='logo' src={logo} alt="logo" /></div>
         </div> 
         <div>
         <Link to={'/chains'}> <button className="btn" >השרשראות שלנו</button> </Link> 
