@@ -91,7 +91,7 @@ function App() {
 {photo: <img style={{width:'80%',height:'90%'}} src={d1} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D1',price:150,color:'כחול,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d2} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D2',price:150,color:'ירוק כהה,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d3} alt="logo" />, photo1: <img style={{width:'200px'}} src={d3s} alt="logo" />,name:'D3',price:150,color:'ורוד,לבן,צהוב,שחור'},
-{photo: <img style={{width:'80%',height:'90%'}} src={d4} alt="logo" />, photo1: <img style={{width:'200px'}} src={d4s} alt="logo" />,name:'D4',price:150,color:'ירוק,לבן'},
+{photo: <img style={{width:'80%',height:'90%'}} src={d4} alt="logo" />, photo1: <img style={{width:'200px'}} src={d4s} alt="logo" />,name:'פלאיה',price:150,color:'ירוק,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d5} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D5',price:150,color:'תכלת,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d6} alt="logo" />, photo1: <img style={{width:'200px'}} src={d6s} alt="logo" />,name:'D6',price:150,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'90%'}} src={d7} alt="logo" />, photo1: <img style={{width:'200px'}} src={d1} alt="logo" />,name:'D7',price:150,color:'חום,לבן'},
