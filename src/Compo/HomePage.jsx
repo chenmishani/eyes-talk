@@ -1,7 +1,10 @@
 import React from "react";
 import "./style.css";
 import suprise from './suprise.jpg'
-
+import d8s from './photos/d8s.JPG'
+import d4s from './photos/d4s.JPG'
+import l1s from './photos/l1s.JPG'
+import a1s from './photos/a1s.JPG'
 
 import { Link } from "react-router-dom";
 
@@ -36,17 +39,17 @@ export default function HomePage(props) {
                 <Link to={"/bracelet"}>
                   {" "}
                   <div
-                    style={{ height: "200px",marginTop:'10px'}}
+                    style={{ height: "200px",marginTop:'20px'}}
                     onClick={() => {
-                      props.chosenBraceletCompo(10);
+                      props.chosenBraceletCompo(0);
                     }}
                   >
-                    {props.arrBracelets[10].photo}
+                      <img style={{width:'90%',height:'90%'}} src={l1s} alt="logo" />
                   </div>
                 </Link>
               </div>
               <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>A6 צמיד </p>
+                <p style={{ fontSize: "100%", marginTop: "0px" }}>L1 צמיד </p>
               </div>
               <div>
                 <p
@@ -56,13 +59,13 @@ export default function HomePage(props) {
                     marginTop: "0px",
                     marginBottom: "10px",
                   }}
-                >{`₪ ${props.arrBracelets[10].price} `}</p>
+                >{`₪ ${props.arrBracelets[0].price} `}</p>
               </div>
               <div>
                 <button
                   className="btn2"
                   onClick={() => {
-                    props.addBracletes(10);
+                    props.addBracletes(0);
                   }}
                 >
                   הוספה לסל
@@ -79,7 +82,7 @@ export default function HomePage(props) {
                       props.chosenChainCompo(4);
                     }}
                   >
-                    {props.arrChains[4].photo}
+                    <img style={{width:'90%',height:'90%'}} src={d4s} alt="logo" />
                   </div>
                 </Link>
               </div>
@@ -117,15 +120,15 @@ export default function HomePage(props) {
                   <div
                     style={{ height: "200px",marginTop:'20px'}}
                     onClick={() => {
-                      props.chosenBraceletCompo(8);
+                      props.chosenBraceletCompo(5);
                     }}
                   >
-                    {props.arrBracelets[8].photo}
+                  <img style={{width:'90%',height:'90%'}} src={a1s} alt="logo" />
                   </div>
                 </Link>
               </div>
               <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>A4 צמיד </p>
+                <p style={{ fontSize: "100%", marginTop: "0px" }}>A1 צמיד </p>
               </div>
               <div>
                 <p
@@ -135,13 +138,13 @@ export default function HomePage(props) {
                     marginTop: "0px",
                     marginBottom: "10px",
                   }}
-                >{`₪ ${props.arrBracelets[8].price} `}</p>
+                >{`₪ ${props.arrBracelets[5].price} `}</p>
               </div>
               <div>
                 <button
                   className="btn2"
                   onClick={() => {
-                    props.addBracletes(8);
+                    props.addBracletes(5);
                   }}
                 >
                   הוספה לסל
@@ -159,14 +162,14 @@ export default function HomePage(props) {
                       props.chosenChainCompo(1);
                     }}
                   >
-                    {props.arrChains[1].photo}
+                   <img style={{width:'90%',height:'90%'}} src={d8s} alt="logo" />
                   </div>
                 </Link>
               </div>
               <div>
                 <p style={{ fontSize: "100%", marginTop: "0px" }}>
                  
-                  D1 שרשרת
+                  D8 שרשרת
                 </p>
               </div>
               <div>
@@ -177,7 +180,7 @@ export default function HomePage(props) {
                     marginTop: "0px",
                     marginBottom: "10px",
                   }}
-                >{`₪ ${props.arrChains[1].price} `}</p>
+                >{`₪ ${props.arrChains[8].price} `}</p>
               </div>
               <div>
                 <button
@@ -238,7 +241,7 @@ export default function HomePage(props) {
               >{`₪ ${props.arrChains[0].price} `}</p>
               <div>
                 <button
-                  className="btn3"
+                  className="btn4"
                   onClick={() => {
                     props.addSale(0);
                   }}

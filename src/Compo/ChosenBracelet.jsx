@@ -13,7 +13,7 @@ export default function ChosenBracelet(props) {
       return  <div>{props.chosenBracelet.photo}</div>
     }
     else{
-      return <div style={{margin:'10px'}}>{props.chosenBracelet.photo}</div>
+      return <div style={{margin:'10px'}}>{props.chosenBracelet.photo1}</div>
     }
   }
 

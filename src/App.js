@@ -68,6 +68,8 @@ import d10s from './Compo/photos/d10s.JPG'
 import y6s from './Compo/photos/y6s.JPG'
 import y3s from './Compo/photos/y3s.JPG'
 import d3s from './Compo/photos/d3s.JPG'
+import l1s from './Compo/photos/l1s.JPG'
+import a1s from './Compo/photos/a1s.JPG'
 
 
 
@@ -111,17 +113,17 @@ function App() {
 ])
 
 const [arrBracelets,setArrBracelets]= useState([
-  {photo: <img style={{width:'80%',height:'90%'}} src={l1} alt="logo" />, name:'L1',price:150,color:'כחול,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />, name:'L2',price:150,color:'כחול כהה,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l3} alt="logo" />, name:'L3',price:150,color:'אפור,לבן,אדום'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l4} alt="logo" />, name:'L4',price:150,color:'תכלת,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l5} alt="logo" />, name:'L5',price:150,color:'אפור כהה,אפור בהיר,שקוף'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a1} alt="logo" />, name:'A1',price:150,color:'ירוק,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a2} alt="logo" />, name:'A2',price:150,color:'שחור,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />, name:'A3',price:150,color:'תכלת,אפור,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a4} alt="logo" />, name:'A4',price:150,color:'ירוק זית,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />, name:'A5',price:150,color:'סגול,לבן,שחור'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a6} alt="logo" />, name:'A6',price:150,color:'לבן,שחור'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l1} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'L1',price:150,color:'כחול,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'L2',price:150,color:'כחול כהה,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l3} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'L3',price:150,color:'אפור,לבן,אדום'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l4} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'L4',price:150,color:'תכלת,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l5} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'L5',price:150,color:'אפור כהה,אפור בהיר,שקוף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a1} alt="logo" />,photo1: <img style={{width:'200px'}} src={a1s} alt="logo" />, name:'A1',price:150,color:'ירוק,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a2} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'A2',price:150,color:'שחור,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'A3',price:150,color:'תכלת,אפור,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a4} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'A4',price:150,color:'ירוק זית,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'A5',price:150,color:'סגול,לבן,שחור'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a6} alt="logo" />,photo1: <img style={{width:'200px'}} src={l1s} alt="logo" />, name:'A6',price:150,color:'לבן,שחור'},
 ])
 
 
