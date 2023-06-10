@@ -17,7 +17,6 @@
     width: 60px;
     height: 60px;
     margin-top: 20px;
-    /* margin-right: 10px; */
     margin-left: 25px;
     mix-blend-mode: multiply;
 }
@@ -73,9 +72,10 @@
 }
 
 .subtitle{
-    font-size: 20px;
-    margin-top: 60px;
-    margin-left: 50px;
+    font-size: 250%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
     font-family: "Times New Roman", Times, serif;
 }
 
@@ -83,10 +83,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
     margin: 0 auto;
     margin-top: 20px;
-    border: 2px solid black;
     background-color: white;
     padding-bottom: 10px;
  
@@ -203,12 +201,21 @@ border-radius: 20%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 82%;
     margin: 10px auto;
-    border: 2px solid black;
-    background-color: white;
     padding: 10px;
 }
+
+.mediaSupriseDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    width: 82%;
+    border: 2px solid black;
+    background-color: #adcbd3;
+    padding: 10px;
+}
+
 
 .mediaBar{
     display: none;
@@ -349,3 +356,45 @@ border-radius: 20%;
     font-size: 90%;
     text-align: center;
 }
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+  
+  .right-arrow {
+    position: absolute;
+    /* top: 50%; */
+    right: 0px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    /* top: 50%; */
+    left: 32px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }

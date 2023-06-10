@@ -13,19 +13,7 @@ export default function HomePage(props) {
     <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
       <div className="mediaMainDiv">
         <div className="mediaSaleDiv">
-          <div style={{ margin: "0 auto" }}>
-            <p
-              style={{
-                width: "101%",
-                fontSize: "35px",
-                fontStyle: "rubik",
-                marginTop: "0px",
-              }}
-            >
-              הנמכרים ביותר
-            </p>
-          </div>
-
+         
           <div
             style={{
               display: "flex",
@@ -199,12 +187,11 @@ export default function HomePage(props) {
           </div>
         </div>
 
-        <div className="mediaSaleDiv">
+        <div className="mediaSupriseDiv">
           <div style={{ margin: "0 auto", width: "100%" }}>
             <h2
               style={{
                 width: "100%",
-                color:'rgb(28, 3, 100)',
                 fontSize: "25px",
                 fontStyle: "rubik",
                 marginTop: "0px",
@@ -221,6 +208,8 @@ export default function HomePage(props) {
               display: "flex",
               flexDirection: "column",
               margin: "0 auto",
+              backgroundColor:'white',
+              border: '2px solid black'
             }}
           >
             <div>
@@ -255,19 +244,7 @@ export default function HomePage(props) {
         </div>
 
         <div className="mediaSaleDiv">
-          <div style={{ margin: "0 auto", width: "100%" }}>
-            <p
-              style={{
-                width: "100%",
-                fontSize: "35px",
-                fontStyle: "rubik",
-                marginTop: "0px",
-              }}
-            >
-              המבצעים שלנו
-            </p>
-          </div>
-
+        
           <div
             style={{
               width: "330px",
@@ -308,46 +285,7 @@ export default function HomePage(props) {
             </div>
           </div>
 
-          <div
-            style={{
-              width: "330px",
-              paddingBottom: "10px",
-              display: "flex",
-              flexDirection: "column",
-              border: "2px solid #adcbd3",
-              margin: "0 auto",
-              marginTop: "10px",
-            }}
-          >
-            <div style={{ height: "200px" }}> {props.saleArr[1].photo}</div>
-            <div>
-              <p
-                style={{
-                  fontSize: "20px",
-                  fontFamily: "Times New Roman",
-                  marginBottom: "0px",
-                }}
-              >
-                {props.saleArr[1].name}
-              </p>
-            </div>
-            <div>
-              {" "}
-              <p
-                style={{ fontSize: "20px", marginTop: "0px" }}
-              >{`₪ ${props.saleArr[1].price} `}</p>
-              <div style={{ width: "80%", margin: "0 auto" }}>
-                <button
-                  className="btn2"
-                  onClick={() => {
-                    props.addSale(2);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-          </div>
+         
 
           <div
             style={{
