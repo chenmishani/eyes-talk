@@ -2,6 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ChainsList(props) {
+
+  const showCnt=()=>{
+    if(props.cnt<1){
+      return <button className="btn2"
+      onClick={() => {
+        props.add(props.index);
+      }}
+    >
+      הוספה לסל
+    </button>
+    }
+    else{
+      return <button className="btn2"
+      onClick={() => {
+        props.add(props.index);
+      }}
+    >
+  {props.cnt}
+    </button>
+  }
+  }
   return (
     <div
       style={{

@@ -13,6 +13,7 @@ export default function ChainsPage(props) {
             name={val.name}
             price={val.price}
             func={props.chosenChainCompo}
+            cnt={val.cnt}
           />
         );
       })}
