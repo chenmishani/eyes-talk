@@ -86,7 +86,7 @@ export default function ChosenChain(props) {
           </div>
 
             </div>
-          <div >
+          <div style={{margin:'0 auto'}} >
             <h1 style={{marginLeft:'10px'}} >{props.chosenChain.name}</h1>
             <p style={{ marginTop: "50px" }}>
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים

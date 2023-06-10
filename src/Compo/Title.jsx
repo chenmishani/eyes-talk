@@ -53,7 +53,7 @@ export default function Title(props){
          <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
     
           
-        <div style={{display:'flex',width:'40%'}}>
+        <div style={{display:'flex',width:'160px'}}>
         <img  className='mediaCartLogo' onClick={()=>{nav('/Cart')}} src={cart} alt="cart" />
         <div className="divNum"><h1 style={{fontSize:'15px'}}>{props.num}</h1></div>
         </div>

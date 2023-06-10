@@ -22,7 +22,7 @@ export default function ChainsList(props) {
           <div
             style={{
               marginTop: "20px",
-              height: "90%",
+              height: "100%",
               width: "80%",
               margin: "0 auto",
             }}
