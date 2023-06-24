@@ -1,188 +1,103 @@
-import React from "react";
+import React,{useState} from "react";
 import "./style.css";
-import suprise from './suprise.jpg'
-import d8s from './photos/d8s.JPG'
-import d4s from './photos/d4s.JPG'
-import l1s from './photos/l1s.JPG'
-import a1s from './photos/a1s.JPG'
+import suprise from "./suprise.jpg";
+import d8s from "./photos/d8s.JPG";
+import d4s from "./photos/d4s.JPG";
+import l1s from "./photos/l1s.JPG";
+import a1s from "./photos/a1s.JPG";
 
 import { Link } from "react-router-dom";
+import MediaHomePageChain from "./MediaHomePageChain";
+import MediaHomePageBracelets from "./MediaHomePageBracelets";
 
 export default function HomePage(props) {
+
+
+  const [flag,setFlag]=useState(false)
+
+
+
+  const showCntChain=(i)=>{
+        if(flag==false){
+      return <button className="btn2"
+      onClick={() => {
+        props.addChain(i);
+      }}
+    >
+      הוספה לסל
+    </button>
+    }
+    else{
+      return <div>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.deleteChain(props.arrChains[i].name,i)}}>
+      -
+    </button>
+      <button className="btn2" style={{width:'40px'}}>
+  {props.arrChains[4].cnt}
+    </button>
+    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
+        props.addChain(i)
+      }}>
+        +
+    </button>
+  
+    </div>
+  }
+  }
+
+  const MediaChains=[{photo: <img style={{width: "90%", height: "90%" }} src={d8s} alt="logo" />,name:'D8',price:150,index:8},
+  {photo: <img style={{width: "90%", height: "90%" }} src={d4s} alt="logo" />,name:'D4',price:150,index:4},]
+
+  const MediaBracelets=[{photo: <img style={{width: "90%", height: "90%" }} src={l1s} alt="logo" />,name:'L1',price:150,index:0},
+  {photo: <img style={{width: "90%", height: "90%" }} src={a1s} alt="logo" />,name:'A1',price:150,index:5},]
+
   return (
     <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
       <div className="mediaMainDiv">
         <div className="mediaSaleDiv">
-         
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection:'row',
               flexWrap: "wrap",
               justifyContent: "space-between",
             }}
           >
-            <div className="meadiaHomePageProduct">
-              <div style={{ height: "100%" }}>
-                <Link to={"/bracelet"}>
-                  {" "}
-                  <div
-                    style={{ height: "200px",marginTop:'20px'}}
-                    onClick={() => {
-                      props.chosenBraceletCompo(0);
-                    }}
-                  >
-                      <img style={{width:'90%',height:'90%'}} src={l1s} alt="logo" />
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>L1 צמיד </p>
-              </div>
-              <div>
-                <p
-                  style={{
-                    fontSize: "100%",
-                    margin: "0 auto",
-                    marginTop: "0px",
-                    marginBottom: "10px",
-                  }}
-                >{`₪ ${props.arrBracelets[0].price} `}</p>
-              </div>
-              <div>
-                <button
-                  className="btn2"
-                  onClick={() => {
-                    props.addBracletes(0);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-
-            <div className="meadiaHomePageProduct">
-              <div style={{ height: "100%" }}>
-                <Link to={"/chain"}>
-                    <div
-                    style={{ height: "200px",marginTop:'20px' }}
-                    onClick={() => {
-                      props.chosenChainCompo(4);
-                    }}
-                  >
-                    <img style={{width:'90%',height:'90%'}} src={d4s} alt="logo" />
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>
-                   D4 שרשרת{" "}
-                </p>
-              </div>
-              <div>
-                <p
-                  style={{
-                    fontSize: "100%",
-                    margin: "0 auto",
-                    marginTop: "0px",
-                    marginBottom: "10px",
-                  }}
-                >{`₪ ${props.arrChains[4].price} `}</p>
-              </div>
-              <div>
-                <button
-                  className="btn2"
-                  onClick={() => {
-                    props.addChain(4);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-
-            <div className="meadiaHomePageProduct">
-              <div style={{ height: "100%" }}>
-                <Link to={"/bracelet"}>
-                  {" "}
-                  <div
-                    style={{ height: "200px",marginTop:'20px'}}
-                    onClick={() => {
-                      props.chosenBraceletCompo(5);
-                    }}
-                  >
-                  <img style={{width:'90%',height:'90%'}} src={a1s} alt="logo" />
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>A1 צמיד </p>
-              </div>
-              <div>
-                <p
-                  style={{
-                    fontSize: "100%",
-                    margin: "0 auto",
-                    marginTop: "0px",
-                    marginBottom: "10px",
-                  }}
-                >{`₪ ${props.arrBracelets[5].price} `}</p>
-              </div>
-              <div>
-                <button
-                  className="btn2"
-                  onClick={() => {
-                    props.addBracletes(5);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>      
-
             
-            <div className="meadiaHomePageProduct">
-              <div style={{ height: "100%" }}>
-                <Link to={"/chain"}>
-                    <div
-                    style={{ height: "200px",marginTop:'20px'}}
-                    onClick={() => {
-                      props.chosenChainCompo(8);
-                    }}
-                  >
-                   <img style={{width:'90%',height:'90%'}} src={d8s} alt="logo" />
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>
-                 
-                  D8 שרשרת
-                </p>
-              </div>
-              <div>
-                <p
-                  style={{
-                    fontSize: "100%",
-                    margin: "0 auto",
-                    marginTop: "0px",
-                    marginBottom: "10px",
-                  }}
-                >{`₪ ${props.arrChains[8].price} `}</p>
-              </div>
-              <div>
-                <button
-                  className="btn2"
-                  onClick={() => {
-                    props.addChain(8);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
+              
+      {MediaChains.map((val) => {
+        return (
+          <MediaHomePageChain
+            add={props.addChain}
+            index={val.index}
+            photo={val.photo}
+            name={val.name}
+            price={val.price}
+            func={props.chosenChainCompo}
+            arrChains={props.arrChains}
+            delete={props.deleteChain}
 
-            
+          />
+        );
+      })}
+    
+    
+      {MediaBracelets.map((val) => {
+        return (
+          <MediaHomePageBracelets
+            add={props.addBracletes}
+            index={val.index}
+            photo={val.photo}
+            name={val.name}
+            price={val.price}
+            func={props.chosenBraceletCompo}
+            arrBracelets={props.arrBracelets}
+            delete={props.deleteBracelet}
+
+          />
+        );
+      })}
+    
 
           </div>
         </div>
@@ -208,8 +123,8 @@ export default function HomePage(props) {
               display: "flex",
               flexDirection: "column",
               margin: "0 auto",
-              backgroundColor:'white',
-              border: '2px solid black'
+              backgroundColor: "white",
+              border: "2px solid black",
             }}
           >
             <div>
@@ -223,10 +138,24 @@ export default function HomePage(props) {
                 !{props.arrChains[0].name}
               </h1>
             </div>
-                <Link to={"/chain"}>  <div style={{ height: "100px" }}  onClick={() => {props.chosenChainCompo(0)}}>
-                   {<img style={{width:'80%',height:'75%',marginTop:'10px'}} src={suprise} alt="logo" />}</div></Link>
+            <Link to={"/chain"}>
+              <div
+                style={{ height: "100px" }}
+                onClick={() => {
+                  props.chosenChainCompo(0);
+                }}
+              >
+                {
+                  <img
+                    style={{ width: "80%", height: "75%", marginTop: "10px" }}
+                    src={suprise}
+                    alt="logo"
+                  />
+                }
+              </div>
+            </Link>
             <div>
-                <p
+              <p
                 style={{ fontSize: "20px", marginTop: "0px" }}
               >{`₪ ${props.arrChains[0].price} `}</p>
               <div>
@@ -244,7 +173,6 @@ export default function HomePage(props) {
         </div>
 
         <div className="mediaSaleDiv">
-        
           <div
             style={{
               width: "330px",
@@ -268,7 +196,6 @@ export default function HomePage(props) {
               </p>
             </div>
             <div>
-              {" "}
               <p
                 style={{ fontSize: "20px", marginTop: "0px" }}
               >{`₪ ${props.saleArr[0].price} `}</p>
@@ -284,8 +211,6 @@ export default function HomePage(props) {
               </div>
             </div>
           </div>
-
-         
 
           <div
             style={{
@@ -311,7 +236,6 @@ export default function HomePage(props) {
               </p>
             </div>
             <div>
-              {" "}
               <p
                 style={{ fontSize: "20px", marginTop: "0px" }}
               >{`₪ ${props.saleArr[2].price} `}</p>
@@ -329,6 +253,8 @@ export default function HomePage(props) {
           </div>
         </div>
       </div>
+
+{/* div for web */}
 
       <div className="mainDiv">
         <div className="saleDiv">
@@ -356,7 +282,6 @@ export default function HomePage(props) {
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
                 <Link to={"/bracelet"}>
-                  {" "}
                   <div
                     style={{ height: "230px" }}
                     onClick={() => {
@@ -395,7 +320,6 @@ export default function HomePage(props) {
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
                 <Link to={"/bracelet"}>
-                  {" "}
                   <div
                     style={{ height: "230px" }}
                     onClick={() => {
@@ -433,12 +357,30 @@ export default function HomePage(props) {
 
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
-              <Link to={"/chain"}>  <div style={{ height: "230px" }}  onClick={() => {props.chosenChainCompo(0)}}>
-                   {<img style={{width:'85%',height:'50%',marginTop:'50px'}} src={suprise} alt="logo" />}</div></Link>
+                <Link to={"/chain"}>
+                  <div
+                    style={{ height: "230px" }}
+                    onClick={() => {
+                      props.chosenChainCompo(0);
+                    }}
+                  >
+                    {
+                      <img
+                        style={{
+                          width: "85%",
+                          height: "50%",
+                          marginTop: "50px",
+                        }}
+                        src={suprise}
+                        alt="logo"
+                      />
+                    }
+                  </div>
+                </Link>
               </div>
               <div>
                 <p style={{ fontSize: "100%", marginTop: "0px" }}>
-                  שרשרת בהפתעה{" "}
+                  שרשרת בהפתעה
                 </p>
               </div>
               <div>
@@ -466,7 +408,6 @@ export default function HomePage(props) {
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
                 <Link to={"/chain"}>
-                  {" "}
                   <div
                     style={{ height: "230px" }}
                     onClick={() => {
@@ -478,10 +419,7 @@ export default function HomePage(props) {
                 </Link>
               </div>
               <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>
-                  {" "}
-                  Y12 שרשרת{" "}
-                </p>
+                <p style={{ fontSize: "100%", marginTop: "0px" }}>Y12 שרשרת</p>
               </div>
               <div>
                 <p
@@ -508,7 +446,6 @@ export default function HomePage(props) {
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
                 <Link to={"/chain"}>
-                  {" "}
                   <div
                     style={{ height: "230px" }}
                     onClick={() => {
@@ -625,7 +562,6 @@ export default function HomePage(props) {
             <div className="homePageProduct">
               <div style={{ height: "100%" }}>
                 <Link to={"/chain"}>
-                  {" "}
                   <div
                     style={{ height: "230px" }}
                     onClick={() => {
@@ -637,10 +573,7 @@ export default function HomePage(props) {
                 </Link>
               </div>
               <div>
-                <p style={{ fontSize: "100%", marginTop: "0px" }}>
-                  {" "}
-                  Y11 שרשרת{" "}
-                </p>
+                <p style={{ fontSize: "100%", marginTop: "0px" }}>Y11 שרשרת</p>
               </div>
               <div>
                 <p
@@ -784,17 +717,16 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
-                    marginTop:'50px'
+                    marginTop: "50px",
                   }}
                 >
                   {props.saleArr[0].name}
                 </p>
               </div>
               <div>
-                {" "}
-                <p
-                  style={{ fontSize: "20px", marginTop: "0px" }}
-                >{`₪ ${props.saleArr[0].price} `}</p>
+                <p style={{ fontSize: "20px", marginTop: "0px" }}>
+                  {`₪ ${props.saleArr[0].price} `}
+                </p>
                 <div style={{ width: "80%", margin: "0 auto" }}>
                   <button
                     className="btn3"
@@ -824,17 +756,16 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
-                    marginTop:'50px'
+                    marginTop: "50px",
                   }}
                 >
                   {props.saleArr[1].name}
                 </p>
               </div>
               <div>
-                {" "}
-                <p
-                  style={{ fontSize: "20px", marginTop: "0px" }}
-                >{`₪ ${props.saleArr[1].price} `}</p>
+                <p style={{ fontSize: "20px", marginTop: "0px" }}>
+                  {`₪ ${props.saleArr[1].price} `}
+                </p>
                 <div style={{ width: "80%", margin: "0 auto" }}>
                   <button
                     className="btn3"
@@ -864,17 +795,16 @@ export default function HomePage(props) {
                     fontSize: "20px",
                     fontFamily: "Times New Roman",
                     marginBottom: "0px",
-                    marginTop:'50px'
+                    marginTop: "50px",
                   }}
                 >
                   {props.saleArr[2].name}
                 </p>
               </div>
               <div>
-                {" "}
-                <p
-                  style={{ fontSize: "20px", marginTop: "0px" }}
-                >{`₪ ${props.saleArr[2].price} `}</p>
+                <p style={{ fontSize: "20px", marginTop: "0px" }}>
+                  {`₪ ${props.saleArr[2].price} `}
+                </p>
                 <div style={{ width: "80%", margin: "0 auto" }}>
                   <button
                     className="btn3"

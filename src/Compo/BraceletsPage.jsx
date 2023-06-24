@@ -13,6 +13,9 @@ export default function BraceletsPage(props) {
             name={val.name}
             price={val.price}
             func={props.chosenBraceletCompo}
+            cnt={val.cnt}
+            delete={props.delete}
+
           />
         );
       })}

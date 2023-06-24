@@ -3,13 +3,13 @@ import './style.css'
 import logo from './logo.jpg';
 import instegram from './InstagramLogo.png'
 import whatsapp from './whatsapp.png'
-import cart from './cartlogo.jpg'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import {CgMenuRound} from 'react-icons/cg'
 import {CgCloseO} from 'react-icons/cg'
 import {FaWhatsapp} from 'react-icons/fa'
+import {BsBasket} from 'react-icons/bs'
 import Humburger from "./Humburger";
 
 
@@ -22,7 +22,14 @@ export default function Title(props){
   
   const nav=useNavigate()
 
-
+  const showNun=()=>{
+    if(props.num<1){
+      return <p></p>
+    }
+    else{
+      return <h1 style={{fontSize:'15px'}}>{props.num}</h1>
+    }
+  }
 
   
   const showDiv=()=>{
@@ -42,6 +49,7 @@ export default function Title(props){
   const burgerIcon = <CgMenuRound size='40px' onClick={()=>{props.setFlag(!props.flag)}}/>
   const closeIcon = <CgCloseO size='40px' onClick={()=>{props.setFlag(!props.flag)}} />
   const whatsappLogo=<FaWhatsapp size='38px'/>
+  const cart=<BsBasket size='30px'/>
 
     return (
 
@@ -54,8 +62,8 @@ export default function Title(props){
     
           
         <div style={{display:'flex',width:'160px'}}>
-        <img  className='mediaCartLogo' onClick={()=>{nav('/Cart')}} src={cart} alt="cart" />
-        <div className="divNum"><h1 style={{fontSize:'15px'}}>{props.num}</h1></div>
+        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
+        <div className="divNum">{showNun()}</div>
         </div>
           <div style={{width:'100%',marginTop:'40px'}}>
         <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
@@ -80,8 +88,8 @@ export default function Title(props){
 
         <div style={{width:'254px'}}>
           <div style={{display:'flex'}}>
-        <img  className='cartLogo' onClick={()=>{nav('/Cart')}} src={cart} alt="cart" />
-        <div className="divNum"><h1 style={{fontSize:'20px'}}>{props.num}</h1></div>
+       <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
+        <div className="divNum">{showNun()}</div>
         </div>
         </div>
        

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function ChainsList(props) {
 
+  const checkFlag=()=>{
+  if(props.cnt>1){
+    setFlag2(true)
+  }
+}
+
+const [flag,setFlag]=useState(false)
+const [flag2,setFlag2]=useState(false)
+
+
+
   const showCnt=()=>{
-    if(props.cnt<1){
+    if(flag==false){
       return <button className="btn2"
       onClick={() => {
         props.add(props.index);
@@ -13,16 +24,24 @@ export default function ChainsList(props) {
       הוספה לסל
     </button>
     }
-    else{
-      return <button className="btn2"
-      onClick={() => {
-        props.add(props.index);
-      }}
-    >
+    else {
+      return <div>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.name,props.index)}}>
+      -
+    </button>
+      <button className="btn2" style={{width:'40px'}}>
   {props.cnt}
     </button>
+    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
+        props.add(props.index);
+      }}>
+        +
+    </button>
+  
+    </div>
   }
   }
+  
   return (
     <div
       style={{
@@ -67,15 +86,17 @@ export default function ChainsList(props) {
         >{`₪ ${props.price} `}</p>
       </div>
       <div>
-        <button
-          className="btn2"
-          onClick={() => {
-            props.add(props.index);
+       <div
+           onClick={() => {
+            setFlag(true)
           }}
         >
-          הוספה לסל
-        </button>
+          {showCnt()}
+          </div>
       </div>
+      {/* {checkFlag()}    */}
     </div>
-  );
+   
+  )
+ 
 }

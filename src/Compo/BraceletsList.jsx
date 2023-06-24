@@ -1,7 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
 export default function BraceletsList(props) {
+
+  const [flag,setFlag]=useState(false)
+
+  
+
+
+
+  const showCnt=()=>{
+    if(flag==false){
+      return <button className="btn2"
+      onClick={() => {
+        props.add(props.index);
+      }}
+    >
+      הוספה לסל
+    </button>
+    }
+    else{
+      return <div>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.name,props.index)}}>
+      -
+    </button>
+      <button className="btn2" style={{width:'40px'}}>
+  {props.cnt}
+    </button>
+    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
+        props.add(props.index);
+      }}>
+        +
+    </button>
+  
+    </div>
+  }
+  }
+
   return (
     <div
       style={{
@@ -46,14 +83,13 @@ export default function BraceletsList(props) {
         >{`₪ ${props.price} `}</p>
       </div>
       <div>
-        <button
-          className="btn2"
-          onClick={() => {
-            props.add(props.index);
+      <div
+           onClick={() => {
+            setFlag(true)
           }}
         >
-          הוספה לסל
-        </button>
+          {showCnt()}
+          </div>
       </div>
     </div>
   );

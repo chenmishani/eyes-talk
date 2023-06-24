@@ -14,6 +14,7 @@ export default function ChainsPage(props) {
             price={val.price}
             func={props.chosenChainCompo}
             cnt={val.cnt}
+            delete={props.delete}
           />
         );
       })}
