@@ -8,6 +8,7 @@ export default function BraceletsPage(props) {
         return (
           <BraceletsList
             add={props.add}
+            add2={props.add2}
             index={i}
             photo={val.photo}
             name={val.name}

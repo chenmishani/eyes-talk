@@ -2,46 +2,58 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function ChainsList(props) {
+  const [flag, setFlag] = useState(false);
 
-  const checkFlag=()=>{
-  if(props.cnt>1){
-    setFlag2(true)
-  }
-}
-
-const [flag,setFlag]=useState(false)
-const [flag2,setFlag2]=useState(false)
-
-
-
-  const showCnt=()=>{
-    if(flag==false){
-      return <button className="btn2"
-      onClick={() => {
-        props.add(props.index);
-      }}
-    >
-      הוספה לסל
-    </button>
+  const showCnt = () => {
+    if (flag == false) {
+      return (
+        <button
+          className="btn2"
+          onClick={() => {
+            props.add(props.index);
+          }}
+        >
+          הוספה לסל
+        </button>
+      );
+    } else {
+      return (
+        <div>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+              marginRight: "5px",
+            }}
+            onClick={() => {
+              props.delete(props.name, props.index);
+            }}
+          >
+            -
+          </button>
+          <button className="btn2" style={{ width: "40px" }}>
+            {props.cnt}
+          </button>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+            }}
+            onClick={() => {
+              props.add2(props.index);
+            }}
+          >
+            +
+          </button>
+        </div>
+      );
     }
-    else {
-      return <div>
-          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.name,props.index)}}>
-      -
-    </button>
-      <button className="btn2" style={{width:'40px'}}>
-  {props.cnt}
-    </button>
-    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
-        props.add(props.index);
-      }}>
-        +
-    </button>
-  
-    </div>
-  }
-  }
-  
+  };
+
   return (
     <div
       style={{
@@ -86,17 +98,14 @@ const [flag2,setFlag2]=useState(false)
         >{`₪ ${props.price} `}</p>
       </div>
       <div>
-       <div
-           onClick={() => {
-            setFlag(true)
+        <div
+          onClick={() => {
+            setFlag(true);
           }}
         >
           {showCnt()}
-          </div>
+        </div>
       </div>
-      {/* {checkFlag()}    */}
     </div>
-   
-  )
- 
+  );
 }

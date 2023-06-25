@@ -23,16 +23,16 @@ export default function BraceletsList(props) {
     }
     else{
       return <div>
-          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.name,props.index)}}>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',marginRight:'5px'}} onClick={()=>{props.delete(props.name,props.index)}}>
       -
     </button>
       <button className="btn2" style={{width:'40px'}}>
   {props.cnt}
     </button>
-    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
-        props.add(props.index);
+    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px'}} onClick={() => {
+        props.add2(props.index);
       }}>
-        +
+      +
     </button>
   
     </div>

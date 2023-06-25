@@ -8,6 +8,7 @@ export default function ChainsPage(props) {
         return (
           <ChainsList
             add={props.addChain}
+            add2={props.add2}
             index={i}
             photo={val.photo}
             name={val.name}

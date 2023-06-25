@@ -5,6 +5,13 @@ import d8s from "./photos/d8s.JPG";
 import d4s from "./photos/d4s.JPG";
 import l1s from "./photos/l1s.JPG";
 import a1s from "./photos/a1s.JPG";
+import homePage1 from "./photos/homePage1.png";
+import homePage2 from "./photos/homePage2.png";
+import homePage3 from "./photos/homePage3.png";
+import homePage4 from "./photos/homePage4.png";
+import homePageVideo from "./photos/homePageVideo.mp4";
+import {AiOutlineRightCircle} from "react-icons/ai";
+import {AiOutlineLeftCircle} from "react-icons/ai";
 
 import { Link } from "react-router-dom";
 import MediaHomePageChain from "./MediaHomePageChain";
@@ -51,9 +58,71 @@ export default function HomePage(props) {
   const MediaBracelets=[{photo: <img style={{width: "90%", height: "90%" }} src={l1s} alt="logo" />,name:'L1',price:150,index:0},
   {photo: <img style={{width: "90%", height: "90%" }} src={a1s} alt="logo" />,name:'A1',price:150,index:5},]
 
+
+  const right=<AiOutlineRightCircle size='25px'/>
+  const left=<AiOutlineLeftCircle size='25px'/>
+
+
+  const SliderData=[
+   {image:<img style={{height:'100%',width:'85%'}} src={homePage1} alt="logo" />},
+   {image:<img style={{height:'100%',width:'85%'}} src={homePage2} alt="logo" />},
+   {image:<img style={{height:'100%',width:'85%'}} src={homePage3} alt="logo" />}  
+  ]
+  
+  const [current, setCurrent] = useState(0);
+  const length = SliderData.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  }
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  }
+
+  if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+    return null;
+  }
+
+
   return (
     <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-      <div className="mediaMainDiv">
+
+       <div className="mediaMainDiv">
+
+     <Link to={'/Bracelets'}><div><img style={{height:'80%',width:'80%'}} src={homePage4} alt="logo" /></div></Link> 
+
+       <div>
+    <video style={{width:'80%',height:'50%'}} controls>
+        <source src={homePageVideo} type="video/mp4" />
+       
+      </video>
+    </div>
+
+    <Link to={'/Sale'}><div style={{width:'100%',marginBottom:'20px',marginTop:'20px'}}>
+      <div style={{display:'flex',flexDirection:'row',width:'100%'}}>
+          <div style={{ display:'flex',alignItems:'center'}}><div onClick={prevSlide} >{left}</div></div>
+          <div> <section className='slider'>
+        {SliderData.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? 'slide active' : 'slide'}
+            key={index}
+          >
+            {index === current && (
+             slide.image
+            )}
+          </div>
+        )
+      })}
+    </section></div>
+          <div style={{ display:'flex',justifyContent:'center',alignItems:'center'}}><div onClick={nextSlide}>{right}</div></div>
+          </div> 
+
+      </div> </Link>
+      </div>
+
+      {/* <div className="mediaMainDiv">
         <div className="mediaSaleDiv">
           <div
             style={{
@@ -258,6 +327,7 @@ export default function HomePage(props) {
 
       <div className="mainDiv">
         <div className="saleDiv">
+          
           <div style={{ marginLeft: "75%", marginTop: "0px" }}>
             <p
               style={{
@@ -818,8 +888,8 @@ export default function HomePage(props) {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> 
+       </div>
     </div>
   );
 }

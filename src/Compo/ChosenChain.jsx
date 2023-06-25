@@ -68,7 +68,7 @@ export default function ChosenChain(props) {
           <div style={{margin:'0 auto'}}>
           <div style={{display:'flex',flexDirection:'row',width:'100%'}}>
           <div style={{ display:'flex',justifyContent:'center',alignItems:'center',marginRight:'10px'}}><div onClick={prevSlide} >{left}</div></div>
-          <div style={{}}> <section className='slider'>
+          <div> <section className='slider'>
         {SliderData.map((slide, index) => {
         return (
           <div
