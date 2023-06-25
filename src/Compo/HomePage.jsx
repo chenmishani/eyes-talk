@@ -13,15 +13,14 @@ import homePageVideo from "./photos/homePageVideo.mp4";
 import {AiOutlineRightCircle} from "react-icons/ai";
 import {AiOutlineLeftCircle} from "react-icons/ai";
 
-import { Link } from "react-router-dom";
-import MediaHomePageChain from "./MediaHomePageChain";
-import MediaHomePageBracelets from "./MediaHomePageBracelets";
+import { Link, useNavigate } from "react-router-dom";
+
 
 export default function HomePage(props) {
 
 
   const [flag,setFlag]=useState(false)
-
+  const nev=useNavigate()
 
 
   const showCntChain=(i)=>{
@@ -64,9 +63,9 @@ export default function HomePage(props) {
 
 
   const SliderData=[
-   {image:<img style={{height:'100%',width:'85%'}} src={homePage1} alt="logo" />},
-   {image:<img style={{height:'100%',width:'85%'}} src={homePage2} alt="logo" />},
-   {image:<img style={{height:'100%',width:'85%'}} src={homePage3} alt="logo" />}  
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage1} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage2} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage3} alt="logo" />}  
   ]
   
   const [current, setCurrent] = useState(0);
@@ -93,19 +92,20 @@ export default function HomePage(props) {
      <Link to={'/Bracelets'}><div><img style={{height:'80%',width:'80%'}} src={homePage4} alt="logo" /></div></Link> 
 
        <div>
-    <video style={{width:'80%',height:'50%'}} controls>
+    <video style={{width:'80%',height:'50%'}} autoPlay loop>
         <source src={homePageVideo} type="video/mp4" />
        
       </video>
     </div>
 
-    <Link to={'/Sale'}><div style={{width:'100%',marginBottom:'20px',marginTop:'20px'}}>
+    <div style={{width:'100%',marginBottom:'20px',marginTop:'20px'}}>
       <div style={{display:'flex',flexDirection:'row',width:'100%'}}>
           <div style={{ display:'flex',alignItems:'center'}}><div onClick={prevSlide} >{left}</div></div>
           <div> <section className='slider'>
         {SliderData.map((slide, index) => {
         return (
-          <div
+            
+            <div
             className={index === current ? 'slide active' : 'slide'}
             key={index}
           >
@@ -113,215 +113,19 @@ export default function HomePage(props) {
              slide.image
             )}
           </div>
+     
+          
+          
+          
         )
       })}
     </section></div>
           <div style={{ display:'flex',justifyContent:'center',alignItems:'center'}}><div onClick={nextSlide}>{right}</div></div>
           </div> 
 
-      </div> </Link>
+      </div> 
       </div>
 
-      {/* <div className="mediaMainDiv">
-        <div className="mediaSaleDiv">
-          <div
-            style={{
-              display: "flex",
-              flexDirection:'row',
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
-          >
-            
-              
-      {MediaChains.map((val) => {
-        return (
-          <MediaHomePageChain
-            add={props.addChain}
-            index={val.index}
-            photo={val.photo}
-            name={val.name}
-            price={val.price}
-            func={props.chosenChainCompo}
-            arrChains={props.arrChains}
-            delete={props.deleteChain}
-
-          />
-        );
-      })}
-    
-    
-      {MediaBracelets.map((val) => {
-        return (
-          <MediaHomePageBracelets
-            add={props.addBracletes}
-            index={val.index}
-            photo={val.photo}
-            name={val.name}
-            price={val.price}
-            func={props.chosenBraceletCompo}
-            arrBracelets={props.arrBracelets}
-            delete={props.deleteBracelet}
-
-          />
-        );
-      })}
-    
-
-          </div>
-        </div>
-
-        <div className="mediaSupriseDiv">
-          <div style={{ margin: "0 auto", width: "100%" }}>
-            <h2
-              style={{
-                width: "100%",
-                fontSize: "25px",
-                fontStyle: "rubik",
-                marginTop: "0px",
-              }}
-            >
-              ??אפשר לא לאהוב הפתעות
-            </h2>
-          </div>
-
-          <div
-            style={{
-              width: "175px",
-              paddingBottom: "10px",
-              display: "flex",
-              flexDirection: "column",
-              margin: "0 auto",
-              backgroundColor: "white",
-              border: "2px solid black",
-            }}
-          >
-            <div>
-              <h1
-                style={{
-                  fontSize: "27px",
-                  fontFamily: "Times New Roman",
-                  marginBottom: "20px",
-                }}
-              >
-                !{props.arrChains[0].name}
-              </h1>
-            </div>
-            <Link to={"/chain"}>
-              <div
-                style={{ height: "100px" }}
-                onClick={() => {
-                  props.chosenChainCompo(0);
-                }}
-              >
-                {
-                  <img
-                    style={{ width: "80%", height: "75%", marginTop: "10px" }}
-                    src={suprise}
-                    alt="logo"
-                  />
-                }
-              </div>
-            </Link>
-            <div>
-              <p
-                style={{ fontSize: "20px", marginTop: "0px" }}
-              >{`₪ ${props.arrChains[0].price} `}</p>
-              <div>
-                <button
-                  className="btn4"
-                  onClick={() => {
-                    props.addSale(0);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mediaSaleDiv">
-          <div
-            style={{
-              width: "330px",
-              paddingBottom: "10px",
-              display: "flex",
-              flexDirection: "column",
-              border: "2px solid #adcbd3",
-              margin: "0 auto",
-            }}
-          >
-            <div style={{ height: "200px" }}> {props.saleArr[0].photo}</div>
-            <div>
-              <p
-                style={{
-                  fontSize: "20px",
-                  fontFamily: "Times New Roman",
-                  marginBottom: "0px",
-                }}
-              >
-                {props.saleArr[0].name}
-              </p>
-            </div>
-            <div>
-              <p
-                style={{ fontSize: "20px", marginTop: "0px" }}
-              >{`₪ ${props.saleArr[0].price} `}</p>
-              <div style={{ width: "80%", margin: "0 auto" }}>
-                <button
-                  className="btn3"
-                  onClick={() => {
-                    props.addSale(0);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            style={{
-              width: "330px",
-              paddingBottom: "10px",
-              display: "flex",
-              flexDirection: "column",
-              border: "2px solid #adcbd3",
-              margin: "0 auto",
-              marginTop: "10px",
-            }}
-          >
-            <div style={{ height: "200px" }}> {props.saleArr[2].photo}</div>
-            <div>
-              <p
-                style={{
-                  fontSize: "20px",
-                  fontFamily: "Times New Roman",
-                  marginBottom: "0px",
-                }}
-              >
-                {props.saleArr[2].name}
-              </p>
-            </div>
-            <div>
-              <p
-                style={{ fontSize: "20px", marginTop: "0px" }}
-              >{`₪ ${props.saleArr[2].price} `}</p>
-              <div style={{ width: "80%", margin: "0 auto" }}>
-                <button
-                  className="btn3"
-                  onClick={() => {
-                    props.addSale(2);
-                  }}
-                >
-                  הוספה לסל
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 {/* div for web */}
 
