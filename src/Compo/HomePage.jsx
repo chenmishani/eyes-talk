@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import "./style.css";
 import suprise from "./suprise.jpg";
 import d8s from "./photos/d8s.JPG";
@@ -18,18 +18,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function HomePage(props) {
 
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlayPause = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-  }
 
 
   const [flag,setFlag]=useState(false)
@@ -76,9 +65,9 @@ export default function HomePage(props) {
 
 
   const SliderData=[
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage1} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage2} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage3} alt="logo" />}  
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'90%'}} src={homePage1} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'90%'}} src={homePage2} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'90%'}} src={homePage3} alt="logo" />}  
   ]
   
   const [current, setCurrent] = useState(0);
@@ -98,19 +87,17 @@ export default function HomePage(props) {
 
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",padding:'0px' }}>
+    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",padding:'10px' }}>
 
        <div className="mediaMainDiv">
 
-     <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'90%'}} src={homePage4} alt="logo" /></div></Link> 
+     <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'95%'}} src={homePage4} alt="logo" /></div></Link> 
 
        <div>
-       <video style={{width:'90%'}} ref={videoRef} controls autoPlay={isPlaying}>
+       <video style={{width:'95%'}} controls  >
         <source src={homePageVideo} type="video/mp4" />
         </video>
-      {/* <button onClick={handlePlayPause}>
-        {isPlaying ? 'Pause' : 'Play'}
-      </button> */}
+   
      
     </div>
 
