@@ -9,6 +9,7 @@ import homePage1 from "./photos/homePage1.png";
 import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
+import homePage5 from "./photos/homePage5.png";
 import homePageVideo from "./homePageVideo.mp4";
 import {BsArrowRightShort} from "react-icons/bs";
 import {BsArrowLeftShort} from "react-icons/bs";
@@ -91,15 +92,14 @@ export default function HomePage(props) {
 
        <div className="mediaMainDiv">
 
-     <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'95%'}} src={homePage4} alt="logo" /></div></Link> 
+     <Link to={'/Bracelets'}><div><img style={{width:'85%'}} src={homePage4} alt="logo" /></div></Link> 
+     <Link to={'/chains'}><div><img style={{width:'85%'}} src={homePage5} alt="logo" /></div></Link> 
 
-       <div>
+       {/* <div>
        <video style={{width:'95%'}} controls  >
         <source src={homePageVideo} type="video/mp4" />
-        </video>
-   
-     
-    </div>
+        </video>    
+    </div> */}
 
     <div style={{width:'100%',marginBottom:'20px',marginTop:'20px'}}>
       <div style={{display:'flex',flexDirection:'row',width:'100%'}}>
