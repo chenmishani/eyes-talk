@@ -25,8 +25,7 @@ export default function ChainsList(props) {
               border: "0px",
               background: "white",
               fontSize: "20px",
-              marginRight: "5px",
-            }}
+              }}
             onClick={() => {
               props.delete(props.name, props.index);
             }}

@@ -92,7 +92,7 @@ export default function HomePage(props) {
      <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'90%'}} src={homePage4} alt="logo" /></div></Link> 
 
        <div>
-    <video style={{width:'90%',height:'50%'}} autoPlay muted>
+    <video style={{width:'90%',height:'50%'}} controls>
         <source src={homePageVideo} type="video/mp4" />
        
       </video>
