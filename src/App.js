@@ -167,11 +167,15 @@ arrChains[index].cnt=arrChains[index].cnt+1
 }
 
 const addChain2=()=>{
-  setcart([...cart,chosenChain])
+  if(chosenChain.cnt<1){
+    setcart([...cart,chosenChain])
+  }
   settemp(temp+chosenChain.price)
   setNum(num+1)
-  
+  chosenChain.cnt=chosenChain.cnt+1
+      
   }
+
 
   const addChain3=(index)=>{
     settemp(temp+arrChains[index].price)
@@ -191,10 +195,13 @@ const addBracelets=(index)=>{
   }
 
   const addBracelets2=()=>{
-    setcart([...cart,chosenBracelet])
+    if(chosenBracelet.cnt<1){
+      setcart([...cart,chosenBracelet])
+    }
     settemp(temp+chosenBracelet.price)
     setNum(num+1)
-    
+    chosenBracelet.cnt=chosenBracelet.cnt+1
+        
     }
 
     const addBracelets3=(index)=>{
@@ -230,45 +237,47 @@ const deleteCart=()=>{
   
 }
 
-const deleteChain=(name,i)=>{
+const deleteChain=(i)=>{
   
   if(arrChains[i].cnt>0){
  arrChains[i].cnt=arrChains[i].cnt-1 
  settemp(temp-arrChains[i].price)
  setNum(num-1)
 }
-else{ 
+}
+
+const deleteChain2=(i)=>{
   
-    const index = cart.findIndex(element => element.name === name);
-    const newArray = [...cart]; 
-    newArray.splice(index, 1); 
-    setcart(newArray); 
-  
+  if(chosenChain.cnt>0){
+ chosenChain.cnt=chosenChain.cnt-1 
+ settemp(temp-chosenChain.price)
+ setNum(num-1)
 }
 }
 
-const deleteBracelet=(name,i)=>{
-  const index = cart.findIndex(element => element.name === name);
-  if (index !== -1) {
-    const newArray = [...cart]; 
-    newArray.splice(index, 1); 
-    setcart(newArray); 
-  }
+const deleteBracelet=(i)=>{
+  if(arrBracelets[i].cnt>0){
 arrBracelets[i].cnt=arrBracelets[i].cnt-1
 settemp(temp-arrBracelets[i].price)
 setNum(num-1)
 }
+}
 
-const deleteSale=(name,i)=>{
-  const index = cart.findIndex(element => element.name === name);
-  if (index !== -1) {
-    const newArray = [...cart]; 
-    newArray.splice(index, 1); 
-    setcart(newArray); 
-  }
+const deleteBracelet2=(i)=>{
+  
+  if(chosenBracelet.cnt>0){
+    chosenBracelet.cnt=chosenBracelet.cnt-1 
+ settemp(temp-chosenBracelet.price)
+ setNum(num-1)
+}
+}
+
+const deleteSale=(i)=>{
+  if(arrSales[i].cnt>0){
 arrSales[i].cnt=arrSales[i].cnt-1
 settemp(temp-arrSales[i].price)
 setNum(num-1)
+}
 }
 
 
@@ -302,9 +311,9 @@ const [flag,setFlag]= useState(false)
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
-    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart}/>} /> 
-    <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2}/>} /> 
-    <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2}/>} /> 
+    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart}/>} /> 
+    <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
+    <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
     <Route path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 
     <Route path='/order' element= {<Order cart={cart} deleteCart={deleteCart} />}/> 
     <Route path='/finish' element= {<Finish />}/> 

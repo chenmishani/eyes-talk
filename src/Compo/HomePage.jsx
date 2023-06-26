@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState, useRef } from 'react';
 import "./style.css";
 import suprise from "./suprise.jpg";
 import d8s from "./photos/d8s.JPG";
@@ -10,13 +10,26 @@ import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
 import homePageVideo from "./homePageVideo.mp4";
-import {AiOutlineRightCircle} from "react-icons/ai";
-import {AiOutlineLeftCircle} from "react-icons/ai";
+import {BsArrowRightShort} from "react-icons/bs";
+import {BsArrowLeftShort} from "react-icons/bs";
 
 import { Link, useNavigate } from "react-router-dom";
 
 
 export default function HomePage(props) {
+
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  }
 
 
   const [flag,setFlag]=useState(false)
@@ -58,14 +71,14 @@ export default function HomePage(props) {
   {photo: <img style={{width: "90%", height: "90%" }} src={a1s} alt="logo" />,name:'A1',price:150,index:5},]
 
 
-  const right=<AiOutlineRightCircle size='25px'/>
-  const left=<AiOutlineLeftCircle size='25px'/>
+  const right=<BsArrowRightShort size='25px'/>
+  const left=<BsArrowLeftShort size='25px'/>
 
 
   const SliderData=[
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage1} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage2} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage3} alt="logo" />}  
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage1} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage2} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'96%'}} src={homePage3} alt="logo" />}  
   ]
   
   const [current, setCurrent] = useState(0);
@@ -81,21 +94,24 @@ export default function HomePage(props) {
 
   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
     return null;
-  }
+  }  
 
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",padding:'10px' }}>
+    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",padding:'0px' }}>
 
        <div className="mediaMainDiv">
 
      <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'90%'}} src={homePage4} alt="logo" /></div></Link> 
 
        <div>
-    <video style={{width:'90%',height:'50%'}} controls>
+       <video style={{width:'90%'}} ref={videoRef} controls autoPlay={isPlaying}>
         <source src={homePageVideo} type="video/mp4" />
-       
-      </video>
+        </video>
+      {/* <button onClick={handlePlayPause}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button> */}
+     
     </div>
 
     <div style={{width:'100%',marginBottom:'20px',marginTop:'20px'}}>

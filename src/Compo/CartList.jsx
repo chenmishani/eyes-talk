@@ -15,7 +15,11 @@ export default function CartList(props) {
                   }}
                 >
                   
-                  <div style={{textAlign:'left'}}>x{props.cnt}</div>
+                  <div style={{display:'flex',justifyContent:'space-between'}}>
+                 <div>x{props.cnt} </div>
+                 <div onClick={()=>{props.delete()}}> </div>
+                  </div>
+                  
                 <div
                   style={{
                     display: "flex",

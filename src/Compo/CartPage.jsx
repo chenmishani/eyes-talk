@@ -7,11 +7,20 @@ export default function CartPage(props) {
 
     const trashIcon = <BsTrash3 size="40px" />;
 
+    const deleteProduct=()=>{
+      for (let index = 0; index < props.cart.length; index++) {
+        if(props.cart[index].cnt==0){
+          const newArray = [...props.cart]; 
+          newArray.splice(index, 1); 
+          props.setCart(newArray); 
+         }
+        
+      }
+     }
 
   const checkCart = () => {
     if (props.cart.length >= 1) {
-      const trashIcon = <BsTrash3 size="40px" />;
-
+      
       return (
         <div>
           <div
@@ -77,7 +86,8 @@ export default function CartPage(props) {
         border: "solid 1px black",
       }}
     >
-      <div className="cartDiv">{checkCart()}</div>
+      <div className="cartDiv">{checkCart()}
+      {deleteProduct()}</div>
     </div>
   );
 }

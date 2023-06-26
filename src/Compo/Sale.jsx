@@ -26,7 +26,7 @@ const [flag2,setFlag2]=useState(false)
     }
     else {
       return <div>
-          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.name,props.index)}}>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.index)}}>
       -
     </button>
       <button className="btn2" style={{width:'40px'}}>
@@ -93,7 +93,7 @@ const [flag2,setFlag2]=useState(false)
           {showCnt()}
           </div>
       </div>
-      {/* {checkFlag()}    */}
+    
     </div>
    
   )

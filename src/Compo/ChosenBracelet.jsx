@@ -7,6 +7,8 @@ export default function ChosenBracelet(props) {
   const right=<AiOutlineRightCircle size='25px'/>
   const left=<AiOutlineLeftCircle size='25px'/>
 
+  const [flag, setFlag] = useState(false);
+
 
   const SliderData=[
    { image:props.chosenBracelet.photo},
@@ -27,6 +29,57 @@ export default function ChosenBracelet(props) {
   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
     return null;
   }
+
+  
+  const showCnt = () => {
+    if (flag == false) {
+      return (
+        <button
+          className="btn2"
+          onClick={() => {
+            props.add()
+          }}
+        >
+          הוספה לסל
+        </button>
+      );
+    } else {
+      return (
+        <div>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+              }}
+            onClick={() => {
+              props.delete();
+            }}
+          >
+            -
+          </button>
+          <button className="btn2" style={{ width: "25px",textAlign:'center',justifyContent:'center',margin:'5px' }}>
+            {props.chosenBracelet.cnt}
+          </button>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+            }}
+            onClick={() => {
+              props.add();
+            }}
+          >
+            +
+          </button>
+        </div>
+      );
+    }
+  };
+
 
 
   return (
@@ -57,14 +110,13 @@ export default function ChosenBracelet(props) {
         <p> צמיד בעבודת יד שעשוי מחרוזים איכותיים </p>
         <p>צבעים: {props.chosenBracelet.color} </p>
         <p style={{ fontSize: "25px" }}>{`₪ ${props.chosenBracelet.price} `}</p>
-        <button
-          className="btn3"
+        <div
           onClick={() => {
-            props.add(props.chosenBracelet.index);
+            setFlag(true);
           }}
         >
-          הוספה לסל
-        </button>
+          {showCnt()}
+        </div>
       </div>
     </div>
   );

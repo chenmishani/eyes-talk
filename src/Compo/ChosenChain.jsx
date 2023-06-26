@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {AiOutlineRightCircle} from "react-icons/ai";
 import {AiOutlineLeftCircle} from "react-icons/ai";
+import {FcApproval} from "react-icons/fc";
 import suprise from './suprise.jpg'
 
 
@@ -8,6 +9,9 @@ export default function ChosenChain(props) {
 
   const right=<AiOutlineRightCircle size='25px'/>
   const left=<AiOutlineLeftCircle size='25px'/>
+  const vi=<FcApproval size='25px'/>
+
+  const [flag, setFlag] = useState(false);
 
 
   const SliderData=[
@@ -30,11 +34,76 @@ export default function ChosenChain(props) {
     return null;
   }
 
+  
+  const showCnt = () => {
+    if (flag == false) {
+      return (
+        <button
+          className="btn2"
+          onClick={() => {
+            props.add()
+          }}
+        >
+          הוספה לסל
+        </button>
+      );
+    } else {
+      return (
+        <div>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+              }}
+            onClick={() => {
+              props.delete(props.chosenChain.index);
+            }}
+          >
+            -
+          </button>
+          <button className="btn2" style={{ width: "25px",textAlign:'center',justifyContent:'center',margin:'5px' }}>
+            {props.chosenChain.cnt}
+          </button>
+          <button
+            style={{
+              width: "10px",
+              border: "0px",
+              background: "white",
+              fontSize: "20px",
+            }}
+            onClick={() => {
+              props.add();
+            }}
+          >
+            +
+          </button>
+        </div>
+      );
+    }
+  };
 
+  const supriseDiv=()=>{
+    if(flag==true){
+      return <div>{vi}</div>
+    }
+    else{
+      return  <button
+      className="btn3"
+      onClick={() => {
+        props.add();
+      }}
+    >
+      הוספה לסל
+    </button>
+    }
+  }
 
   const showDiv = () => {
-    if (props.chosenChain.price == 200) {
-      return (
+  
+    if (props.chosenChain.price == 180) {
+      return (  
 
 <div className="chosenProductDiv">
              <div style={{margin:'0 auto'}}>
@@ -51,14 +120,13 @@ export default function ChosenChain(props) {
             <p
               style={{ fontSize: "25px", marginTop: "50px" }}
             >{`₪ ${props.chosenChain.price} `}</p>
-            <button
-              className="btn3"
-              onClick={() => {
-                props.add(props.chosenChain.index);
-              }}
-            >
-              הוספה לסל
-            </button>
+              <div
+          onClick={() => {
+            setFlag(true);
+          }}
+        >
+          {supriseDiv()}
+        </div>
           </div>
         </div>
       );
@@ -95,14 +163,13 @@ export default function ChosenChain(props) {
             <p
               style={{ fontSize: "25px", marginTop: "40px" }}
             >{`₪ ${props.chosenChain.price} `}</p>
-            <button
-              className="btn3"
-              onClick={() => {
-                props.add(props.chosenChain.index);
-              }}
-            >
-              הוספה לסל
-            </button>
+            <div
+          onClick={() => {
+            setFlag(true);
+          }}
+        >
+          {showCnt()}
+        </div>
           </div>
         </div>
       );

@@ -23,7 +23,7 @@ export default function BraceletsList(props) {
     }
     else{
       return <div>
-          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',marginRight:'5px'}} onClick={()=>{props.delete(props.name,props.index)}}>
+          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px'}} onClick={()=>{props.delete(props.index)}}>
       -
     </button>
       <button className="btn2" style={{width:'40px'}}>

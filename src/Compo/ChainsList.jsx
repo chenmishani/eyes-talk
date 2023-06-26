@@ -27,7 +27,7 @@ export default function ChainsList(props) {
               fontSize: "20px",
               }}
             onClick={() => {
-              props.delete(props.name, props.index);
+              props.delete(props.index);
             }}
           >
             -
