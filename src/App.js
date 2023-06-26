@@ -158,7 +158,9 @@ const [temp,settemp]=useState(0)
 const [cart,setcart]= useState([])
 
 const addChain=(index)=>{
-setcart([...cart,arrChains[index]])
+  if(arrChains[index].cnt<1){
+    setcart([...cart,arrChains[index]])
+  }
 settemp(temp+arrChains[index].price)
 setNum(num+1)
 arrChains[index].cnt=arrChains[index].cnt+1
@@ -178,7 +180,9 @@ const addChain2=()=>{
     }
 
 const addBracelets=(index)=>{
-  setcart([...cart,arrBracelets[index]])
+  if(arrBracelets[index].cnt<1){
+    setcart([...cart,arrBracelets[index]])
+  }
   settemp(temp+arrBracelets[index].price)
   setNum(num+1)
   arrBracelets[index].cnt=arrBracelets[index].cnt+1
@@ -200,7 +204,9 @@ const addBracelets=(index)=>{
       }
 
     const addSale=(index)=>{
-      setcart([...cart,arrSales[index]])
+      if(arrSales[index].cnt<1){
+        setcart([...cart,arrSales[index]])
+      }
       settemp(temp+arrSales[index].price)
       setNum(num+1)
       arrSales[index].cnt=arrSales[index].cnt+1
@@ -225,15 +231,20 @@ const deleteCart=()=>{
 }
 
 const deleteChain=(name,i)=>{
-  const index = cart.findIndex(element => element.name === name);
-  if (index !== -1) {
+  
+  if(arrChains[i].cnt>0){
+ arrChains[i].cnt=arrChains[i].cnt-1 
+ settemp(temp-arrChains[i].price)
+ setNum(num-1)
+}
+else{ 
+  
+    const index = cart.findIndex(element => element.name === name);
     const newArray = [...cart]; 
     newArray.splice(index, 1); 
     setcart(newArray); 
-  }
-arrChains[i].cnt=arrChains[i].cnt-1
-settemp(temp-arrChains[i].price)
-setNum(num-1)
+  
+}
 }
 
 const deleteBracelet=(name,i)=>{

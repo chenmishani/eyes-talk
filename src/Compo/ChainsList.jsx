@@ -33,7 +33,7 @@ export default function ChainsList(props) {
           >
             -
           </button>
-          <button className="btn2" style={{ width: "40px" }}>
+          <button className="btn2" style={{ width: "25px",textAlign:'center',justifyContent:'center' }}>
             {props.cnt}
           </button>
           <button

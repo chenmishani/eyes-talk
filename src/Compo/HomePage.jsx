@@ -9,7 +9,7 @@ import homePage1 from "./photos/homePage1.png";
 import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
-import homePageVideo from "./photos/homePageVideo.mp4";
+import homePageVideo from "./homePageVideo.mp4";
 import {AiOutlineRightCircle} from "react-icons/ai";
 import {AiOutlineLeftCircle} from "react-icons/ai";
 
@@ -63,9 +63,9 @@ export default function HomePage(props) {
 
 
   const SliderData=[
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage1} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage2} alt="logo" />},
-   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'85%'}} src={homePage3} alt="logo" />}  
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage1} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage2} alt="logo" />},
+   {image:<img onClick={()=>{nev('/sale')}} style={{height:'100%',width:'92%'}} src={homePage3} alt="logo" />}  
   ]
   
   const [current, setCurrent] = useState(0);
@@ -85,14 +85,14 @@ export default function HomePage(props) {
 
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",padding:'10px' }}>
 
        <div className="mediaMainDiv">
 
-     <Link to={'/Bracelets'}><div><img style={{height:'80%',width:'80%'}} src={homePage4} alt="logo" /></div></Link> 
+     <Link to={'/Bracelets'}><div><img style={{height:'90%',width:'90%'}} src={homePage4} alt="logo" /></div></Link> 
 
        <div>
-    <video style={{width:'80%',height:'50%'}} autoPlay loop>
+    <video style={{width:'90%',height:'50%'}} autoPlay muted>
         <source src={homePageVideo} type="video/mp4" />
        
       </video>
