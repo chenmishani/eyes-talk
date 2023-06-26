@@ -26,7 +26,7 @@ export default function BraceletsList(props) {
           <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px'}} onClick={()=>{props.delete(props.index)}}>
       -
     </button>
-      <button className="btn2" style={{width:'40px'}}>
+      <button className="btn2" style={{width:'40px',margin:'10px'}}>
   {props.cnt}
     </button>
     <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px'}} onClick={() => {
@@ -45,7 +45,7 @@ export default function BraceletsList(props) {
         display: "flex",
         flexDirection: "column",
         border: "1px solid #adcbd3",
-        width: "30%",
+        width: "40%",
         margin: "0 auto",
         marginTop: "15px",
       }}

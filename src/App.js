@@ -9,7 +9,6 @@ import Bracelets from './Compo/BraceletsPage';
 import HomePage from './Compo/HomePage';
 import CartPage from './Compo/CartPage';
 import Finish from './Compo/Finish';
-import SubTitle from './Compo/SubTitle';
 import ChosenChain from './Compo/ChosenChain';
 import ChosenBracelet from './Compo/ChosenBracelet';
 import Order from './Compo/Order';
@@ -83,6 +82,7 @@ import a2s from './Compo/photos/a2s.JPG'
 import a3s from './Compo/photos/a3s.JPG'
 import a4s from './Compo/photos/a4s.JPG'
 import a6s from './Compo/photos/a6s.JPG'
+import Suprise from './Compo/Suprise';
 
 
 
@@ -318,11 +318,13 @@ const [flag,setFlag]= useState(false)
     <Route path='/order' element= {<Order cart={cart} deleteCart={deleteCart} />}/> 
     <Route path='/finish' element= {<Finish />}/> 
     <Route path='/contact' element= {<Contact />}/> 
+    <Route path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
+
 
 
 
     </Routes>
-    <SubTitle/>
+
 
     </BrowserRouter>
     

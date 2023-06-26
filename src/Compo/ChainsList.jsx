@@ -32,7 +32,7 @@ export default function ChainsList(props) {
           >
             -
           </button>
-          <button className="btn2" style={{ width: "25px",textAlign:'center',justifyContent:'center' }}>
+          <button className="btn2" style={{ width: "25px",textAlign:'center',justifyContent:'center',margin:'10px' }}>
             {props.cnt}
           </button>
           <button
@@ -59,7 +59,7 @@ export default function ChainsList(props) {
         display: "flex",
         flexDirection: "column",
         border: "1px solid #adcbd3",
-        width: "30%",
+        width: "40%",
         margin: "0 auto",
         marginTop: "10px",
       }}

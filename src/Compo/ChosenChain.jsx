@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import {AiOutlineRightCircle} from "react-icons/ai";
 import {AiOutlineLeftCircle} from "react-icons/ai";
-import {FcApproval} from "react-icons/fc";
 import suprise from './suprise.jpg'
+import viBlue from './vi.png'
 
 
 export default function ChosenChain(props) {
 
   const right=<AiOutlineRightCircle size='25px'/>
   const left=<AiOutlineLeftCircle size='25px'/>
-  const vi=<FcApproval size='25px'/>
+ 
 
   const [flag, setFlag] = useState(false);
 
@@ -85,8 +85,8 @@ export default function ChosenChain(props) {
   };
 
   const supriseDiv=()=>{
-    if(flag==true){
-      return <div>{vi}</div>
+    if(flag==true||props.chosenChain.cnt>0){
+      return <img style={{width:'40px'}} src={viBlue} alt="vi" />
     }
     else{
       return  <button
