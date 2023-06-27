@@ -18,11 +18,14 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 import { Link, useNavigate } from "react-router-dom";
-import { getElementError } from "@testing-library/react";
+
 
 export default function HomePage(props) {
   const [flag, setFlag] = useState(false);
   const nev = useNavigate();
+
+ 
+
 
   const showCntChain = (i) => {
     if (flag == false) {
@@ -169,6 +172,7 @@ export default function HomePage(props) {
   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
     return null;
   }
+
 
 
 

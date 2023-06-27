@@ -101,11 +101,9 @@ export default function Title(props){
         </div>
         <div className="logoDiv"> 
         <div><h1 className="title">EYES  TALK</h1></div>
-        <div>
-        <img style={{width:'85%',marginTop:'20px'}} src={logo} alt="logo" />
- 
-    
-          </div>
+       <Link to={'/'}> <div>
+        <img style={{width:'35%',marginTop:'20px'}} src={logo} alt="logo" />   
+          </div></Link>
         </div> 
         <div>
         <Link to={'/chains'}> <button className="btn" >השרשראות שלנו</button> </Link> 
