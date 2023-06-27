@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import logo from './logo.mp4';
+import logo from './logo.jpg';
 import instegram from './InstagramLogo.png'
 import whatsapp from './whatsapp.png'
 import { useState } from "react";
@@ -70,9 +70,7 @@ export default function Title(props){
         <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
         <div style={{width:'100%',margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-          <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted>
-      <source src={logo} type="video/mp4" />
-    </video>
+        <img style={{width:'85%',marginTop:'20px'}} src={logo} alt="logo" />
             </div>
             </div>
         </div>
@@ -104,9 +102,9 @@ export default function Title(props){
         <div className="logoDiv"> 
         <div><h1 className="title">EYES  TALK</h1></div>
         <div>
-        <video style={{width:'85%',marginTop:'20px'}} autoPlay loop >
-      <source src={logo} type="video/mp4" />
-    </video>
+        <img style={{width:'85%',marginTop:'20px'}} src={logo} alt="logo" />
+ 
+    
           </div>
         </div> 
         <div>
