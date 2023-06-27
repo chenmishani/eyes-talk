@@ -104,7 +104,7 @@ export default function Title(props){
         <div className="logoDiv"> 
         <div><h1 className="title">EYES  TALK</h1></div>
         <div>
-        <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted>
+        <video style={{width:'85%',marginTop:'20px'}} autoPlay loop >
       <source src={logo} type="video/mp4" />
     </video>
           </div>
