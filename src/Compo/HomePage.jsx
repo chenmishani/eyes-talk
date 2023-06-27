@@ -18,6 +18,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 import { Link, useNavigate } from "react-router-dom";
+import { getElementError } from "@testing-library/react";
 
 export default function HomePage(props) {
   const [flag, setFlag] = useState(false);
@@ -169,6 +170,10 @@ export default function HomePage(props) {
     return null;
   }
 
+  window.onload=function(){
+    document.getElementById("autoplay").play()
+  }
+
   return (
     <div
       style={{
@@ -188,9 +193,10 @@ export default function HomePage(props) {
         </div>
 
            <div>
-       <video style={{width:'85%',marginTop:'20px'}} autoPlay loop  >
+       <video style={{width:'85%',marginTop:'20px'}} loop muted id="autoplay"  >
         <source src={homePageVideo} type="video/mp4" />
-        </video>    
+        </video>
+        
     </div>
 
         <Link to={"/Bracelets"}>
