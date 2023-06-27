@@ -170,9 +170,7 @@ export default function HomePage(props) {
     return null;
   }
 
-  window.onload=function(){
-    document.getElementById("autoplay").play()
-  }
+
 
   return (
     <div
@@ -193,7 +191,7 @@ export default function HomePage(props) {
         </div>
 
            <div>
-       <video style={{width:'85%',marginTop:'20px'}} loop muted id="autoplay"  >
+       <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted playsInline>
         <source src={homePageVideo} type="video/mp4" />
         </video>
         

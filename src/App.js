@@ -300,11 +300,15 @@ const chosenBraceletCompo =(i)=>{
 
 const [flag,setFlag]= useState(false)
 
-
+const closeHumburger=()=>{
+if(flag==true){
+  setFlag(false)
+}
+}
 
   return (
 
-    <div className="App" >
+    <div className="App" onClick={()=>{closeHumburger()}} >
        <BrowserRouter>
        <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
     <Routes>

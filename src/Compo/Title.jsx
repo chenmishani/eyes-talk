@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import logo from './logo.jpg';
+import logo from './logo.mp4';
 import instegram from './InstagramLogo.png'
 import whatsapp from './whatsapp.png'
 import { useState } from "react";
@@ -42,7 +42,8 @@ export default function Title(props){
  
   const showCompo=()=>{
     if(props.flag===true){
-      return <div> <Humburger flag={props.flag} setFlag={props.setFlag}/> </div> 
+      return <div> <Humburger flag={props.flag} setFlag={props.setFlag}/>
+      </div> 
     }
   }
 
@@ -68,7 +69,12 @@ export default function Title(props){
           <div style={{width:'100%',marginTop:'40px'}}>
         <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
         <div style={{width:'100%',margin:'0 auto'}}>
-          <div style={{margin:'0 auto'}}><img onClick={()=>{nav('/')}}className='mediaLogo' src={logo} alt="logo" /></div>
+        <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
+          <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted playsInline>
+        <source src={logo} type="video/mp4" />
+        </video>
+          
+            </div>
             </div>
         </div>
        
