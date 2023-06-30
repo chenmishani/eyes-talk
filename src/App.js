@@ -41,7 +41,7 @@ import y11 from './Compo/chains/y11.png'
 import y12 from './Compo/chains/y12.png'
 import y13 from './Compo/chains/y13.png'
 import y14 from './Compo/chains/y14.png'
-import suprise from './Compo/suprise.jpg'
+import suprise from './Compo/photos2/suprise.jpg'
 
 import sale1 from './Compo/photos/sale1.JPG'
 import sale2 from './Compo/photos/sale2.JPG'
@@ -83,21 +83,6 @@ import a3s from './Compo/photos/a3s.JPG'
 import a4s from './Compo/photos/a4s.JPG'
 import a6s from './Compo/photos/a6s.JPG'
 import Suprise from './Compo/Suprise';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

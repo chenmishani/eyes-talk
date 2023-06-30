@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import suprise from './suprise.jpg'
-import viBlue from './vi.png'
+import suprise from './photos2/suprise.jpg'
+import viBlue from './photos2/vi.png'
 
 export default function Suprise(props) {
 

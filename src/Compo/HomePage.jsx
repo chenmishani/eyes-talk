@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import suprise from "./suprise.jpg";
+import suprise from "./photos2/suprise.jpg";
 import d8s from "./photos/d8s.JPG";
 import d4s from "./photos/d4s.JPG";
 import l1s from "./photos/l1s.JPG";
@@ -11,7 +11,7 @@ import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
 import homePage5 from "./photos/homePage5.png";
 import homePageTitle from "./photos/homePageTitle.png";
-import homePageVideo from "./homePageVideo.mp4";
+import homePageVideo from "./photos2/homePageVideo.mp4";
 
 
 import { BsArrowRightShort } from "react-icons/bs";
@@ -26,95 +26,94 @@ export default function HomePage(props) {
 
  
 
+  // const showCntChain = (i) => {
+  //   if (flag == false) {
+  //     return (
+  //       <button
+  //         className="btn2"
+  //         onClick={() => {
+  //           props.addChain(i);
+  //         }}
+  //       >
+  //         הוספה לסל
+  //       </button>
+  //     );
+  //   } else {
+  //     return (
+  //       <div>
+  //         <button
+  //           style={{
+  //             width: "10px",
+  //             border: "0px",
+  //             background: "white",
+  //             fontSize: "20px",
+  //             margin: "10px",
+  //           }}
+  //           onClick={() => {
+  //             props.deleteChain(props.arrChains[i].name, i);
+  //           }}
+  //         >
+  //           -
+  //         </button>
+  //         <button className="btn2" style={{ width: "40px" }}>
+  //           {props.arrChains[4].cnt}
+  //         </button>
+  //         <button
+  //           style={{
+  //             width: "10px",
+  //             border: "0px",
+  //             background: "white",
+  //             fontSize: "20px",
+  //             margin: "5px",
+  //           }}
+  //           onClick={() => {
+  //             props.addChain(i);
+  //           }}
+  //         >
+  //           +
+  //         </button>
+  //       </div>
+  //     );
+  //   }
+  // };
 
-  const showCntChain = (i) => {
-    if (flag == false) {
-      return (
-        <button
-          className="btn2"
-          onClick={() => {
-            props.addChain(i);
-          }}
-        >
-          הוספה לסל
-        </button>
-      );
-    } else {
-      return (
-        <div>
-          <button
-            style={{
-              width: "10px",
-              border: "0px",
-              background: "white",
-              fontSize: "20px",
-              margin: "10px",
-            }}
-            onClick={() => {
-              props.deleteChain(props.arrChains[i].name, i);
-            }}
-          >
-            -
-          </button>
-          <button className="btn2" style={{ width: "40px" }}>
-            {props.arrChains[4].cnt}
-          </button>
-          <button
-            style={{
-              width: "10px",
-              border: "0px",
-              background: "white",
-              fontSize: "20px",
-              margin: "5px",
-            }}
-            onClick={() => {
-              props.addChain(i);
-            }}
-          >
-            +
-          </button>
-        </div>
-      );
-    }
-  };
+  // const MediaChains = [
+  //   {
+  //     photo: (
+  //       <img style={{ width: "90%", height: "90%" }} src={d8s} alt="logo" />
+  //     ),
+  //     name: "D8",
+  //     price: 150,
+  //     index: 8,
+  //   },
+  //   {
+  //     photo: (
+  //       <img style={{ width: "90%", height: "90%" }} src={d4s} alt="logo" />
+  //     ),
+  //     name: "D4",
+  //     price: 150,
+  //     index: 4,
+  //   },
+  // ];
 
-  const MediaChains = [
-    {
-      photo: (
-        <img style={{ width: "90%", height: "90%" }} src={d8s} alt="logo" />
-      ),
-      name: "D8",
-      price: 150,
-      index: 8,
-    },
-    {
-      photo: (
-        <img style={{ width: "90%", height: "90%" }} src={d4s} alt="logo" />
-      ),
-      name: "D4",
-      price: 150,
-      index: 4,
-    },
-  ];
-
-  const MediaBracelets = [
-    {
-      photo: (
-        <img style={{ width: "90%", height: "90%" }} src={l1s} alt="logo" />
-      ),
-      name: "L1",
-      price: 150,
-      index: 0,
-    },
-    {
-      photo: (
-        <img style={{ width: "90%", height: "90%" }} src={a1s} alt="logo" />
-      ),
-      name: "A1",
-      price: 150,
-      index: 5,
-    },
-  ];
+  // const MediaBracelets = [
+  //   {
+  //     photo: (
+  //       <img style={{ width: "90%", height: "90%" }} src={l1s} alt="logo" />
+  //     ),
+  //     name: "L1",
+  //     price: 150,
+  //     index: 0,
+  //   },
+  //   {
+  //     photo: (
+  //       <img style={{ width: "90%", height: "90%" }} src={a1s} alt="logo" />
+  //     ),
+  //     name: "A1",
+  //     price: 150,
+  //     index: 5,
+  //   },
+  // ];
 
   const right = <BsArrowRightShort size="25px" />;
   const left = <BsArrowLeftShort size="25px" />;
@@ -212,7 +211,24 @@ export default function HomePage(props) {
           </div>
         </Link>
 
-          <div style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}>
+        <div className="photo-gallery">
+      <div className="scrollable-container">
+        <div className="photo-wrapper">
+        <img style={{ height: "80%", width: "80%" }}
+          onClick={() => {nev("/sale")}} src={homePage1} alt="Photo 1" />
+        </div>
+         <div className="photo-wrapper">
+          <img style={{ height: "100%", width: "80%" }}
+           onClick={() => {nev("/sale")}} src={homePage2} alt="Photo 2" />
+        </div>
+        <div className="photo-wrapper">
+          <img style={{ height: "100%", width: "80%" }}
+           onClick={() => {nev("/sale")}} src={homePage3} alt="Photo 3" />
+        </div>
+        </div>
+    </div>
+
+          {/* <div style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}>
           <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
               <div onClick={prevSlide}>{left}</div>
@@ -242,7 +258,7 @@ export default function HomePage(props) {
               <div onClick={nextSlide}>{right}</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* div for web */}
