@@ -194,7 +194,7 @@ export default function HomePage(props) {
         </div>
 
            <div>
-       <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted >
+       <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted playsInline >
         <source src={homePageVideo} type="video/mp4" />
         </video>
         
