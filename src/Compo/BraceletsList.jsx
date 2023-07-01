@@ -50,11 +50,7 @@ export default function BraceletsList(props) {
         marginTop: "15px",
       }}
     >
-      <div>
-        <p style={{ fontSize: "130%", marginTop: "20px" }}>{props.name} </p>
-      </div>
-
-      <div style={{ height: "100%" }}>
+          <div style={{ height: "100%" }}>
         <Link to={"/bracelet"}>
           <div
             style={{
@@ -73,12 +69,21 @@ export default function BraceletsList(props) {
       </div>
 
       <div>
+        <p style={{ fontSize: "130%", marginTop: "20px", textAlign:'left',marginLeft:'10px',marginBottom:'0px' }}>{props.name} </p>
+        <p style={{ textAlign:'left',marginLeft:'10px',color:'gray',marginTop:'0px'}}>צמיד</p>
+
+      </div>
+
+      <div>
         <p
           style={{
             fontSize: "130%",
-            margin: "0 auto",
             marginTop: "0px",
             marginBottom: "10px",
+            textAlign:'left',
+            marginLeft:'10px',
+            color:'grey',
+            marginTop:'0px'
           }}
         >{`₪ ${props.price} `}</p>
       </div>

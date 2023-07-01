@@ -58,24 +58,22 @@ export default function ChainsList(props) {
       style={{
         display: "flex",
         flexDirection: "column",
-        border: "1px solid #adcbd3",
-        width: "40%",
+        width: "45%",
         margin: "0 auto",
         marginTop: "10px",
       }}
     >
-      <div>
-        <p style={{ fontSize: "130%", marginTop: "20px" }}>{props.name} </p>
-      </div>
-
+      
       <div style={{ height: "100%" }}>
         <Link to={"/chain"}>
           <div
             style={{
               marginTop: "20px",
               height: "100%",
-              width: "80%",
+              width: "100%",
               margin: "0 auto",
+              paddingTop:'10px',
+              backgroundColor:' rgb(249, 248, 248)'
             }}
             onClick={() => {
               props.func(props.index);
@@ -87,12 +85,19 @@ export default function ChainsList(props) {
       </div>
 
       <div>
+      <div>
+        <p style={{ fontSize: "130%", marginTop: "20px", textAlign:'left',marginLeft:'10px',marginBottom:'0px' }}>{props.name} </p>
+        <p style={{ textAlign:'left',marginLeft:'10px',color:'gray',marginTop:'0px'}}>שרשרת</p>
+      </div>
         <p
           style={{
             fontSize: "130%",
-            margin: "0 auto",
             marginTop: "0px",
             marginBottom: "10px",
+            textAlign:'left',
+            marginLeft:'10px',
+            color:'grey',
+            marginTop:'0px'
           }}
         >{`₪ ${props.price} `}</p>
       </div>

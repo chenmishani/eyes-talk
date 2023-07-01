@@ -194,7 +194,7 @@ export default function HomePage(props) {
         </div>
 
            <div>
-       <video style={{width:'85%',marginTop:'20px'}} autoPlay loop muted playsInline >
+       <video style={{width:'100%',marginTop:'20px'}} autoPlay loop muted playsInline >
         <source src={homePageVideo} type="video/mp4" />
         </video>
         
@@ -202,28 +202,32 @@ export default function HomePage(props) {
 
         <Link to={"/Bracelets"}>
           <div>
-            <img style={{ width: "85%" }} src={homePage4} alt="logo" />
+            <img style={{ width: "100%" }} src={homePage4} alt="logo" />
           </div>
         </Link>
         <Link to={"/chains"}>
           <div>
-            <img style={{ width: "85%" }} src={homePage5} alt="logo" />
+            <img style={{ width: "100%" }} src={homePage5} alt="logo" />
           </div>
         </Link>
 
         <div className="photo-gallery">
       <div className="scrollable-container">
         <div className="photo-wrapper">
-        <img style={{ height: "80%", width: "80%" }}
+        <img style={{ height: "80%", width: "99%" }}
           onClick={() => {nev("/sale")}} src={homePage1} alt="Photo 1" />
+             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}><span style={{color:'black'}}>.</span>..</p>
         </div>
+            
          <div className="photo-wrapper">
-          <img style={{ height: "100%", width: "80%" }}
+          <img style={{ height: "100%", width: "99%" }}
            onClick={() => {nev("/sale")}} src={homePage2} alt="Photo 2" />
+             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}>.<span style={{color:'black'}}>.</span>.</p>
         </div>
         <div className="photo-wrapper">
-          <img style={{ height: "100%", width: "80%" }}
+          <img style={{ height: "100%", width: "99%" }}
            onClick={() => {nev("/sale")}} src={homePage3} alt="Photo 3" />
+             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}>..<span style={{color:'black'}}>.</span></p>
         </div>
         </div>
     </div>
