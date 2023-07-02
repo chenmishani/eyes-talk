@@ -418,7 +418,7 @@
   
   .photo-wrapper {
     flex: 0 0 auto;
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
   
@@ -427,3 +427,8 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .sale{
+    text-decoration: line-through;
+    margin-right: 10px;
+   }

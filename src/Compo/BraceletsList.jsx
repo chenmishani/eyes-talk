@@ -82,7 +82,6 @@ export default function BraceletsList(props) {
             marginBottom: "10px",
             textAlign:'left',
             marginLeft:'10px',
-            color:'grey',
             marginTop:'0px'
           }}
         >{`₪ ${props.price} `}</p>

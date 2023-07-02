@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 export default function ChainsList(props) {
   const [flag, setFlag] = useState(false);
 
@@ -53,6 +54,45 @@ export default function ChainsList(props) {
     }
   };
 
+  const showPrice=()=>{
+    if(props.price==130){
+      return <div>
+       <p style={{ fontSize: "130%",
+        marginTop: "0px",
+        marginBottom: "10px",
+        textAlign:'left',
+        marginLeft:'10px',
+        marginTop:'0px'}}
+        > <span className="sale">₪150</span> {`₪${props.price} `}</p> 
+   
+       </div>
+    }
+    else if(props.price==120){
+      return <div>
+      <p style={{ fontSize: "130%",
+       marginTop: "0px",
+       marginBottom: "10px",
+       textAlign:'left',
+       marginLeft:'10px',
+       marginTop:'0px'}}
+       > <span className="sale">₪150</span> {`₪${props.price} `}</p> 
+  
+      </div>
+    }
+    else{    
+      return <p
+      style={{
+        fontSize: "130%",
+        marginTop: "0px",
+        marginBottom: "10px",
+        textAlign:'left',
+        marginLeft:'10px',
+        marginTop:'0px'
+      }}
+    >{`₪ ${props.price} `}</p>
+    }
+  }
+
   return (
     <div
       style={{
@@ -89,17 +129,9 @@ export default function ChainsList(props) {
         <p style={{ fontSize: "130%", marginTop: "20px", textAlign:'left',marginLeft:'10px',marginBottom:'0px' }}>{props.name} </p>
         <p style={{ textAlign:'left',marginLeft:'10px',color:'gray',marginTop:'0px'}}>שרשרת</p>
       </div>
-        <p
-          style={{
-            fontSize: "130%",
-            marginTop: "0px",
-            marginBottom: "10px",
-            textAlign:'left',
-            marginLeft:'10px',
-            color:'grey',
-            marginTop:'0px'
-          }}
-        >{`₪ ${props.price} `}</p>
+      <div>
+       {showPrice()}
+       </div>
       </div>
       <div>
         <div

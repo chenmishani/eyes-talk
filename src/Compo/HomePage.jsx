@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./style.css";
 import suprise from "./photos2/suprise.jpg";
-import d8s from "./photos/d8s.JPG";
-import d4s from "./photos/d4s.JPG";
-import l1s from "./photos/l1s.JPG";
-import a1s from "./photos/a1s.JPG";
+import d8 from "./chains/d8.png";
+import d4 from "./chains/d4.png";
+import l1 from "./bracelets/l1.png";
+import a6 from "./bracelets/a6.png";
 import homePage1 from "./photos/homePage1.png";
 import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
@@ -13,168 +13,16 @@ import homePage5 from "./photos/homePage5.png";
 import homePageTitle from "./photos/homePageTitle.png";
 import homePageVideo from "./photos2/homePageVideo.mp4";
 
-
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 import { Link, useNavigate } from "react-router-dom";
 
-
 export default function HomePage(props) {
-  const [flag, setFlag] = useState(false);
   const nev = useNavigate();
 
- 
 
-  // const showCntChain = (i) => {
-  //   if (flag == false) {
-  //     return (
-  //       <button
-  //         className="btn2"
-  //         onClick={() => {
-  //           props.addChain(i);
-  //         }}
-  //       >
-  //         הוספה לסל
-  //       </button>
-  //     );
-  //   } else {
-  //     return (
-  //       <div>
-  //         <button
-  //           style={{
-  //             width: "10px",
-  //             border: "0px",
-  //             background: "white",
-  //             fontSize: "20px",
-  //             margin: "10px",
-  //           }}
-  //           onClick={() => {
-  //             props.deleteChain(props.arrChains[i].name, i);
-  //           }}
-  //         >
-  //           -
-  //         </button>
-  //         <button className="btn2" style={{ width: "40px" }}>
-  //           {props.arrChains[4].cnt}
-  //         </button>
-  //         <button
-  //           style={{
-  //             width: "10px",
-  //             border: "0px",
-  //             background: "white",
-  //             fontSize: "20px",
-  //             margin: "5px",
-  //           }}
-  //           onClick={() => {
-  //             props.addChain(i);
-  //           }}
-  //         >
-  //           +
-  //         </button>
-  //       </div>
-  //     );
-  //   }
-  // };
-
-  // const MediaChains = [
-  //   {
-  //     photo: (
-  //       <img style={{ width: "90%", height: "90%" }} src={d8s} alt="logo" />
-  //     ),
-  //     name: "D8",
-  //     price: 150,
-  //     index: 8,
-  //   },
-  //   {
-  //     photo: (
-  //       <img style={{ width: "90%", height: "90%" }} src={d4s} alt="logo" />
-  //     ),
-  //     name: "D4",
-  //     price: 150,
-  //     index: 4,
-  //   },
-  // ];
-
-  // const MediaBracelets = [
-  //   {
-  //     photo: (
-  //       <img style={{ width: "90%", height: "90%" }} src={l1s} alt="logo" />
-  //     ),
-  //     name: "L1",
-  //     price: 150,
-  //     index: 0,
-  //   },
-  //   {
-  //     photo: (
-  //       <img style={{ width: "90%", height: "90%" }} src={a1s} alt="logo" />
-  //     ),
-  //     name: "A1",
-  //     price: 150,
-  //     index: 5,
-  //   },
-  // ];
-
-  const right = <BsArrowRightShort size="25px" />;
-  const left = <BsArrowLeftShort size="25px" />;
-
-  const SliderData = [
-    {
-      image: (
-        <img
-          onClick={() => {
-            nev("/sale");
-          }}
-          style={{ height: "100%", width: "90%" }}
-          src={homePage1}
-          alt="logo"
-        />
-      ),
-    },
-    {
-      image: (
-        <img
-          onClick={() => {
-            nev("/sale");
-          }}
-          style={{ height: "100%", width: "90%" }}
-          src={homePage2}
-          alt="logo"
-        />
-      ),
-    },
-    {
-      image: (
-        <img
-          onClick={() => {
-            nev("/sale");
-          }}
-          style={{ height: "100%", width: "90%" }}
-          src={homePage3}
-          alt="logo"
-        />
-      ),
-    },
-  ];
-
-  const [current, setCurrent] = useState(0);
-  const length = SliderData.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(SliderData) || SliderData.length <= 0) {
-    return null;
-  }
-
-
-
-
+  
   return (
     <div
       style={{
@@ -185,20 +33,61 @@ export default function HomePage(props) {
       }}
     >
       <div className="mediaMainDiv">
-      <div style={{marginTop:'20px'}}>
-            <img style={{ width: "85%" }} src={homePageTitle} alt="logo" />
-          </div>
-        <div style={{display:'flex',justifyContent:'space-between',width:'50%',margin:'0 auto'}}>
-        <Link to={"/chains"}> <button style={{width:'70px',backgroundColor:'black',color:'white',borderRadius:'45%',height:'30px'}}>שרשראות</button>  </Link>
-        <Link to={"/Bracelets"}> <button style={{width:'70px',backgroundColor:'black',color:'white',borderRadius:'45%',height:'30px'}}>צמידים</button>  </Link>
+
+        
+
+        <div style={{ marginTop: "20px" }}>
+          <img style={{ width: "85%" }} src={homePageTitle} alt="logo" />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "50%",
+            margin: "0 auto",
+          }}
+        >
+          <Link to={"/chains"}>
+            {" "}
+            <button
+              style={{
+                width: "70px",
+                backgroundColor: "black",
+                color: "white",
+                borderRadius: "45%",
+                height: "30px",
+              }}
+            >
+              שרשראות
+            </button>{" "}
+          </Link>
+          <Link to={"/Bracelets"}>
+            {" "}
+            <button
+              style={{
+                width: "70px",
+                backgroundColor: "black",
+                color: "white",
+                borderRadius: "45%",
+                height: "30px",
+              }}
+            >
+              צמידים
+            </button>{" "}
+          </Link>
         </div>
 
-           <div>
-       <video style={{width:'100%',marginTop:'20px'}} autoPlay loop muted playsInline >
-        <source src={homePageVideo} type="video/mp4" />
-        </video>
-        
-    </div>
+        <div>
+          <video
+            style={{ width: "100%", marginTop: "20px" }}
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={homePageVideo} type="video/mp4" />
+          </video>
+        </div>
 
         <Link to={"/Bracelets"}>
           <div>
@@ -211,58 +100,255 @@ export default function HomePage(props) {
           </div>
         </Link>
 
-        <div className="photo-gallery">
-      <div className="scrollable-container">
-        <div className="photo-wrapper">
-        <img style={{ height: "80%", width: "99%" }}
-          onClick={() => {nev("/sale")}} src={homePage1} alt="Photo 1" />
-             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}><span style={{color:'black'}}>.</span>..</p>
-        </div>
-            
-         <div className="photo-wrapper">
-          <img style={{ height: "100%", width: "99%" }}
-           onClick={() => {nev("/sale")}} src={homePage2} alt="Photo 2" />
-             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}>.<span style={{color:'black'}}>.</span>.</p>
-        </div>
-        <div className="photo-wrapper">
-          <img style={{ height: "100%", width: "99%" }}
-           onClick={() => {nev("/sale")}} src={homePage3} alt="Photo 3" />
-             <p style={{margin:'0px',width:'20px',height:'30px',fontSize:'40px',margin:'0 auto',color:'gray'}}>..<span style={{color:'black'}}>.</span></p>
-        </div>
-        </div>
-    </div>
+        <p className="subtitle">הנמכרים ביותר</p>
+        <div className="photo-gallery" style={{ height: "15%" }}>
+          <div className="scrollable-container">
+            <div className="photo-wrapper">
+              <div
+                style={{
+                  backgroundColor: "rgb(249, 248, 248)",
+                  height: "350px",
+                  width: "90%",
+                }}
+              >
+                {" "}
+                <img
+                  style={{ width: "70%", height: "70%", marginTop: "30px" }}
+                  src={l1}
+                  alt="logo"
+                />{" "}
+              </div>
+              <p
+                style={{  
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  marginTop: "0px",
+                }}
+              >
+                L1
+              </p>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  color: "grey",
+                  marginTop: "0px",
+                }}
+              >
+                צמיד
+              </p>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  marginTop: "0px",
+                }}
+              >
+                ₪120
+              </p>
+            </div>
 
-          {/* <div style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}>
-          <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <div onClick={prevSlide}>{left}</div>
+            <div className="photo-wrapper">
+              <div
+                style={{
+                  backgroundColor: "rgb(249, 248, 248)",
+                  height: "350px",
+                  width: "90%",
+                }}
+              >
+              
+                <img
+                  style={{ width: "70%", height: "70%", marginTop: "60px" }}
+                  src={d4}
+                  alt="logo"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  marginTop: "0px",
+                }}
+              >
+                D4
+              </p>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  color: "grey",
+                  marginTop: "0px",
+                }}
+              >
+                שרשרת
+              </p>
+              <div>
+      <p style={{ fontSize: "130%",
+       marginTop: "0px",
+       marginBottom: "10px",
+       textAlign:'left',
+       marginLeft:'10px',
+       marginTop:'0px'}}
+       > <span className="sale">₪150</span> {`₪${120} `}</p> 
+  
+      </div>
             </div>
-            <div>
-              {" "}
-              <section className="slider">
-                {SliderData.map((slide, index) => {
-                  return (
-                    <div
-                      className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
-                      {index === current && slide.image}
-                    </div>
-                  );
-                })}
-              </section>
+            <div className="photo-wrapper">
+              <div
+                style={{
+                  backgroundColor: "rgb(249, 248, 248)",
+                  height: "350px",
+                  width: "90%",
+                }}
+              >
+              
+                <img
+                  style={{ width: "70%", height: "70%", marginTop: "30px" }}
+                  src={a6}
+                  alt="logo"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  marginTop: "0px",
+                }}
+              >
+                a6
+              </p>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  color: "grey",
+                  marginTop: "0px",
+                }}
+              >
+                צמיד
+              </p>
+              <div>
+      <p style={{ fontSize: "130%",
+       marginTop: "0px",
+       marginBottom: "10px",
+       textAlign:'left',
+       marginLeft:'10px',
+       marginTop:'0px'}}>₪120</p> 
+  
+      </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div onClick={nextSlide}>{right}</div>
+            <div className="photo-wrapper">
+              <div
+                style={{
+                  backgroundColor: "rgb(249, 248, 248)",
+                  height: "350px",
+                  width: "90%",
+                }}
+              >
+                <img
+                  style={{ width: "80%", height: "70%", marginTop: "60px" }}
+                  src={d8}
+                  alt="logo"
+                />
+              </div>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  marginTop: "0px",
+                }}
+              >
+                D8
+              </p>
+              <p
+                style={{
+                  fontSize: "130%",
+                  marginTop: "0px",
+                  marginBottom: "10px",
+                  textAlign: "left",
+                  marginLeft: "10px",
+                  color: "grey",
+                  marginTop: "0px",
+                }}
+              >
+                שרשרת
+              </p>
+              <div>
+      <p style={{ fontSize: "130%",
+       marginTop: "0px",
+       marginBottom: "10px",
+       textAlign:'left',
+       marginLeft:'10px',
+       marginTop:'0px'}}
+       > <span className="sale">₪150</span> {`₪${120} `}</p> 
+  
+      </div>
             </div>
           </div>
-        </div> */}
+        </div>
+
+        <p className="subtitle">במיוחד בשבילך </p>
+        <div className="photo-gallery" style={{height:'15%'}}>
+          <div className="scrollable-container">
+            <div className="photo-wrapper">
+              <img
+                style={{ height: "80%", width: "80%" }}
+                onClick={() => {
+                  nev("/sale");
+                }}
+                src={homePage1}
+                alt="Photo 1"
+              />
+            </div>
+
+            <div className="photo-wrapper">
+              <img
+                style={{ height: "80%", width: "80%" }}
+                onClick={() => {
+                  nev("/sale");
+                }}
+                src={homePage2}
+                alt="Photo 2"
+              />
+            </div>
+            <div className="photo-wrapper">
+              <img
+                style={{ height: "80%", width: "80%" }}
+                onClick={() => {
+                  nev("/sale");
+                }}
+                src={homePage3}
+                alt="Photo 3"
+              />
+            </div>
+          </div>
+        </div>
+
+      
       </div>
 
       {/* div for web */}
