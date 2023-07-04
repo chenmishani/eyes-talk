@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import suprise from "./photos2/suprise.jpg";
 import d8 from "./chains/d8.png";
@@ -10,13 +10,12 @@ import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
 import homePage5 from "./photos/homePage5.png";
-import homePageTitle from "./photos/homePageTitle.png";
+import homePageTitle from "./photos2/title.png";
 import homePageVideo from "./photos2/homePageVideo.mp4";
+import HomePageBar from "./HomePageBar";
 
-import { BsArrowRightShort } from "react-icons/bs";
-import { BsArrowLeftShort } from "react-icons/bs";
 
-import { Link, useNavigate } from "react-router-dom";
+
 
 export default function HomePage(props) {
   const nev = useNavigate();
@@ -34,11 +33,12 @@ export default function HomePage(props) {
     >
       <div className="mediaMainDiv">
 
-        
+
 
         <div style={{ marginTop: "20px" }}>
-          <img style={{ width: "85%" }} src={homePageTitle} alt="logo" />
-        </div>
+        <HomePageBar/>
+          <img style={{ width: "100%" }} src={homePageTitle} alt="logo" />
+          </div>
         <div
           style={{
             display: "flex",
@@ -48,7 +48,7 @@ export default function HomePage(props) {
           }}
         >
           <Link to={"/chains"}>
-            {" "}
+            
             <button
               style={{
                 width: "70px",
@@ -59,10 +59,10 @@ export default function HomePage(props) {
               }}
             >
               שרשראות
-            </button>{" "}
+            </button>
           </Link>
           <Link to={"/Bracelets"}>
-            {" "}
+            
             <button
               style={{
                 width: "70px",
@@ -73,7 +73,7 @@ export default function HomePage(props) {
               }}
             >
               צמידים
-            </button>{" "}
+            </button>
           </Link>
         </div>
 
@@ -104,20 +104,24 @@ export default function HomePage(props) {
         <div className="photo-gallery" style={{ height: "15%" }}>
           <div className="scrollable-container">
             <div className="photo-wrapper">
-              <div
+                <Link to={"/bracelet"}> 
+                <div
+                 onClick={() => {
+                  props.chosenBraceletCompo(0);
+                }}
                 style={{
                   backgroundColor: "rgb(249, 248, 248)",
                   height: "350px",
                   width: "90%",
                 }}
               >
-                {" "}
+               
                 <img
                   style={{ width: "70%", height: "70%", marginTop: "30px" }}
                   src={l1}
                   alt="logo"
-                />{" "}
-              </div>
+                />
+              </div>  </Link>
               <p
                 style={{  
                   fontSize: "130%",
@@ -158,7 +162,11 @@ export default function HomePage(props) {
             </div>
 
             <div className="photo-wrapper">
+            <Link to={"/chain"}> 
               <div
+               onClick={() => {
+                props.chosenChainCompo(4);
+              }}
                 style={{
                   backgroundColor: "rgb(249, 248, 248)",
                   height: "350px",
@@ -171,7 +179,7 @@ export default function HomePage(props) {
                   src={d4}
                   alt="logo"
                 />
-              </div>
+              </div>  </Link>
               <p
                 style={{
                   fontSize: "130%",
@@ -209,7 +217,11 @@ export default function HomePage(props) {
       </div>
             </div>
             <div className="photo-wrapper">
+            <Link to={"/bracelet"}> 
               <div
+               onClick={() => {
+                props.chosenBraceletCompo(10);
+              }}
                 style={{
                   backgroundColor: "rgb(249, 248, 248)",
                   height: "350px",
@@ -222,7 +234,7 @@ export default function HomePage(props) {
                   src={a6}
                   alt="logo"
                 />
-              </div>
+              </div>  </Link>
               <p
                 style={{
                   fontSize: "130%",
@@ -259,7 +271,11 @@ export default function HomePage(props) {
       </div>
             </div>
             <div className="photo-wrapper">
+            <Link to={"/chain"}> 
               <div
+               onClick={() => {
+                props.chosenChainCompo(8);
+              }}
                 style={{
                   backgroundColor: "rgb(249, 248, 248)",
                   height: "350px",
@@ -271,7 +287,7 @@ export default function HomePage(props) {
                   src={d8}
                   alt="logo"
                 />
-              </div>
+              </div>  </Link>
               <p
                 style={{
                   fontSize: "130%",
