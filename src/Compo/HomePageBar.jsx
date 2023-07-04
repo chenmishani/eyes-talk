@@ -22,7 +22,7 @@ function HomePageBar() {
 
 
   return (
-    <div style={{width:'100%',backgroundColor:'rgb(249, 248, 248)',marginBottom:'20px'}}>
+    <div className='homePageBar'>
       {currentDiv=== 1 && <div style={{fontSize:'20px'}}> אנו שמחים להציג את האתר החדש שלנו </div>}
       {currentDiv=== 2 && <div style={{fontSize:'20px'}}> מבצע קיץ- כל השרשראות עד 130 ש"ח</div>}
       {currentDiv=== 3 && <div style={{fontSize:'20px'}}> רק אצלנו-שרשרת בהפתעה</div>}
