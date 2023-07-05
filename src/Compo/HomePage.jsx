@@ -28,7 +28,7 @@ export default function HomePage(props) {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        padding: "10px",
+       
       }}
     >
       <div className="mediaMainDiv">

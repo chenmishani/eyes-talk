@@ -48,7 +48,7 @@ export default function Title(props){
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
   const closeIcon = <CgCloseO size='30px' onClick={()=>{props.setFlag(!props.flag)}} />
   const whatsappLogo=<FaWhatsapp size='28px'/>
-  const cart=<BsBasket size='30px'/>
+  const cart=<BsBasket size='23px'/>
 
     return (
 
@@ -56,37 +56,32 @@ export default function Title(props){
       <div className="titleDiv">
 
          <div className="mediaBar">
-
-         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-    
-          
-        <div style={{display:'flex',width:'160px'}}>
+         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between',width:'95%',height:'50px'}}>
+              <div style={{display:'flex',width:'160px'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
-        </div>
-          <div style={{width:'100%',marginTop:'40px'}}>
-        <div style={{width:'100%'}}><h1 className="title">EYES  TALK</h1></div>
-        <div style={{width:'100%',margin:'0 auto'}}>
-        <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'100%',marginTop:'20px'}} autoPlay loop muted playsInline>
-        <source src={logo} type="video/mp4" />
-        </video>
-            </div>
-            </div>
-        </div>
-       
-          <div>
+        </div>      
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
         <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'14px',marginRight:'3px'}} src={instegram} alt="logo" /> </a></div>
         <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972527899444">{whatsappLogo}</a>
           <div style={{marginTop:'10px',marginRight:'10px'}}> {open ? closeIcon: burgerIcon} </div>   
          </div>
+         </div>
+         <div>
+        <div ><h1 className="title">EYES  TALK</h1></div>
+        <div style={{margin:'0 auto'}}>
+        <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
+        <video style={{width:'70%'}} autoPlay loop muted playsInline>
+        <source src={logo} type="video/mp4" />
+        </video>
+            </div> 
+        </div>
+        </div>
         
         <div>{showCompo()}</div>
       
         </div>
-        </div>
-        </div>
+       
 
         <div className="webTitleDiv">
 
@@ -117,7 +112,7 @@ export default function Title(props){
       <div>
       <div style={{display:'flex'}}> 
      <Link to={'/contact'}> <div style={{width:'70px'}}><img style={{ width: "50px",height:'55px',marginTop:'12px' }} src={whatsapp} alt="logo" /> </div></Link>
-        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "120px",height:'80px' }} src={instegram} alt="logo" /> </a></div>
+        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "60px",height:'60px',marginTop:'10px',marginRight:'5px' }} src={instegram} alt="logo" /> </a></div>
         <div style={{marginRight:'30px'}}><p>בס"ד</p></div>
      </div>
      <div>{showDiv()}</div>
