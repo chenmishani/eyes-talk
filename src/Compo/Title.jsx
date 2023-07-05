@@ -67,18 +67,19 @@ export default function Title(props){
           <div style={{marginTop:'10px',marginRight:'10px'}}> {open ? closeIcon: burgerIcon} </div>   
          </div>
          </div>
+         <div>{showCompo()}</div>
          <div>
         <div ><h1 className="title">EYES  TALK</h1></div>
         <div style={{margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'70%'}} autoPlay loop muted playsInline>
+        <video style={{width:'50%'}} autoPlay loop muted playsInline>
         <source src={logo} type="video/mp4" />
         </video>
             </div> 
         </div>
         </div>
         
-        <div>{showCompo()}</div>
+        
       
         </div>
        
