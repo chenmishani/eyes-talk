@@ -44,7 +44,6 @@ export default function BraceletsList(props) {
       style={{
         display: "flex",
         flexDirection: "column",
-        border: "1px solid #adcbd3",
         width: "40%",
         margin: "0 auto",
         marginTop: "15px",
@@ -53,12 +52,14 @@ export default function BraceletsList(props) {
           <div style={{ height: "100%" }}>
         <Link to={"/bracelet"}>
           <div
-            style={{
-              marginTop: "20px",
-              height: "90%",
-              width: "80%",
-              margin: "0 auto",
-            }}
+           style={{
+            marginTop: "20px",
+            height: "100%",
+            width: "100%",
+            margin: "0 auto",
+            paddingTop:'10px',
+            backgroundColor:' rgb(249, 248, 248)'
+          }}
             onClick={() => {
               props.func(props.index);
             }}

@@ -6,7 +6,7 @@ function HomePageBar() {
   useEffect(() => {
     const timer= setTimeout(()=>{
         setCurrentDiv(prevDiv=>prevDiv+1)
-    },2000);
+    },4000);
 
 
     return () => clearTimeout(timer); 

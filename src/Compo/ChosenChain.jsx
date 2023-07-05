@@ -116,6 +116,8 @@ export default function ChosenChain(props) {
       );
     } else {
       return (
+        <div>
+        <div className="chosenChainMedia">
         <div className="chosenProductDiv">
           <div style={{ margin: "0 auto" }}>
               <div className="photo-gallery" style={{height:'300px'}}>
@@ -146,6 +148,33 @@ export default function ChosenChain(props) {
               {showCnt()}
             </div>
           </div>
+        </div>
+        </div>
+        <div className="chosenChainWeb">
+        <div className="chosenProductDiv">
+        <div style={{ margin: "0 auto", display: "flex" }}>
+            <div style={{height:'340px'}}>{props.chosenChain.photo}</div>
+            <div>{props.chosenChain.photo1}</div>
+          </div>
+          <div style={{ margin: "0 auto" }}>
+            <h1 style={{ marginLeft: "10px" }}>{props.chosenChain.name}</h1>
+            <p style={{ marginTop: "50px" }}>
+              שרשרת בעבודת יד שעשויה מחרוזים איכותיים
+            </p>
+            <p>צבעים: {props.chosenChain.color} </p>
+            <p
+              style={{ fontSize: "25px", marginTop: "40px" }}
+            >{`₪ ${props.chosenChain.price} `}</p>
+            <div
+              onClick={() => {
+                setFlag(true);
+              }}
+            >
+              {showCnt()}
+            </div>
+          </div>
+        </div>
+        </div>
         </div>
       );
     }

@@ -216,6 +216,22 @@
     padding: 10px;
 }
 
+.chainMedia{
+    display: none;
+}
+
+.braceletsMedia{
+    display: none;
+}
+
+.chosenChainMedia{
+    display: none;
+}
+
+.chosenBraceletMedia{
+    display: none;
+}
+
 
 .mediaBar {
     display: none;
@@ -228,8 +244,7 @@
 
 @media (max-width:768px) {
 
-    .webTitleDiv,
-    .mainDiv {
+    .webTitleDiv,.mainDiv,.chainWeb,.braceletsWeb,.chosenChainWeb,.chosenBraceletWeb{
         display: none;
     }
 
@@ -238,14 +253,13 @@
     }
 
 
-    .burgerBtn,
-    .mediaBar,
-    .mediaMainDiv {
+    .burgerBtn,.mediaBar,.mediaMainDiv,.chainMedia,.braceletsMedia,.chosenChainMedia,.chosenBraceletMedia{
         display: block;
     }
 
 
 }
+
 
 
 

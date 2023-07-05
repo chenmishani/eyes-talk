@@ -58,7 +58,7 @@ const [flag2,setFlag2]=useState(false)
       </div>
 
       <div style={{ height: "100%" }}>
-        <Link to={"/chain"}>
+        
           <div
             style={{
               height: "100%",
@@ -66,12 +66,12 @@ const [flag2,setFlag2]=useState(false)
               margin: "0 auto",
             }}
             onClick={() => {
-              props.func(props.index);
+             
             }}
           >
             {props.photo}
           </div>
-        </Link>
+       
       </div>
 
       <div>

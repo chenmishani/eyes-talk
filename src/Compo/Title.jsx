@@ -45,9 +45,9 @@ export default function Title(props){
     }
   }
 
-  const burgerIcon = <CgMenuRound size='40px' onClick={()=>{props.setFlag(!props.flag)}}/>
-  const closeIcon = <CgCloseO size='40px' onClick={()=>{props.setFlag(!props.flag)}} />
-  const whatsappLogo=<FaWhatsapp size='38px'/>
+  const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
+  const closeIcon = <CgCloseO size='30px' onClick={()=>{props.setFlag(!props.flag)}} />
+  const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='30px'/>
 
     return (
@@ -71,13 +71,13 @@ export default function Title(props){
         <video style={{width:'100%',marginTop:'20px'}} autoPlay loop muted playsInline>
         <source src={logo} type="video/mp4" />
         </video>
-        {/* <img style={{width:'85%',marginTop:'20px'}} src={logo} alt="logo" /> */}
             </div>
             </div>
         </div>
        
           <div>
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
+        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'14px',marginRight:'3px'}} src={instegram} alt="logo" /> </a></div>
         <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972527899444">{whatsappLogo}</a>
           <div style={{marginTop:'10px',marginRight:'10px'}}> {open ? closeIcon: burgerIcon} </div>   
          </div>
