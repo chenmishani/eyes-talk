@@ -297,16 +297,16 @@ if(flag==true){
        <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
     <Routes>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
-    <Route basename="/" path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
-    <Route basename="/" path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
-    <Route basename="/" path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart}/>} /> 
-    <Route basename="/" path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
-    <Route basename="/" path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
-    <Route basename="/" path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 
-    <Route basename="/" path='/order' element= {<Order cart={cart} deleteCart={deleteCart} />}/> 
-    <Route basename="/" path='/finish' element= {<Finish />}/> 
-    <Route basename="/" path='/contact' element= {<Contact />}/> 
-    <Route basename="/" path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
+    <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
+    <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
+    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart}/>} /> 
+    <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
+    <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
+    <Route path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 
+    <Route path='/order' element= {<Order cart={cart} deleteCart={deleteCart} />}/> 
+    <Route path='/finish' element= {<Finish />}/> 
+    <Route path='/contact' element= {<Contact />}/> 
+    <Route path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
 
 
 
