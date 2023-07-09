@@ -3,10 +3,8 @@ import React from "react";
 export default function CartList(props) {
  
       return (
-      
-        
-          
-                <div
+  
+        <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -14,9 +12,9 @@ export default function CartList(props) {
                     margin: "10px auto",
                   }}
                 >
-                  
+
                   <div style={{display:'flex',justifyContent:'space-between'}}>
-                 <div>x{props.cnt} </div>
+                 <div>x{props.cnt}</div>
                  <div onClick={()=>{props.delete()}}> </div>
                   </div>
                   
@@ -57,8 +55,6 @@ export default function CartList(props) {
                 </div>
                 </div>
               
-            
-   
          
       );
   
