@@ -293,9 +293,9 @@ if(flag==true){
   return (
 
     <div className="App" onClick={()=>{closeHumburger()}} >
-       <BrowserRouter basename='/'>
+       <BrowserRouter >
        <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
-    <Routes>
+    <Routes basename='/'>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
