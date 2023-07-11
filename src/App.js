@@ -206,20 +206,24 @@ const addBracelets=(index)=>{
   
 
 const deleteCart=()=>{
-  setcart([])
-  settemp(0)
-  setNum(0)
- for (let i = 0; i < arrChains.length; i++) {
-  arrChains[i].cnt=0
-  }
-  for (let i = 0; i < arrBracelets.length; i++) {
-    arrBracelets[i].cnt=0
+   setcart([])
+    settemp(0)
+    setNum(0)
+   for (let i = 0; i < arrChains.length; i++) {
+    arrChains[i].cnt=0
     }
-    for (let i = 0; i < arrSales.length; i++) {
-      arrSales[i].cnt=0
+    for (let i = 0; i < arrBracelets.length; i++) {
+      arrBracelets[i].cnt=0
       }
-  
+      for (let i = 0; i < arrSales.length; i++) {
+        arrSales[i].cnt=0
+        }
+
 }
+
+const deleteProduct=(i)=>{
+console.log('c');
+ }
 
 const deleteChain=(i)=>{
   
@@ -299,7 +303,7 @@ if(flag==true){
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
-    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart}/>} /> 
+    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart} deleteProdauct={deleteProduct}/>}  /> 
     <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
     <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
     <Route path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 
@@ -307,7 +311,7 @@ if(flag==true){
     <Route path='/finish' element= {<Finish />}/> 
     <Route path='/contact' element= {<Contact />}/> 
     <Route path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
-
+    
 
 
 

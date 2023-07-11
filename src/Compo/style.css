@@ -65,6 +65,19 @@
 
 }
 
+.bar3{
+display:flex;
+flex-direction:row;
+justify-Content:space-between;
+width:100%;
+height:50px;
+position:fixed;
+top:0;
+background-color: white;
+
+}
+
+
 .photo {
     width: 350px;
     height: 220px;

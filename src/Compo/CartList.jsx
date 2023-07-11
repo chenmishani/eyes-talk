@@ -15,7 +15,8 @@ export default function CartList(props) {
 
                   <div style={{display:'flex',justifyContent:'space-between'}}>
                  <div>x{props.cnt}</div>
-                 <div onClick={()=>{props.delete()}}> </div>
+                 {/* <div onClick={()=>{props.delete()}}> </div> */}
+                 <div onClick={()=>{props.deleteProdauct()}}> x</div>
                   </div>
                   
                 <div
@@ -54,6 +55,8 @@ export default function CartList(props) {
                   </div>
                 </div>
                 </div>
+
+
               
          
       );

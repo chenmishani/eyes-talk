@@ -37,7 +37,7 @@ export default function CartPage(props) {
             {props.cart.map((val, i) => {
               return (
                    <CartList
-
+                   deleteProdauct={props.deleteProdauct}
                   index={i}
                   photo={val.photo}
                   name={val.name}
