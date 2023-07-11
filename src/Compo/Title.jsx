@@ -57,12 +57,12 @@ export default function Title(props){
 
          <div className="mediaBar">
          <div className="bar3">
-        <div style={{display:'flex',width:'24%'}}>
+        <div style={{display:'flex',width:'20%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
         </div> 
-        <div>
-        <div ><h1 className="title" style={{fontSize:'25px'}}>EYES  TALK</h1></div>
+        <div style={{width:'60%'}}>
+        <div  ><h1 className="title" style={{fontSize:'25px'}}>EYES  TALK</h1></div>
         </div>
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
