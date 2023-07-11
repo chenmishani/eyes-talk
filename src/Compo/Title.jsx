@@ -58,7 +58,7 @@ export default function Title(props){
          <div className="mediaBar">
          <div className="bar3">
         <div style={{display:'flex',width:'20%'}}>
-        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
+        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>{}
         <div className="divNum">{showNun()}</div>
         </div> 
         <div style={{width:'60%'}}>
@@ -117,8 +117,8 @@ export default function Title(props){
 
       <div>
       <div style={{display:'flex'}}> 
-     <Link to={'/contact'}> <div style={{width:'70px'}}><img style={{ width: "50px",height:'55px',marginTop:'12px' }} src={whatsapp} alt="logo" /> </div></Link>
-        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "60px",height:'60px',marginTop:'10px',marginRight:'5px' }} src={instegram} alt="logo" /> </a></div>
+     <Link to={'/contact'}> <div style={{width:'70px'}}><img style={{ width: "40px",height:'40px',marginTop:'12px' }} src={whatsapp} alt="logo" /> </div></Link>
+        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "40px",height:'40px',marginTop:'10px',marginRight:'5px' }} src={instegram} alt="logo" /> </a></div>
         <div style={{marginRight:'30px'}}><p>בס"ד</p></div>
      </div>
      <div>{showDiv()}</div>
