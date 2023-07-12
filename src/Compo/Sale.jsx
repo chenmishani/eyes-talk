@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { AiOutlinePlusCircle } from "react-icons/ai"
+import { AiOutlineMinusCircle } from "react-icons/ai"
 
 export default function ChainsList(props) {
 
+  const plus =  <AiOutlinePlusCircle size="18px" />;
+  const minus = <AiOutlineMinusCircle size="18px" />;
+  
   const checkFlag=()=>{
   if(props.cnt>1){
     setFlag2(true)
@@ -25,20 +29,14 @@ const [flag2,setFlag2]=useState(false)
     </button>
     }
     else {
-      return <div>
-          <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'10px'}} onClick={()=>{props.delete(props.index)}}>
-      -
-    </button>
-      <button className="btn2" style={{width:'40px'}}>
-  {props.cnt}
-    </button>
-    <button style={{width:'10px',border:'0px',background:'white',fontSize:'20px',margin:'5px'}} onClick={() => {
-        props.add(props.index);
-      }}>
-        +
-    </button>
-  
-    </div>
+      return (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ marginTop: '5px' }} onClick={() => { props.add(props.index) }}> {plus}</div>
+          <div style={{ marginLeft: '5px', marginRight: '5px', fontSize: '20px', border: '1px solid black', width: '25px' }}>{props.cnt}</div>
+          <div style={{ marginTop: '5px' }} onClick={() => { props.delete(props.index); }}>{minus}</div>
+        </div>
+
+      )
   }
   }
   

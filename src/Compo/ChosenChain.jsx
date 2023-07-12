@@ -123,10 +123,10 @@ export default function ChosenChain(props) {
               <div className="photo-gallery" style={{height:'300px'}}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
-                {props.chosenChain.photo}
+                {props.chosenChain.photo1}
                 </div>
                 <div className="photo-wrapper">
-                {props.chosenChain.photo1}
+                {props.chosenChain.photo}
                 </div>
               </div>
             </div>

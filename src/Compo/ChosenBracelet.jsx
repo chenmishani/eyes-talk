@@ -66,10 +66,10 @@ export default function ChosenBracelet(props) {
             <div className="photo-gallery" style={{ height: "300px" }}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
-                  {props.chosenBracelet.photo}
+                  {props.chosenBracelet.photo1}
                 </div>
                 <div className="photo-wrapper">
-                  {props.chosenBracelet.photo1}
+                  {props.chosenBracelet.photo}
                 </div>
               </div>
             </div>

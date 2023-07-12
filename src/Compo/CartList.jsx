@@ -1,4 +1,11 @@
 import React from "react";
+import {AiOutlinePlusCircle} from "react-icons/ai"
+import {AiOutlineMinusCircle} from "react-icons/ai"
+
+const plus = <AiOutlinePlusCircle size="18px" />;
+const minus = <AiOutlineMinusCircle size="18px" />;
+
+
 
 export default function CartList(props) {
  
@@ -13,10 +20,11 @@ export default function CartList(props) {
                   }}
                 >
 
-                  <div style={{display:'flex',justifyContent:'space-between'}}>
-                 <div>x{props.cnt}</div>
-                 {/* <div onClick={()=>{props.delete()}}> </div> */}
-                 <div onClick={()=>{props.deleteProdauct()}}> x</div>
+                  <div style={{display:'flex',justifyContent:'center'}}>
+                 <div style={{marginTop:'5px'}} onClick={()=>{props.deleteProdauct(props.index)}}> {plus}</div>
+                 <div style={{marginLeft:'5px',marginRight:'5px',fontSize:'20px'}}>{props.cnt}</div>
+                 <div style={{marginTop:'5px'}}  onClick={()=>{props.deleteProdauct(props.index)}}>{minus}</div>
+                 
                   </div>
                   
                 <div
