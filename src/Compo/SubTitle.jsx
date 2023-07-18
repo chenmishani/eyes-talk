@@ -14,17 +14,24 @@ export default function SubTitle() {
 
   return (
     <div >
-        <div style={{width:'100%',backgroundColor:'black',color:'white',paddingTop:'10px',paddingBottom:'10px'}}>
-            <h1 style={{color:'white',fontSize:'20px'}}>שירות לקוחות</h1>
-            <div style={{display:'flex',justifyContent:'center'}}> <a style={{color:'white',margin:'12px'}} href="https://wa.me/+972527899444">{whatsappLogo} </a>
-            <p>WhatsApp: 0527899444</p>
+        <div style={{width:'100%',backgroundColor:'black',color:'white',paddingTop:'10px',paddingBottom:'15px'}}>
+            <h1 style={{color:'white',fontSize:'20px',marginBottom:'30px'}}>שירות לקוחות</h1>
+            <div style={{display:'flex',justifyContent:'center'}}> 
+            <a style={{color:'white',marginRight:'10px',marginBottom:'10px'}} href="https://wa.me/+972527899444">{whatsappLogo} </a>
+            <a style={{color:'white',textDecoration:'none'}} href="https://wa.me/+972527899444">WhatsApp: 0527899444 </a>
             </div>
-            <div style={{display:'flex',justifyContent:'center'}}> <a style={{color:'white',margin:'12px'}} href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer">{instegram} </a>
-            <p>Instagram: eyes_talk_yd</p>
+            <div style={{display:'flex',justifyContent:'center'}}> 
+            <a style={{color:'white',marginRight:'10px',marginBottom:'10px'}} href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer">{instegram} </a>
+            <a style={{color:'white',textDecoration:'none'}} href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer">Instagram: eyes_talk_yd</a>
             </div>
-            <p style={{color:'white'}}>0528775898</p>
-            <p style={{color:'white'}}>y.d.handmade.jewelry@gmail.com</p>
-        
+            <a style={{color:'white',textDecoration:'none'}} href="tel:+972528775898">0528775898</a>
+            {/* <p style={{color:'white'}}>y.d.handmade.jewelry@gmail.com</p> */}
+            <div style={{marginTop:'10px'}}>  
+             <a style={{color:'white',textDecoration:'none'}} href="mailto:y.d.handmade.jewelry@gmail.com">y.d.handmade.jewelry@gmail.com</a>           
+            </div>
+            {/* <a style={{color:'white',textDecoration:'none'}} href="mailto:y.d.handmade.jewelry@gmail.com">y.d.handmade.jewelry@gmail.com</a>            */}
+
+
          </div>
          <div style={{display:'flex',justifyContent:'center'}}> 
          <p>כל הזכויות שמורות לאייס טוק 2023</p>        

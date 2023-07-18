@@ -49,6 +49,7 @@ const [flag2,setFlag2]=useState(false)
         width: "40%",
         margin: "0 auto",
         marginTop: "10px",
+        marginBottom:'20px'
       }}
     >
       <div>
