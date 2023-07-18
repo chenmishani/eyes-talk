@@ -83,6 +83,7 @@ import a3s from './Compo/photos/a3s.JPG'
 import a4s from './Compo/photos/a4s.JPG'
 import a6s from './Compo/photos/a6s.JPG'
 import Suprise from './Compo/Suprise';
+import SubTitle from './Compo/SubTitle';
 
 
 
@@ -336,10 +337,8 @@ if(flag==true){
     <Route path='/contact' element= {<Contact />}/> 
     <Route path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
     
-
-
-
     </Routes>
+    <SubTitle/>
 
 
     </BrowserRouter>

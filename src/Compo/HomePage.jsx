@@ -28,6 +28,7 @@ export default function HomePage(props) {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
+        marginBottom:'80px'
        
       }}
     >
