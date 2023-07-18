@@ -180,5 +180,5 @@ export default function ChosenChain(props) {
     }
   };
 
-  return <div>{showDiv()}</div>;
+  return <div style={{marginBottom:'20px'}}>{showDiv()}</div>;
 }

@@ -14,7 +14,7 @@ export default function SubTitle() {
 
   return (
     <div >
-        <div style={{width:'100%',backgroundColor:'black',color:'white',padding:'10px'}}>
+        <div style={{width:'100%',backgroundColor:'black',color:'white',paddingTop:'10px',paddingBottom:'10px'}}>
             <h1 style={{color:'white',fontSize:'20px'}}>שירות לקוחות</h1>
             <div style={{display:'flex',justifyContent:'center'}}> <a style={{color:'white',margin:'12px'}} href="https://wa.me/+972527899444">{whatsappLogo} </a>
             <p>WhatsApp: 0527899444</p>

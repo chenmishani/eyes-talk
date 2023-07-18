@@ -59,7 +59,7 @@ export default function ChosenBracelet(props) {
 
 
   return (
-    <div>
+    <div style={{marginBottom:'20px'}}>
       <div className="chosenBraceletMedia">
         <div className="chosenProductDiv">
           <div style={{ margin: "0 auto" }}>
