@@ -21,7 +21,7 @@ export default function CartList(props) {
                 >
 
                   <div style={{display:'flex',justifyContent:'center'}}>
-                 <div style={{marginTop:'5px'}} onClick={()=>{props.deleteProdauct(props.index)}}> {plus}</div>
+                 <div style={{marginTop:'5px'}} onClick={()=>{props.addProduct(props.index)}}> {plus}</div>
                  <div style={{marginLeft:'5px',marginRight:'5px',fontSize:'20px'}}>{props.cnt}</div>
                  <div style={{marginTop:'5px'}}  onClick={()=>{props.deleteProdauct(props.index)}}>{minus}</div>
                  

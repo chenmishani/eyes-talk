@@ -141,6 +141,8 @@ const [arrSales,setArrSales]=useState([
 const [num,setNum]=useState(0)
 const [temp,settemp]=useState(0)
 const [cart,setcart]= useState([])
+const [chosenChain,setChosenChain]=useState(0)
+const [chosenBracelet,setChosenBracelet]=useState(0)
 
 const addChain=(index)=>{
   if(arrChains[index].cnt<1){
@@ -249,6 +251,32 @@ if(cart[index].id>9&&cart[index].id<49){
             console.log(cart);
 }
  
+const addProduct=(index)=>{
+  if(cart[index].id>9&&cart[index].id<49){
+    for (let i = 0; i < arrChains.length; i++) {
+      if(cart[index].id==arrChains[i].id){
+          arrChains[i].cnt=arrChains[i].cnt+1
+          settemp(temp+arrChains[i].price)
+          setNum(num+1)
+      }
+    }
+    }
+      if(cart[index].id>49&&cart[index].id<80){
+        for (let i = 0; i < arrBracelets.length; i++) {
+          if(cart[index].id==arrBracelets[i].id){
+            arrBracelets[i].cnt=arrBracelets[i].cnt+1 
+              settemp(temp+arrBracelets[i].price)
+              setNum(num+1)
+          }}}
+          if(cart[index].id>79&&cart[index].id<100){
+            for (let i = 0; i < arrSales.length; i++) {
+              if(cart[index].id==arrSales[i].id){
+                arrSales[i].cnt=arrSales[i].cnt+1 
+                  settemp(temp+arrSales[i].price)
+                  setNum(num+1)
+              }}}
+              console.log(cart);
+  }
 
 const deleteChain=(i)=>{
   
@@ -296,9 +324,7 @@ setNum(num-1)
 
 
 
-const [chosenChain,setChosenChain]=useState()
 
-const [chosenBracelet,setChosenBracelet]=useState()
 
 
 const chosenChainCompo =(i)=>{
@@ -328,7 +354,7 @@ if(flag==true){
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
-    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart} deleteProdauct={deleteProduct}/>}  /> 
+    <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart} deleteProdauct={deleteProduct} addProduct={addProduct}/>}  /> 
     <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
     <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
     <Route path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 

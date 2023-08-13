@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div style={{backgroundColor:'white',width:'80%',margin:'0 auto',marginTop:'30px',marginBottom:'50px',border:'1px solid black',height: "350px",backgroundColor:'#adcbd3'}} >
+    <div className='cont' style={{width:'80%',margin:'0 auto',marginTop:'30px',marginBottom:'50px',border:'1px solid black',height: "350px"}} >
     <p style={{marginTop:'50px',fontSize:'250%',fontFamily: "Times New Roman"}}> צור קשר</p>
     <p style={{fontSize:'130%',marginTop:'30px',marginBottom:'0px'}}>:כתובת מייל</p>
     <p style={{fontSize:'110%',marginTop:'00px'}}> y.d.handmade.jewelry@gmail.com</p>

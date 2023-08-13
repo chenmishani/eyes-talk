@@ -40,39 +40,15 @@ export default function HomePage(props) {
         <HomePageBar/>
           <img style={{ width: "100%" }} src={homePageTitle} alt="logo" />
           </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "50%",
-            margin: "0 auto",
-          }}
-        >
+          <div style={{display: "flex",justifyContent: "space-between",width: "50%",margin: "0 auto",}}>
           <Link to={"/chains"}>
-            
-            <button
-              style={{
-                width: "70px",
-                backgroundColor: "black",
-                color: "white",
-                borderRadius: "45%",
-                height: "30px",
-              }}
-            >
+          <button style={{width: "70px",backgroundColor: "black",color: "white",borderRadius: "45%",height: "30px"}}>
               שרשראות
             </button>
           </Link>
+
           <Link to={"/Bracelets"}>
-            
-            <button
-              style={{
-                width: "70px",
-                backgroundColor: "black",
-                color: "white",
-                borderRadius: "45%",
-                height: "30px",
-              }}
-            >
+          <button style={{width: "70px",backgroundColor: "black",color: "white",borderRadius: "45%",height: "30px"}}>
               צמידים
             </button>
           </Link>

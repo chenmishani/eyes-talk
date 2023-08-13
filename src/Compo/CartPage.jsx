@@ -38,6 +38,7 @@ export default function CartPage(props) {
               return (
                    <CartList
                    deleteProdauct={props.deleteProdauct}
+                   addProduct={props.addProduct}
                   index={i}
                   photo={val.photo}
                   name={val.name}

@@ -140,6 +140,11 @@ background-color: white;
 
 }
 
+.cont{
+    background-color:#d2ebf1;
+
+}
+
 .btn3 {
     width: 50%;
     height: 20px;
@@ -342,7 +347,8 @@ background-color: white;
     width: 70%;
     margin: 0 auto;
     margin-top: 20px;
-    border: 2px solid black;
+    border: 2px solid#d2ebf1;
+    ;
     background-color: white;
     padding-right: 30px;
     padding-left: 30px;
