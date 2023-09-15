@@ -98,7 +98,7 @@ function App() {
 {photo: <img style={{width:'80%',height:'80%'}} src={d5} alt="logo" />,cnt:0,id:'15', photo1: <img style={{width:'80%'}} src={d5s} alt="logo" />,name:'D5',price:120,color:'תכלת,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'80%'}} src={d6} alt="logo" />,cnt:0,id:'16', photo1: <img style={{width:'80%'}} src={d6s} alt="logo" />,name:'D6',price:120,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'80%',height:'80%'}} src={d7} alt="logo" />,cnt:0,id:'17', photo1: <img style={{width:'80%'}} src={d7s} alt="logo" />,name:'D7',price:120,color:'חום,לבן'},
-{photo: <img style={{width:'80%',height:'80%'}} src={d8} alt="logo" />,cnt:0,id:'18', photo1: <img style={{width:'80%',height:'30%'}} src={d8s} alt="logo" />,name:'D8',price:120,color:'כחול,לבן'},
+{photo: <img style={{width:'80%',height:'80%'}} src={d8} alt="logo" />,cnt:0,id:'18', photo1: <img style={{width:'80%'}} src={d8s} alt="logo" />,name:'D8',price:120,color:'כחול,לבן'},
 {photo: <img style={{width:'80%',height:'80%'}} src={d9} alt="logo" />,cnt:0,id:'19', photo1: <img style={{width:'80%'}} src={d9} alt="logo" />,name:'D9',price:120,color:'אפור,לבן,חום'},
 {photo: <img style={{width:'80%',height:'80%'}} src={d10} alt="logo" />,cnt:0,id:'20',photo1: <img style={{width:'80%'}} src={d10s} alt="logo" />,name:'D10',price:130,color:'כתום,כחול'},
 {photo: <img style={{width:'80%',height:'80%'}} src={y1} alt="logo" />,cnt:0,id:'21', photo1: <img style={{width:'80%'}} src={y1} alt="logo" />,name:'Y1',price:120,color:'כחול,חום,לבן'},
@@ -345,11 +345,13 @@ if(flag==true){
 }
 }
 
+const [login,setLogin]=useState(false)
+
   return (
 
     <div className="App" onClick={()=>{closeHumburger()}} >
        <BrowserRouter >
-       <Title cart={cart} num={num} flag={flag} setFlag={setFlag}/>
+       <Title cart={cart} num={num} flag={flag} setFlag={setFlag} login={login} setLogin={setLogin}/>
     <Routes>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 

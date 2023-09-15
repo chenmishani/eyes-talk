@@ -17,6 +17,8 @@ export default function Title(props){
   const [flag,setFlag]=useState(false)
   
   const [open,setOpen]=useState(false)
+
+  const [login,setLogin]=useState(false)
   
   const nav=useNavigate()
 
@@ -40,8 +42,42 @@ export default function Title(props){
  
   const showCompo=()=>{
     if(props.flag===true){
-      return <div> <Humburger flag={props.flag} setFlag={props.setFlag}/>
+      return <div> <Humburger flag={props.flag} setFlag={props.setFlag} login={props.login}/>
       </div> 
+    }
+  }
+
+
+  
+  const openPopup=()=>{
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordPopup = document.getElementById('passwordPopup');
+    passwordPopup.style.display = 'block';
+    passwordInput.focus();
+  }
+
+  const checkPassword=()=>{
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordPopup = document.getElementById('passwordPopup');
+    const enteredPassword = passwordInput.value;
+    if (enteredPassword === '121315') {
+      alert('ברוך הבא יגבר על');
+      setLogin(true)
+      props.setLogin(true)
+      passwordPopup.style.display = 'none';
+      passwordInput.value = '';
+  } else {
+      alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
+      passwordInput.value = '';
+      passwordInput.focus(); 
+  }
+
+  }
+
+  const setColor=()=>{
+    const btn=document.getElementById('loginBtn');
+    if(login==true){
+      btn.style.backgroundColor='#adcbd3'
     }
   }
 
@@ -58,8 +94,16 @@ export default function Title(props){
          <div className="mediaBar">
          <div className="bar3">
         <div style={{display:'flex',width:'25%'}}>
-        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>{}
+        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
+        <div><button id="loginBtn" style={{marginTop:'18px',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
+    <div id="passwordPopup" className="popup">
+        <div class="popup-content">
+            <h2>Password Required</h2>
+            <input type="password" id="passwordInput" placeholder="Enter Password"/>
+            <button id="submitPasswordBtn" onClick={()=>{checkPassword()}}>Submit</button>  
+        </div>
+    </div>
         </div> 
         <div style={{width:'60%'}}>
         <div onClick={()=>{nav('/')}}> <h1 className="title" style={{fontSize:'25px'}}>EYES  TALK</h1></div>
@@ -91,40 +135,47 @@ export default function Title(props){
 
         <div className="webTitleDiv">
 
-        <div style={{width:'650px'}}>
+        <div style={{width:'25%'}} >
           <div style={{display:'flex'}}>
        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
         </div>
         </div>
        
-        <div>
-        <Link to={'/Bracelets'}> <button className="btn">הצמידים שלנו</button> </Link> 
-        </div>
-        <div className="logoDiv"> 
+       
+        <div > 
+        <div className="logoDiv" > 
         <div><h1 className="title">EYES  TALK</h1></div>
        <Link to={'/'}> <div>
-       <video style={{width:'45%'}} autoPlay loop muted playsInline>
+       <video style={{width:'20%'}} autoPlay loop muted playsInline>
         <source src={logo} type="video/mp4" />
         </video>
           </div></Link>
-        </div> 
-        <div>
-        <Link to={'/chains'}> <button className="btn" >השרשראות שלנו</button> </Link> 
+          </div>
+          <div style={{display:'flex',justifyContent:'space-between'}}>
+
+        <div style={{height:'80px'}} >
+        <Link to={'/Bracelets'}> <button className="btn" style={{marginTop:'20px'}}>הצמידים שלנו</button> </Link> 
         </div>
+        
+          <div style={{height:'80px'}}>
+        <Link to={'/chains'}> <button className="btn" style={{marginTop:'20px'}} >השרשראות שלנו</button> </Link> 
+        </div>
+        </div>
+        </div> 
+       
 
-      <div style={{width:'20%'}}>
-
-      <div>
+      
+      <div >
       <div style={{display:'flex'}}> 
      <Link to={'/contact'}> <div style={{width:'70px'}}><img style={{ width: "40px",height:'40px',marginTop:'12px' }} src={whatsapp} alt="logo" /> </div></Link>
         <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "40px",height:'40px',marginTop:'10px',marginRight:'5px' }} src={instegram} alt="logo" /> </a></div>
         <div style={{marginRight:'30px'}}><p>בס"ד</p></div>
      </div>
      <div>{showDiv()}</div>
+     {setColor()}
  
-      </div>
-      </div>
+       </div>
       </div>
       </div>
     )
