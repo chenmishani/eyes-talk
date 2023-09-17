@@ -94,7 +94,7 @@ export default function ChainsList(props) {
               width: "100%",
               margin: "0 auto",
               paddingTop: '10px',
-              backgroundColor: ' rgb(249, 248, 248)'
+              // backgroundColor: 'red'
             }}
             onClick={() => { props.func(props.index) }}>
             {props.photo}
