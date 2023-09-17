@@ -59,6 +59,7 @@ export default function Title(props){
   const checkPassword=()=>{
     const passwordInput = document.getElementById('passwordInput');
     const passwordPopup = document.getElementById('passwordPopup');
+    const btn=document.getElementById('loginBtn');
     const enteredPassword = passwordInput.value;
     if (enteredPassword === '121315') {
       alert('ברוך הבא יגבר על');
@@ -66,20 +67,16 @@ export default function Title(props){
       props.setLogin(true)
       passwordPopup.style.display = 'none';
       passwordInput.value = '';
+      btn.style.borderColor='#adcbd3'
+
   } else {
       alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
       passwordInput.value = '';
-      passwordInput.focus(); 
+      passwordPopup.style.display = 'none';
   }
 
   }
 
-  const setColor=()=>{
-    const btn=document.getElementById('loginBtn');
-    if(login==true){
-      btn.style.backgroundColor='#adcbd3'
-    }
-  }
 
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
   const closeIcon = <CgCloseO size='30px' onClick={()=>{props.setFlag(!props.flag)}} />
@@ -96,7 +93,7 @@ export default function Title(props){
         <div style={{display:'flex',width:'25%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
-        <div><button id="loginBtn" style={{marginTop:'18px',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
+        <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
     <div id="passwordPopup" className="popup">
         <div class="popup-content">
             <h2>Password Required</h2>
@@ -173,7 +170,7 @@ export default function Title(props){
         <div style={{marginRight:'30px'}}><p>בס"ד</p></div>
      </div>
      <div>{showDiv()}</div>
-     {setColor()}
+    
  
        </div>
       </div>
