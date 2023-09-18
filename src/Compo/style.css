@@ -98,8 +98,8 @@ background-color: white;
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 20px;
-    background-color: white;
     padding-bottom: 10px;
+
 
 
 }
@@ -235,6 +235,7 @@ background-color: white;
 
 .chainMedia{
     display: none;
+    
 }
 
 .braceletsMedia{
