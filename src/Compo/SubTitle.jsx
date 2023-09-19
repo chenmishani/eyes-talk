@@ -18,7 +18,7 @@ export default function SubTitle() {
             <h1 style={{color:'white',fontSize:'20px',marginBottom:'30px'}}>שירות לקוחות</h1>
             <div style={{display:'flex',justifyContent:'center'}}> 
             <a style={{color:'white',marginRight:'10px',marginBottom:'10px'}} href="https://wa.me/+972527899444">{whatsappLogo} </a>
-            <a style={{color:'white',textDecoration:'none'}} href="https://wa.me/+972527899444">WhatsApp: 0527899444 </a>
+            <a style={{color:'white',textDecoration:'none'}} href="https://wa.me/+972528775898">WhatsApp: 0528775898 </a>
             </div>
             <div style={{display:'flex',justifyContent:'center'}}> 
             <a style={{color:'white',marginRight:'10px',marginBottom:'10px'}} href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer">{instegram} </a>

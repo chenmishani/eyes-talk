@@ -84,6 +84,7 @@ import a4s from './Compo/photos/a4s.JPG'
 import a6s from './Compo/photos/a6s.JPG'
 import Suprise from './Compo/Suprise';
 import SubTitle from './Compo/SubTitle';
+import Terms from './Compo/Terms';
 
 
 
@@ -91,7 +92,7 @@ function App() {
   
   const [arrChains,setarrChains]= useState([
 {photo: <img style={{width:'80%',height:'55%',marginTop:'5%'}} src={suprise} alt="logo" />,cnt:0, id:'10' , name:'שרשרת בהפתעה',price:180 ,src:{suprise}},
-{photo: <img style={{width:'80%',height:'80%'}} src={d1} alt="logo" />,cnt:0,id:'11', photo1: <img style={{width:'80%'}} src={d1} alt="logo" />,name:'D1',price:130,color:'כחול,לבן'},
+{photo: <img style={{width:'100%',height:'100%'}} src={d1} alt="logo" />,cnt:0,id:'11', photo1: <img style={{width:'80%'}} src={d1} alt="logo" />,name:'D1',price:130,color:'כחול,לבן'},
 {photo: <img style={{width:'100%',height:'100%'}} src={d2} alt="logo" />,cnt:0,id:'12', photo1: <img style={{width:'80%'}} src={d2} alt="logo" />,name:'D2',price:120,color:'ירוק כהה,אפור,לבן'},
 {photo: <img style={{width:'100%',height:'100%'}} src={d3} alt="logo" />,cnt:0,id:'13', photo1: <img style={{width:'80%'}} src={d3s} alt="logo" />,name:'D3',price:120,color:'ורוד,לבן,צהוב,שחור'},
 {photo: <img style={{width:'100%',height:'100%'}} src={d4} alt="logo" />,cnt:0,id:'14', photo1: <img style={{width:'80%'}} src={d4s} alt="logo" />,name:'D4',price:120,color:'ירוק,לבן'},
@@ -364,6 +365,7 @@ const [login,setLogin]=useState(false)
     <Route path='/finish' element= {<Finish />}/> 
     <Route path='/contact' element= {<Contact />}/> 
     <Route path='/suprise' element= {<Suprise arrchains={arrChains} add={addChain} />}/> 
+    <Route path='/Terms' element= {<Terms/>}/> 
     
     </Routes>
     <SubTitle/>

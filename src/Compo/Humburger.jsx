@@ -27,7 +27,8 @@ else{
   <Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
   <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
   <Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
- 
+  <Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
+
 </div>
 }
   }
