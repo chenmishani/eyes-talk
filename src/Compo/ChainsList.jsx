@@ -83,6 +83,7 @@ export default function ChainsList(props) {
         width: "45%",
         margin: "0 auto",
         marginTop: "10px",
+        
       }}>
 
       <div style={{ height: "100%" }}>
