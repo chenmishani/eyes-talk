@@ -122,10 +122,10 @@ export default function ChosenChain(props) {
               <div className="photo-gallery" style={{height:'300px'}}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
-                {props.chosenChain.photo1}
+                {props.chosenChain.photo}
                 </div>
                 <div className="photo-wrapper">
-                {props.chosenChain.photo}
+                {props.chosenChain.photo1}
                 </div>
               </div>
             </div>
@@ -152,8 +152,8 @@ export default function ChosenChain(props) {
         <div className="chosenChainWeb">
         <div className="chosenProductDiv">
         <div style={{ margin: "0 auto", display: "flex" }}>
-            <div style={{height:'340px'}}>{props.chosenChain.photo}</div>
-            <div style={{width:'265px'}}>{props.chosenChain.photo1}</div>
+            <div style={{height:'340px'}}>{props.chosenChain.photo1}</div>
+            <div style={{width:'265px'}}>{props.chosenChain.photo}</div>
           </div>
           <div style={{ margin: "0 auto" }}>
             <h1 style={{ marginLeft: "10px" }}>{props.chosenChain.name}</h1>
