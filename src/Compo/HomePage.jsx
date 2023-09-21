@@ -1,10 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
-import suprise from "./photos2/suprise.jpg";
 import d5 from "./chains/d5.png";
-import d1 from "./chains/d1.png";
+import d6 from "./chains/d6.png";
 import l1 from "./bracelets/l1.png";
-import a6 from "./bracelets/a6.png";
+import a3 from "./bracelets/a3.png";
 import homePage1 from "./photos/homePage1.png";
 import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
@@ -93,7 +92,7 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "90%", height: "80%", marginTop: "50px" }}
+                    style={{ width: "80%", height: "75%", marginTop: "60px" }}
                     src={l1}
                     alt="logo"
                   />
@@ -114,7 +113,7 @@ export default function HomePage(props) {
               <Link to={"/chain"}>
                 <div
                   onClick={() => {
-                    props.chosenChainCompo(1);
+                    props.chosenChainCompo(6);
                   }}
                   style={{
                    height: "350px",
@@ -123,13 +122,13 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "100%", height: "80%", marginTop: "60px" }}
-                    src={d1}
+                    style={{ width: "90%", height: "70%", marginTop: "60px" }}
+                    src={d6}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                D1
+                D6
               </p>
               <p className="homePageP2">
                 שרשרת
@@ -143,7 +142,7 @@ export default function HomePage(props) {
               <Link to={"/bracelet"}>
                 <div
                   onClick={() => {
-                    props.chosenBraceletCompo(10);
+                    props.chosenBraceletCompo(7);
                   }}
                   style={{
                     height: "350px",
@@ -152,13 +151,13 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "70%", height: "70%", marginTop: "80px" }}
-                    src={a6}
+                    style={{ width: "65%", height: "65%", marginTop: "80px" }}
+                    src={a3}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                a6
+                A3
               </p>
               <p className="homePageP2">
                 צמיד
@@ -282,14 +281,13 @@ export default function HomePage(props) {
                     props.chosenBraceletCompo(0);
                   }}
                   style={{
-                    backgroundColor: "rgb(249, 248, 248)",
                     height: "350px",
                     width: "90%"                  
                   }}
                 >
 
                   <img
-                    style={{ width: "100%", height: "100%", marginTop: "60px" }}
+                    style={{ width: "90%", height: "80%", marginTop: "60px" }}
                     src={l1}
                     alt="logo"
                   />
@@ -310,7 +308,7 @@ export default function HomePage(props) {
               <Link to={"/chain"}>
                 <div 
                   onClick={() => {
-                    props.chosenChainCompo(1);
+                    props.chosenChainCompo(6);
                   }}
                   style={{
                     height: "350px",
@@ -320,12 +318,12 @@ export default function HomePage(props) {
 
                   <img
                     style={{ width: "90%", height: "80%", marginTop: "70px" }}
-                    src={d1}
+                    src={d6}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                D1
+              D6
               </p>
               <p className="homePageP2">
                 שרשרת
@@ -339,23 +337,22 @@ export default function HomePage(props) {
               <Link to={"/bracelet"}>
                 <div
                   onClick={() => {
-                    props.chosenBraceletCompo(10);
+                    props.chosenBraceletCompo(7);
                   }}
                   style={{
-                    backgroundColor: "rgb(249, 248, 248)",
                     height: "350px",
                     width: "90%"
                     }}
                 >
 
                   <img
-                    style={{ width: "70%", height: "70%", marginTop: "30px" }}
-                    src={a6}
+                    style={{ width: "80%", height: "80%", marginTop: "60px" }}
+                    src={a3}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                a6
+                A3
               </p>
               <p className="homePageP2">
                 צמיד

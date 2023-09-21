@@ -58,8 +58,7 @@ export default function BraceletsList(props) {
             width: "100%",
             margin: "0 auto",
             paddingTop:'10px',
-            backgroundColor:' rgb(249, 248, 248)'
-          }}
+            }}
             onClick={() => {
               props.func(props.index);
             }}

@@ -152,7 +152,7 @@ export default function ChosenChain(props) {
         <div className="chosenChainWeb">
         <div className="chosenProductDiv">
         <div style={{ margin: "0 auto", display: "flex" }}>
-            <div style={{height:'340px'}}>{props.chosenChain.photo1}</div>
+            <div style={{width:'340px'}}>{props.chosenChain.photo1}</div>
             <div style={{width:'265px'}}>{props.chosenChain.photo}</div>
           </div>
           <div style={{ margin: "0 auto" }}>
