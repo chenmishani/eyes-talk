@@ -108,7 +108,7 @@ function App() {
 {photo: <img style={{width:'90%',height:'90%'}} src={d9} alt="logo" />,cnt:0,id:'19', photo1: <img style={{width:'80%'}} src={d9s} alt="logo" />,name:'D9',price:120,color:'ירוק,ורוד,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={d10} alt="logo" />,cnt:0,id:'20',photo1: <img style={{width:'100%'}} src={d10s} alt="logo" />,name:'D10',price:130,color:'שחור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y1} alt="logo" />,cnt:0,id:'21', photo1: <img style={{width:'80%'}} src={y1} alt="logo" />,name:'Y1',price:120,color:'אפור,ירוק,לבן'},
-{photo: <img style={{width:'90%',height:'90%'}} src={y3} alt="logo" />,cnt:0,id:'22', photo1: <img style={{width:'80%'}} src={y2s} alt="logo" />,name:'Y2',price:100,color:'כחול,לבן'},
+{photo: <img style={{width:'90%',height:'90%'}} src={y3} alt="logo" />,cnt:0,id:'22', photo1: <img style={{width:'80%'}} src={y2s} alt="logo" />,name:'Y2',price:120,color:'כחול,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y2} alt="logo" />,cnt:0,id:'23', photo1: <img style={{width:'80%'}} src={y3s} alt="logo" />,name:'Y3',price:120,color:'כחול,כתום,ירוק,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y4} alt="logo" />,cnt:0,id:'24', photo1: <img style={{width:'80%'}} src={y4s} alt="logo" />,name:'Y4',price:130,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y5} alt="logo" />,cnt:0,id:'25', photo1: <img style={{width:'80%'}} src={y5} alt="logo" />,name:'Y5',price:120,color:'ירוק,סגול,לבן,שחור'},

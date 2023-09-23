@@ -32,6 +32,15 @@
 
 }
 
+.mediaBtn{
+     font-family: "Times New Roman", Times, 'rubik';
+     width: 70px;
+     background-color: black;
+     color: white;
+     border-radius: 45%;
+     height: 30px
+}
+
 .logoDiv {
     margin: 0 auto;
 
@@ -89,7 +98,7 @@ background-color: white;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, 'rubik';
 }
 
 .productList {

@@ -96,10 +96,11 @@ export default function Title(props){
         <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
     <div id="passwordPopup" className="popup">
         <div class="popup-content">
-            <h2>Password Required</h2>
-            <input type="password" id="passwordInput" placeholder="Enter Password"/>
-            <button id="submitPasswordBtn" onClick={()=>{checkPassword()}}>Submit</button>  
-        </div>
+            <h2>כניסת מנהל</h2>
+            <button id="submitPasswordBtn" style={{marginRight:'10px'}} onClick={()=>{checkPassword()}}>אישור</button>  
+
+            <input style={{textAlign:'right'}} type="password" id="passwordInput" placeholder="הכנס סיסמא"/>
+     </div>
     </div>
         </div> 
         <div style={{width:'60%'}}>

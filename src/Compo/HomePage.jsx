@@ -3,7 +3,7 @@ import "./style.css";
 import d5 from "./chains/d5.png";
 import d2 from "./chains/d2.png";
 import l1 from "./bracelets/l1.png";
-import a3 from "./bracelets/a3.png";
+import a2 from "./bracelets/a2.png";
 import homePage1 from "./photos/homePage1.png";
 import homePage2 from "./photos/homePage2.png";
 import homePage3 from "./photos/homePage3.png";
@@ -41,22 +41,24 @@ export default function HomePage(props) {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", width: "50%", margin: "0 auto", }}>
           <Link to={"/chains"}>
-            <button style={{ width: "70px", backgroundColor: "black", color: "white", borderRadius: "45%", height: "30px" }}>
+            <button className="mediaBtn">
               שרשראות
             </button>
           </Link>
 
           <Link to={"/Bracelets"}>
-            <button style={{ width: "70px", backgroundColor: "black", color: "white", borderRadius: "45%", height: "30px" }}>
+            <button className="mediaBtn">
               צמידים
             </button>
           </Link>
+          
         </div>
 
         <div>
           <video
             style={{ width: "100%", marginTop: "20px" }}
-            autoPlay
+            preload="auto"
+            autoPlay={true}
             loop
             muted
             playsInline
@@ -92,7 +94,7 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "80%", height: "75%", marginTop: "60px" }}
+                    style={{ width: "70%", height: "65%", marginTop: "60px" }}
                     src={l1}
                     alt="logo"
                   />
@@ -151,19 +153,19 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "65%", height: "65%", marginTop: "80px" }}
-                    src={a3}
+                    style={{ width: "70%", height: "50%", marginTop: "90px" }}
+                    src={a2}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                A3
+                A2
               </p>
               <p className="homePageP2">
                 צמיד
               </p>
               <div>
-                <p className="homePageP">₪250</p>
+                <p className="homePageP">₪120</p>
 
               </div>
             </div>
@@ -179,7 +181,7 @@ export default function HomePage(props) {
                   }}
                 >
                   <img
-                    style={{  width: "80%", height: "65%", marginTop: "80px"  }}
+                    style={{  width: "70%", height: "55%", marginTop: "80px"  }}
                     src={d5}
                     alt="logo"
                   />
@@ -242,16 +244,17 @@ export default function HomePage(props) {
       <div className="mainDiv">
         <div style={{display:"flex"}}>
         <div>
-        <Link to={"/chains"}>
+        <Link to={"/Bracelets"}>
           <div>
-            <img style={{ width: "75%"}} src={homePage5} alt="logo" />
+            <img style={{ width: "90%" }} src={homePage4} alt="logo" />
           </div>
         </Link>
         </div>
-        <div style={{marginRight:'28px'}}>
+        <div style={{marginRight:'75px'}}>
           <video
-            style={{ width: "112%"}}
-            autoPlay
+            style={{ width: "148%"}}
+            preload="auto"
+            autoPlay={true}
             loop
             muted
             playsInline
@@ -260,9 +263,9 @@ export default function HomePage(props) {
           </video>
         </div>
         <div>
-        <Link to={"/Bracelets"}>
+        <Link to={"/chains"}>
           <div>
-            <img style={{ width: "75%" }} src={homePage4} alt="logo" />
+            <img style={{ width: "85%"}} src={homePage5} alt="logo" />
           </div>
         </Link>
         </div>
@@ -337,7 +340,7 @@ export default function HomePage(props) {
               <Link to={"/bracelet"}>
                 <div
                   onClick={() => {
-                    props.chosenBraceletCompo(7);
+                    props.chosenBraceletCompo(2);
                   }}
                   style={{
                     height: "350px",
@@ -347,12 +350,12 @@ export default function HomePage(props) {
 
                   <img
                     style={{ width: "80%", height: "80%", marginTop: "60px" }}
-                    src={a3}
+                    src={a2}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                A3
+                A2
               </p>
               <p className="homePageP2">
                 צמיד
