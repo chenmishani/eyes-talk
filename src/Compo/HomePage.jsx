@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import d5 from "./chains/d5.png";
-import d6 from "./chains/d6.png";
+import d2 from "./chains/d2.png";
 import l1 from "./bracelets/l1.png";
 import a3 from "./bracelets/a3.png";
 import homePage1 from "./photos/homePage1.png";
@@ -113,7 +113,7 @@ export default function HomePage(props) {
               <Link to={"/chain"}>
                 <div
                   onClick={() => {
-                    props.chosenChainCompo(6);
+                    props.chosenChainCompo(2);
                   }}
                   style={{
                    height: "350px",
@@ -122,13 +122,13 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "90%", height: "70%", marginTop: "60px" }}
-                    src={d6}
+                    style={{ width: "80%", height: "60%", marginTop: "80px" }}
+                    src={d2}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-                D6
+                D2
               </p>
               <p className="homePageP2">
                 שרשרת
@@ -163,7 +163,7 @@ export default function HomePage(props) {
                 צמיד
               </p>
               <div>
-                <p className="homePageP">₪120</p>
+                <p className="homePageP">₪250</p>
 
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function HomePage(props) {
                   }}
                 >
                   <img
-                    style={{ width: "100%", height: "80%", marginTop: "60px" }}
+                    style={{  width: "80%", height: "65%", marginTop: "80px"  }}
                     src={d5}
                     alt="logo"
                   />
@@ -308,7 +308,7 @@ export default function HomePage(props) {
               <Link to={"/chain"}>
                 <div 
                   onClick={() => {
-                    props.chosenChainCompo(6);
+                    props.chosenChainCompo(2);
                   }}
                   style={{
                     height: "350px",
@@ -318,12 +318,12 @@ export default function HomePage(props) {
 
                   <img
                     style={{ width: "90%", height: "80%", marginTop: "70px" }}
-                    src={d6}
+                    src={d2}
                     alt="logo"
                   />
                 </div>  </Link>
               <p className="homePageP">
-              D6
+              D2
               </p>
               <p className="homePageP2">
                 שרשרת
