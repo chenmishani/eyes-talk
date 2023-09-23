@@ -124,7 +124,7 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "70%", height: "50%", marginTop: "80px" }}
+                    style={{ width: "100%", height: "75%", marginTop: "40px" }}
                     src={d2}
                     alt="logo"
                   />
@@ -153,7 +153,7 @@ export default function HomePage(props) {
                 >
 
                   <img
-                    style={{ width: "60%", height: "45%", marginTop: "90px" }}
+                    style={{ width: "80%", height: "60%", marginTop: "70px" }}
                     src={a2}
                     alt="logo"
                   />
@@ -181,7 +181,7 @@ export default function HomePage(props) {
                   }}
                 >
                   <img
-                    style={{  width: "95%", height: "80%", marginTop: "30px"  }}
+                    style={{  width: "100%", height: "85%", marginTop: "30px"  }}
                     src={d5}
                     alt="logo"
                   />
