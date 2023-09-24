@@ -16,9 +16,9 @@ import HomePageBar from "./HomePageBar";
 
 
 
+
 export default function HomePage(props) {
   const nev = useNavigate();
-
 
 
   return (
@@ -57,7 +57,6 @@ export default function HomePage(props) {
         <div>
           <video
             style={{ width: "100%", marginTop: "20px" }}
-            preload="auto"
             autoPlay={true}
             loop
             muted
@@ -88,18 +87,18 @@ export default function HomePage(props) {
                     props.chosenBraceletCompo(0);
                   }}
                   style={{
-                    height: "350px",
+                    height: "200%",
                     width: "90%",
                   }}
                 >
 
                   <img
-                    style={{ width: "70%", height: "65%", marginTop: "60px" }}
+                    style={{ width: "80%", height: "75%", marginTop: "60px" }}
                     src={l1}
                     alt="logo"
                   />
                 </div>  </Link>
-              <p className="homePageP">
+              <p className="homePageP" style={{marginTop:'10px'}}>
                 L1
               </p>
 
@@ -118,7 +117,7 @@ export default function HomePage(props) {
                     props.chosenChainCompo(2);
                   }}
                   style={{
-                   height: "350px",
+                   height: "200%",
                     width: "90%",
                   }}
                 >
@@ -147,7 +146,7 @@ export default function HomePage(props) {
                     props.chosenBraceletCompo(7);
                   }}
                   style={{
-                    height: "350px",
+                    height: "200%",
                     width: "90%",
                   }}
                 >
@@ -158,7 +157,7 @@ export default function HomePage(props) {
                     alt="logo"
                   />
                 </div>  </Link>
-              <p className="homePageP">
+              <p className="homePageP" style={{marginTop:'25px'}}>
                 A2
               </p>
               <p className="homePageP2">
@@ -176,12 +175,12 @@ export default function HomePage(props) {
                     props.chosenChainCompo(5);
                   }}
                   style={{
-                    height: "350px",
+                    height: "200%",
                     width: "90%",
                   }}
                 >
                   <img
-                    style={{  width: "100%", height: "85%", marginTop: "30px"  }}
+                    style={{  width: "100%", height: "75%", marginTop: "20px"  }}
                     src={d5}
                     alt="logo"
                   />
