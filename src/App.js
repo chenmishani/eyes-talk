@@ -39,7 +39,7 @@ import y9 from './Compo/chains/y9.png'
 import y10 from './Compo/chains/y10.png'
 import y11 from './Compo/chains/y11.png'
 import y12 from './Compo/chains/y12.png'
-import y13 from './Compo/chains/y13.png'
+
 import suprise from './Compo/photos2/suprise.jpg'
 
 import sale1 from './Compo/photos/sale1.JPG'
@@ -119,7 +119,6 @@ function App() {
 {photo: <img style={{width:'90%',height:'90%'}} src={y10} alt="logo" />,cnt:0,id:'30', photo1: <img style={{width:'80%'}} src={y10s} alt="logo" />,name:'Y10',price:120,color:'אפור,שחור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y11} alt="logo" />,cnt:0,id:'31', photo1: <img style={{width:'80%'}} src={y11} alt="logo" />,name:'Y11',price:130,color:'אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y12} alt="logo" />,cnt:0,id:'32', photo1: <img style={{width:'100%'}} src={y12s} alt="logo" />,name:'Y12',price:150,color:'שחור,אפור,לבן'},
-{photo: <img style={{width:'90%',height:'90%'}} src={y13} alt="logo" />,cnt:0,id:'33', photo1: <img style={{width:'80%'}} src={y13} alt="logo" />,name:'Y13',price:150,color:'פנינים לבנים,,כסף'},
 ])
 
 const [arrBracelets,setArrBracelets]= useState([

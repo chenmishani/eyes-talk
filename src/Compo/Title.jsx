@@ -119,7 +119,7 @@ export default function Title(props){
          <div>
         <div style={{margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'40%',marginTop:'50px'}} autoPlay loop muted playsInline>
+        <video style={{width:'40%',marginTop:'50px'}} autoPlay muted loop playsInline>
         <source src={logo} type="video/mp4" />
         </video>
             </div> 
