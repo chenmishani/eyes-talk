@@ -61,6 +61,7 @@ export default function HomePage(props) {
             muted 
             preload="auto"
             loop
+            playsInline
           >
             <source src={homePageVideo} type="video/mp4" />
           </video>
