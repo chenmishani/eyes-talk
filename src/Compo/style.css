@@ -9,7 +9,7 @@
 
 .webTitleDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
    
 }
 
@@ -32,6 +32,16 @@
 
 }
 
+.btnWeb{
+    width: 150px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, 'rubik';
+    background-color: #adcbd3;
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 20px;
+}
+
 .mediaBtn{
      font-family: "Times New Roman", Times, 'rubik';
      width: 70px;
@@ -43,6 +53,7 @@
 
 .logoDiv {
     margin: 0 auto;
+    /* width: 50%; */
 
 }
 

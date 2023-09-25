@@ -123,13 +123,13 @@ function App() {
 
 const [arrBracelets,setArrBracelets]= useState([
   {photo: <img style={{width:'80%',height:'90%'}} src={l1} alt="logo" />,cnt:0,id:'50', photo1: <img style={{width:'80%'}} src={l1s} alt="logo" />, name:'L1',price:150,color:'פנינים'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />,cnt:0,id:'51', photo1: <img style={{width:'80%'}} src={l2} alt="logo" />, name:'L2',price:100,color:'כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />,cnt:0,id:'51', photo1: <img style={{width:'80%'}} src={l2} alt="logo" />, name:'L2',price:250,color:'כסף'},
   {photo: <img style={{width:'80%',height:'90%'}} src={l3} alt="logo" />,cnt:0,id:'52', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l3s} alt="logo" />, name:'L3',price:100,color:'שחור,כסף'},
   {photo: <img style={{width:'80%',height:'90%'}} src={l4} alt="logo" />,cnt:0,id:'53', photo1: <img style={{width:'80%'}} src={l4} alt="logo" />, name:'L4',price:100,color:'תכלת,כסף'},
   {photo: <img style={{width:'80%',height:'90%'}} src={l5} alt="logo" />,cnt:0,id:'54', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l5s} alt="logo" />, name:'L5',price:100,color:'כסף,לבן'},
   {photo: <img style={{width:'80%',height:'90%'}} src={a1} alt="logo" />,cnt:0,id:'55', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a1s} alt="logo" />, name:'A1',price:130,color:'כסף,לבן'},
   {photo: <img style={{width:'80%',height:'90%'}} src={a2} alt="logo" />,cnt:0,id:'56', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a2s} alt="logo" />, name:'A2',price:120,color:'תכלת,לבן,פנינים'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />,cnt:0,id:'57', photo1: <img style={{width:'80%'}} src={a3} alt="logo" />, name:'A3',price:250,color:'כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />,cnt:0,id:'57', photo1: <img style={{width:'80%'}} src={a3} alt="logo" />, name:'A3',price:100,color:'כסף'},
   {photo: <img style={{width:'80%',height:'90%'}} src={a4} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a4} alt="logo" />, name:'A4',price:100,color:'כחול'},
   {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a5s} alt="logo" />, name:'A5',price:100,color:'לבן,שחור'},
 ])

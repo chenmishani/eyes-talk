@@ -132,16 +132,33 @@ export default function Title(props){
        
 
         <div className="webTitleDiv">
-
+        <div style={{display:'flex',justifyContent:'space-between'}}>
         <div style={{width:'25%'}} >
           <div style={{display:'flex'}}>
        <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
+        <div> <Link to={'/contact'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>צור קשר</button></Link> </div> 
+        <div> <Link to={'/terms'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>תקנון</button></Link> </div> 
+
         </div>
         </div>
+
+      
+      <div >
+      <div style={{display:'flex'}}> 
+
+        <div style={{display:'flex'}}>        
+  <div> <Link to={'/suprise'}>  <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}} >שרשרת בהפתעה</button> </Link> </div> 
+  <div> <Link to={'/sale'}>  <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}} >מבצעים</button> </Link> </div> 
+        </div>
        
-       
-        <div > 
+        <div style={{marginRight:'30px', fontFamily: "Times New Roman",fontSize:'20px'}}><p>בס"ד</p></div> 
+     </div>
+     <div>{showDiv()}</div>
+     </div>
+     </div>
+     
+      <div>
         <div className="logoDiv" > 
         <div><h1 className="title">EYES  TALK</h1></div>
        <Link to={'/'}> <div>
@@ -150,7 +167,7 @@ export default function Title(props){
         </video>
           </div></Link>
           </div>
-          <div style={{display:'flex',justifyContent:'space-between'}}>
+          <div style={{display:'flex',justifyContent:'space-between',width:'70%',margin:'0 auto'}}>
 
         <div style={{height:'80px'}} >
         <Link to={'/Bracelets'}> <button className="btn" style={{marginTop:'20px'}}>הצמידים שלנו</button> </Link> 
@@ -160,22 +177,11 @@ export default function Title(props){
         <Link to={'/chains'}> <button className="btn" style={{marginTop:'20px'}} >השרשראות שלנו</button> </Link> 
         </div>
         </div>
-        </div> 
-       
-
-      
-      <div >
-      <div style={{display:'flex'}}> 
-     <Link to={'/contact'}> <div style={{width:'70px'}}><img style={{ width: "40px",height:'40px',marginTop:'12px' }} src={whatsapp} alt="logo" /> </div></Link>
-        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width: "40px",height:'40px',marginTop:'10px',marginRight:'5px' }} src={instegram} alt="logo" /> </a></div>
-        <div style={{marginRight:'30px'}}><p>בס"ד</p></div>
-     </div>
-     <div>{showDiv()}</div>
-    
- 
+        </div>
+        
        </div>
       </div>
-      </div>
+      
     )
 
 }
