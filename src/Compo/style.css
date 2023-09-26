@@ -279,6 +279,7 @@ background-color: white;
 
 .mediaMainDiv {
     display: none;
+    width: 100%;
 }
 
 @media (max-width:768px) {
@@ -537,4 +538,11 @@ background-color: white;
 .teamsDiv{
     display: flex;
     justify-content: right;
+}
+
+.loading{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+    height: 250px;
 }

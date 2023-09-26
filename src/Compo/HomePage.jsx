@@ -1,4 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import ClockLoader from "react-spinners/ClockLoader";
 import "./style.css";
 import d5 from "./chains/d5.png";
 import d2 from "./chains/d2.png";
@@ -25,7 +27,7 @@ export default function HomePage(props) {
         <video style={{ width: "100%", marginTop: "20px" }}
             autoPlay 
             muted 
-            preload="auto"
+            loading="lazy"
             loop
             playsInline>
            <source src={videoSource} type="video/mp4"/>
@@ -36,6 +38,17 @@ export default function HomePage(props) {
     )
   }
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 4000); 
+
+     return () => clearTimeout(timeout);
+  }, []);
+  
+
   return (
     <div
       style={{
@@ -43,13 +56,28 @@ export default function HomePage(props) {
         flexDirection: "row",
         flexWrap: "wrap",
         marginBottom: '80px'
+      }}>
 
-      }}
-    >
       <div className="mediaMainDiv">
-
-
-
+      {loading ? (
+        <div style={{width:'100%'}}> 
+        <div className="loading">
+          <div style={{width:'23%',margin:'0 auto'}}>
+          <ClockLoader
+        color='#adcbd3'
+        loading={loading}
+        size={100}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+      </div>
+      <p style={{fontSize:'20px',fontFamily: "Times New Roman"}}>Life isn't prfercr but jewelry can be </p>
+      </div>
+         
+        </div>
+      ) : (
+        <>
+         
         <div style={{ marginTop: "20px" }}>
           <HomePageBar />
           <img style={{ width: "100%" }} src={homePageTitle} alt="logo" />
@@ -243,7 +271,8 @@ export default function HomePage(props) {
           </div>
         </div>
 
-
+        </>
+      )}
       </div>
 
       {/* div for web */}
