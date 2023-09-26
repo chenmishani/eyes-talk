@@ -12,14 +12,29 @@ import homePage5 from "./photos/homePage5.png";
 import homePageTitle from "./photos2/title.png";
 import homePageVideo from "./photos2/homePageVideo.mp4";
 import HomePageBar from "./HomePageBar";
-
+import videoSource from './photos2/homePageVideo.mp4';
 
 
 
 
 export default function HomePage(props) {
   const nev = useNavigate();
+  const videoPlayer=()=>{
+    return (
+      <div>
+        <video style={{ width: "100%", marginTop: "20px" }}
+            autoPlay 
+            muted 
+            preload="auto"
+            loop
+            playsInline>
+           <source src={videoSource} type="video/mp4"/>
 
+        </video>
+      </div>
+     
+    )
+  }
 
   return (
     <div
@@ -55,16 +70,7 @@ export default function HomePage(props) {
         </div>
 
         <div>
-          <video
-            style={{ width: "100%", marginTop: "20px" }}
-            autoPlay 
-            muted 
-            preload="auto"
-            loop
-            playsInline
-          >
-            <source src={homePageVideo} type="video/mp4" />
-          </video>
+            {videoPlayer()}
         </div>
 
         <Link to={"/Bracelets"}>

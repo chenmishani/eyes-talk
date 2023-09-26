@@ -83,6 +83,7 @@ export default function Title(props){
   const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='23px'/>
 
+
     return (
 
   
@@ -122,6 +123,7 @@ export default function Title(props){
         <video style={{width:'40%',marginTop:'50px'}} autoPlay muted loop playsInline>
         <source src={logo} type="video/mp4" />
         </video>
+        
             </div> 
         </div>
         </div>
