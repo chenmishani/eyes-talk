@@ -71,7 +71,7 @@ export default function HomePage(props) {
         data-testid="loader"
       />
       </div>
-      <p style={{fontSize:'20px',fontFamily: "Times New Roman"}}>Life isn't prfercr but jewelry can be </p>
+      <p style={{fontSize:'20px',fontFamily: "Times New Roman"}}>Life isn't prferct but jewelry can be </p>
       </div>
          
         </div>
