@@ -27,7 +27,7 @@ export default function HomePage(props) {
         <video style={{ width: "100%", marginTop: "20px" }}
             autoPlay 
             muted 
-            loading="lazy"
+            preload="none"
             loop
             playsInline>
            <source src={videoSource} type="video/mp4"/>
