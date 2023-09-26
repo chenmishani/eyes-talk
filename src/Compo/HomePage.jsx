@@ -43,7 +43,7 @@ export default function HomePage(props) {
   useEffect(() => {
       const timeout = setTimeout(() => {
       setLoading(false);
-    }, 7000); 
+    }, 4000); 
 
      return () => clearTimeout(timeout);
   }, []);
