@@ -37,15 +37,23 @@ export default function HomePage(props) {
      
     )
   }
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 4000); 
+    const firstTime = localStorage.getItem('firstTime');
 
-     return () => clearTimeout(timeout);
+    if (firstTime !== null) {
+      setLoading(false);
+    } else {
+        const timeout = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem('firstTime', 'false');
+      }, 4000);
+
+        return () => {
+        clearTimeout(timeout);
+      };
+    }
   }, []);
   
 
@@ -277,17 +285,18 @@ export default function HomePage(props) {
 
       {/* div for web */}
       <div className="mainDiv">
-        <div style={{display:"flex"}}>
-        <div>
+        <div style={{width:'100%',display:"flex",justifyContent:'space-between'}}>
+     
+        <div style={{width:'51%'}}>
         <Link to={"/Bracelets"}>
-          <div>
-            <img style={{ width: "90%" }} src={homePage4} alt="logo" />
+          <div >
+            <img style={{ width: "90%" }}  src={homePage4} alt="logo" />
           </div>
         </Link>
         </div>
-        <div style={{marginRight:'75px'}}>
+        <div style={{width:'30%'}}>
           <video
-            style={{ width: "148%"}}
+            style={{ width: "93%"}}
             preload="auto"
             autoPlay={true}
             loop
@@ -297,21 +306,18 @@ export default function HomePage(props) {
             <source src={homePageVideo} type="video/mp4" />
           </video>
         </div>
-        <div>
+        <div style={{width:'50%'}}>
         <Link to={"/chains"}>
-          <div>
-            <img style={{ width: "85%"}} src={homePage5} alt="logo" />
+          <div >
+            <img style={{ width: "90%" }}  src={homePage5} alt="logo" />
           </div>
         </Link>
-        </div>
+        </div>    
        
         </div>
 
-   
-
-
-       <p className="subtitle" style={{marginTop:'40px',marginBottom:'0px'}}>הנמכרים ביותר</p>
-          <div style={{display:'flex',margin:'0 auto'}}>
+         <p className="subtitle" style={{marginTop:'40px',marginBottom:'0px'}}>הנמכרים ביותר</p>
+          <div style={{display:'flex',margin:'0 auto',width:'90%',justifyContent:'space-between'}}>
             <div style={{margin:'40px'}}>
               <Link to={"/bracelet"}>
                 <div

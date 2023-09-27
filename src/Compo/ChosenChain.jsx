@@ -123,9 +123,11 @@ export default function ChosenChain(props) {
               <div className="scrollable-container">
                 <div className="photo-wrapper">
                 {props.chosenChain.photo}
+                <p style={{fontSize:'50px',marginTop:'0px',margin:'0 auto'}}>. <span style={{color:'grey'}}>.</span> </p>
                 </div>
                 <div className="photo-wrapper">
                 {props.chosenChain.photo1}
+                <p style={{fontSize:'50px',marginTop:'31px',margin:'0 auto'}}><span style={{color:'grey'}}>.</span> .  </p>
                 </div>
               </div>
             </div>
