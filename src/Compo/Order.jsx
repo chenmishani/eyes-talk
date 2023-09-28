@@ -61,12 +61,7 @@ export default function Order(props) {
       setSearchInput(city);
     };
 
-    const handleInputClear = () => {
-      setSearchInput('');
-      setShowCityList(true);
-    };
-
-  const nav=useNavigate()
+   const nav=useNavigate()
 
   
 
@@ -91,7 +86,6 @@ export default function Order(props) {
   
         if (inputValue.length < minLength) {
           isValid = false;
-          // Show an error message or handle validation as needed
           console.error(`${key} input is too short. Minimum length: ${minLength}`);
         }
         
@@ -112,10 +106,7 @@ export default function Order(props) {
       e.target.reset();
       nav('/finish');
       props.deleteCart();
-    } else {
-      // Handle validation error, e.g., display an error message to the user
-      // You can also prevent form submission here if needed
-    }
+    } 
   };
 
   const form=useRef()
@@ -133,13 +124,11 @@ export default function Order(props) {
       <input className='inp' type="text" placeholder='שם מלא' name='user_name' required />
       <input className='inp' type="number" placeholder='מספר טלפון' name='user_number' required />
       <div>
-      {searchInput && (
-        <button style={{margin:'5px'}} onClick={handleInputClear}>ניקוי</button>
-      )}
+      
       <input className='inp' type="text" placeholder='עיר' name='user_city' required value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
-      />
-       {searchInput && (
+        onChange={(e) => setSearchInput(e.target.value)}/>
+         
+          {searchInput && (
         <ul>
           {filterCities().map((city, index) => (
            <li style={{width:'150px'}} key={index} onClick={() => handleCityClick(city)}>

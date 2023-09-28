@@ -129,20 +129,7 @@ export default function ChosenChain(props) {
         <div className="chosenChainMedia">
         <div className="chosenProductDiv">
           <div style={{ margin: "0 auto" }}>
-              {/* <div className="photo-gallery" style={{height:'300px'}}>
-              <div className="scrollable-container">
-                <div className="photo-wrapper">
-               <div style={{height:'200px'}}><div> {props.chosenChain.photo} </div> </div>
-                <p style={{fontSize:'50px',marginTop:'0px',margin:'0 auto'}}>. <span style={{color:'grey'}}>.</span> </p>
-                </div>
-                <div className="photo-wrapper">
-             <div style={{height:'200px'}}><div> {props.chosenChain.photo1} </div> </div> 
-                <p style={{fontSize:'50px',marginTop:'31px',margin:'0 auto'}}><span style={{color:'grey'}}>.</span> .  </p>
-                </div>
-              </div>
-            </div> */}
-
-<div>
+         <div>
       <div className="photo-gallery" style={{ height: "300px" }}>
         <div className="scrollable-container">
           <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenChain.photo)}>
@@ -151,8 +138,7 @@ export default function ChosenChain(props) {
           <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenChain.photo1)}>
           {props.chosenChain.photo1}
           </div>
-          {/* Add more photos as needed */}
-        </div>
+          </div>
       </div>
 
       {selectedPhoto && (
@@ -172,6 +158,7 @@ export default function ChosenChain(props) {
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>
             <p>צבעים: {props.chosenChain.color} </p>
+            <p>אורך: 55 ס"מ</p>
             <p
               style={{ fontSize: "25px", marginTop: "40px" }}
             >{`₪ ${props.chosenChain.price} `}</p>
@@ -197,6 +184,7 @@ export default function ChosenChain(props) {
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>
             <p>צבעים: {props.chosenChain.color} </p>
+            <p>אורך: 55 ס"מ</p>
             <p
               style={{ fontSize: "25px", marginTop: "40px" }}
             >{`₪ ${props.chosenChain.price} `}</p>
