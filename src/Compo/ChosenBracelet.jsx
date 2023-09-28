@@ -14,6 +14,15 @@ export default function ChosenBracelet(props) {
 
   const nev =useNavigate()
 
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  const openFullScreen = (photoUrl) => {
+    setSelectedPhoto(photoUrl);
+  };
+
+  const closeFullScreen = () => {
+    setSelectedPhoto(null);
+  };
  
   const showCnt = () => {
     if (flag == false) {
@@ -69,18 +78,27 @@ export default function ChosenBracelet(props) {
           <div className="chosenBraceletMedia">
             <div className="chosenProductDiv">
               <div style={{ margin: "0 auto" }}>
-                <div className="photo-gallery" style={{ height: "300px" }}>
-                  <div className="scrollable-container">
-                    <div className="photo-wrapper">
-                      {props.chosenBracelet.photo}
-                      <p style={{fontSize:'50px',marginTop:'0px',margin:'0 auto'}}>. <span style={{color:'grey'}}>.</span> </p>
-                    </div>
-                    <div className="photo-wrapper">
-                      {props.chosenBracelet.photo1}
-                      <p style={{fontSize:'50px',marginTop:'31px',margin:'0 auto'}}><span style={{color:'grey'}}>.</span> .  </p>
-                    </div>
-                  </div>
-                </div>
+              <div>
+      <div className="photo-gallery" style={{ height: "300px" }}>
+        <div className="scrollable-container">
+          <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenBracelet.photo)}>
+            {props.chosenBracelet.photo} 
+          </div>
+          <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenBracelet.photo1)}>
+          {props.chosenBracelet.photo1}
+          </div>
+          {/* Add more photos as needed */}
+        </div>
+      </div>
+
+      {selectedPhoto && (
+        <div className="fullscreen-overlay" onClick={closeFullScreen}>
+          <div className="fullscreen-photo">
+          {selectedPhoto}
+          </div>
+        </div>
+      )}
+    </div>
               </div>
               <div style={{ margin: "0 auto" }}>
                 <h1>{props.chosenBracelet.name}</h1>

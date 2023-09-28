@@ -11,7 +11,17 @@ export default function ChosenChain(props) {
   const minus = <AiOutlineMinusCircle size="18px" />;
 
   const nev =useNavigate()
-  
+
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  const openFullScreen = (photoUrl) => {
+    setSelectedPhoto(photoUrl);
+  };
+
+  const closeFullScreen = () => {
+    setSelectedPhoto(null);
+  };
+
   
   const [flag, setFlag] = useState(false);
 
@@ -119,18 +129,42 @@ export default function ChosenChain(props) {
         <div className="chosenChainMedia">
         <div className="chosenProductDiv">
           <div style={{ margin: "0 auto" }}>
-              <div className="photo-gallery" style={{height:'300px'}}>
+              {/* <div className="photo-gallery" style={{height:'300px'}}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
-                {props.chosenChain.photo}
+               <div style={{height:'200px'}}><div> {props.chosenChain.photo} </div> </div>
                 <p style={{fontSize:'50px',marginTop:'0px',margin:'0 auto'}}>. <span style={{color:'grey'}}>.</span> </p>
                 </div>
                 <div className="photo-wrapper">
-                {props.chosenChain.photo1}
+             <div style={{height:'200px'}}><div> {props.chosenChain.photo1} </div> </div> 
                 <p style={{fontSize:'50px',marginTop:'31px',margin:'0 auto'}}><span style={{color:'grey'}}>.</span> .  </p>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+<div>
+      <div className="photo-gallery" style={{ height: "300px" }}>
+        <div className="scrollable-container">
+          <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenChain.photo)}>
+            {props.chosenChain.photo} 
+          </div>
+          <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenChain.photo1)}>
+          {props.chosenChain.photo1}
+          </div>
+          {/* Add more photos as needed */}
+        </div>
+      </div>
+
+      {selectedPhoto && (
+        <div className="fullscreen-overlay" onClick={closeFullScreen}>
+          <div className="fullscreen-photo">
+          {selectedPhoto}
+          </div>
+        </div>
+      )}
+    </div>
+      
+
           </div>
           <div style={{ margin: "0 auto" }}>
             <h1 style={{ marginLeft: "10px" }}>{props.chosenChain.name}</h1>
