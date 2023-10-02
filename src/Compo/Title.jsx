@@ -14,7 +14,17 @@ import Humburger from "./Humburger";
 
 export default function Title(props){
 
-  const [flag,setFlag]=useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const humFlag= props.flag
+
+  const toggleMenu = () => {
+      setIsOpen(!open);
+    }
+
+  const menuClass = isOpen && humFlag ? 'menu-container menu-open' : 'menu-container';
+  // const buttonClass = 'menu-button';
+
+  // const [flag,setFlag]=useState(false)
   
   const [open,setOpen]=useState(false)
 
@@ -31,24 +41,7 @@ export default function Title(props){
     }
   }
 
-  
-  const showDiv=()=>{
-    if(flag===true){
-      return <div>
-       <div><p style={{fontFamily: "Times New Roman"}}>0527899444 -דור</p> <p style={{fontFamily: "Times New Roman"}}>0528775898 -יובל</p></div>
-      </div>
-    }
-  }
  
-  const showCompo=()=>{
-    if(props.flag===true){
-      return <div> <Humburger flag={props.flag} setFlag={props.setFlag} login={props.login}/>
-      </div> 
-    }
-  }
-
-
-  
   const openPopup=()=>{
     const passwordInput = document.getElementById('passwordInput');
     const passwordPopup = document.getElementById('passwordPopup');
@@ -79,7 +72,6 @@ export default function Title(props){
 
 
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
-  const closeIcon = <CgCloseO size='30px' onClick={()=>{props.setFlag(!props.flag)}} />
   const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='23px'/>
 
@@ -91,10 +83,10 @@ export default function Title(props){
 
          <div className="mediaBar">
          <div className="bar3">
-        <div style={{display:'flex',width:'25%'}}>
+        <div style={{display:'flex',width:'20%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
-        <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
+        {/* <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
     <div id="passwordPopup" className="popup">
         <div class="popup-content">
             <h2>כניסת מנהל</h2>
@@ -102,18 +94,37 @@ export default function Title(props){
 
             <input style={{textAlign:'right'}} type="password" id="passwordInput" placeholder="הכנס סיסמא"/>
      </div>
-    </div>
+    </div> */}
         </div> 
         <div style={{width:'60%'}}>
         <div onClick={()=>{nav('/')}}> <h1 className="title" style={{fontSize:'25px'}}>EYES  TALK</h1></div>
         </div>
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
-        <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
-        <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
-          <div style={{marginTop:'10px',marginRight:'10px'}}> {open ? closeIcon: burgerIcon} </div>   
+          
+          <div style={{width:'80px'}}>
+      <div  style={{display:'flex',width:'20%'}}> 
+      <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
+      <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
+      <div style={{marginTop:'10px'}} onClick={toggleMenu}> {burgerIcon} </div>
+      </div>
+
+      <div className={menuClass}>
+     
+        <Link to={'/Bracelets'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צמידים</button> </Link>
+  <Link to={'/chains'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשראות</button> </Link>
+  <Link to={'/suprise'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשרת בהפתעה</button> </Link>
+  <Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
+  <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
+  <Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
+
+  <Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
+      </div>
+    </div> 
          </div>
-         <div>{showCompo()}</div>
+        {/* {showCompo()} */}
+        
+           
          </div>
          </div>
          
@@ -156,7 +167,6 @@ export default function Title(props){
        
         <div style={{marginRight:'30px', fontFamily: "Times New Roman",fontSize:'20px'}}><p>בס"ד</p></div> 
      </div>
-     <div>{showDiv()}</div>
      </div>
      </div>
      

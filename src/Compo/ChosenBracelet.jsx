@@ -79,7 +79,7 @@ export default function ChosenBracelet(props) {
             <div className="chosenProductDiv">
               <div style={{ margin: "0 auto" }}>
               <div>
-      <div className="photo-gallery" style={{ height: "300px" }}>
+      <div className="photo-gallery" style={{ height: "250px" }}>
         <div className="scrollable-container">
           <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenBracelet.photo)}>
             {props.chosenBracelet.photo} 
@@ -87,7 +87,6 @@ export default function ChosenBracelet(props) {
           <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenBracelet.photo1)}>
           {props.chosenBracelet.photo1}
           </div>
-          {/* Add more photos as needed */}
         </div>
       </div>
 
@@ -101,7 +100,7 @@ export default function ChosenBracelet(props) {
     </div>
               </div>
               <div style={{ margin: "0 auto" }}>
-                <h1>{props.chosenBracelet.name}</h1>
+                <h1 style={{margin:'0px'}}>{props.chosenBracelet.name}</h1>
                 <p> צמיד בעבודת יד שעשוי מחרוזים איכותיים </p>
                 <p>צבעים: {props.chosenBracelet.color} </p>
                 <p

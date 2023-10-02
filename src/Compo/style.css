@@ -10,7 +10,7 @@
 .webTitleDiv {
     display: flex;
     flex-direction: column;
-   
+
 }
 
 .cartLogo {
@@ -32,7 +32,7 @@
 
 }
 
-.btnWeb{
+.btnWeb {
     width: 150px;
     font-size: 18px;
     font-family: "Times New Roman", Times, 'rubik';
@@ -42,13 +42,13 @@
     margin-top: 20px;
 }
 
-.mediaBtn{
-     font-family: "Times New Roman", Times, 'rubik';
-     width: 70px;
-     background-color: black;
-     color: white;
-     border-radius: 45%;
-     height: 30px
+.mediaBtn {
+    font-family: "Times New Roman", Times, 'rubik';
+    width: 70px;
+    background-color: black;
+    color: white;
+    border-radius: 45%;
+    height: 30px
 }
 
 .logoDiv {
@@ -85,14 +85,15 @@
 
 }
 
-.bar3{
-display:flex;
-flex-direction:row;
-width:100%;
-height:50px;
-position:fixed;
-top:0;
-background-color: white;
+.bar3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: white;
 
 }
 
@@ -119,7 +120,7 @@ background-color: white;
     margin: 0 auto;
     margin-top: 20px;
     padding-bottom: 10px;
- 
+
 
 
 
@@ -161,8 +162,8 @@ background-color: white;
 
 }
 
-.cont{
-    background-color:#d2ebf1;
+.cont {
+    background-color: #d2ebf1;
 
 }
 
@@ -254,20 +255,20 @@ background-color: white;
     padding: 10px;
 }
 
-.chainMedia{
+.chainMedia {
     display: none;
-    
+
 }
 
-.braceletsMedia{
-    display: none;
-}
-
-.chosenChainMedia{
+.braceletsMedia {
     display: none;
 }
 
-.chosenBraceletMedia{
+.chosenChainMedia {
+    display: none;
+}
+
+.chosenBraceletMedia {
     display: none;
 }
 
@@ -284,7 +285,12 @@ background-color: white;
 
 @media (max-width:768px) {
 
-    .webTitleDiv,.mainDiv,.chainWeb,.braceletsWeb,.chosenChainWeb,.chosenBraceletWeb{
+    .webTitleDiv,
+    .mainDiv,
+    .chainWeb,
+    .braceletsWeb,
+    .chosenChainWeb,
+    .chosenBraceletWeb {
         display: none;
     }
 
@@ -293,7 +299,13 @@ background-color: white;
     }
 
 
-    .burgerBtn,.mediaBar,.mediaMainDiv,.chainMedia,.braceletsMedia,.chosenChainMedia,.chosenBraceletMedia{
+    .burgerBtn,
+    .mediaBar,
+    .mediaMainDiv,
+    .chainMedia,
+    .braceletsMedia,
+    .chosenChainMedia,
+    .chosenBraceletMedia {
         display: block;
     }
 
@@ -319,30 +331,42 @@ background-color: white;
     mix-blend-mode: multiply;
 }
 
-.humburger {
-    width: 90px;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid white;
-    background-color: black;
-    height: 470px;
-    position: absolute;
-    padding-right: 10px;
-    z-index: 9999;
-
-}
 
 .humburgerBtn {
+    width: 80%;
     font-size: 15px;
     background-color: black;
     border: none;
     color: white;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 .humburger:active {
     text-decoration: underline;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.menu-container {
+
+    border: 1px solid white;
+    background-color: black;
+    width: 90px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+}
+
+.menu-open {
+    max-height: 600px;
 }
 
 .supriseBtn {
@@ -461,34 +485,35 @@ background-color: white;
 
 .photo-gallery {
     width: 100%;
-    height: 700px; /* Adjust the height as needed */
+    height: 700px;
+    /* Adjust the height as needed */
     overflow: hidden;
-  }
-  
-  .scrollable-container {
+}
+
+.scrollable-container {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
-  }
-  
-  .photo-wrapper {
+}
+
+.photo-wrapper {
     flex: 0 0 auto;
     width: 80%;
     height: 100%;
-  }
-  
-  .photo-wrapper img {
+}
+
+.photo-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .sale{
+.sale {
     text-decoration: line-through;
     margin-right: 10px;
-   }
+}
 
-   .homePageBar{
+.homePageBar {
     display: flex;
     width: 100%;
     height: 50px;
@@ -496,27 +521,27 @@ background-color: white;
     justify-content: center;
     background-color: rgb(249, 248, 248);
     margin-bottom: 10px;
-   }
+}
 
-   .homePageP{
+.homePageP {
     font-size: 130%;
     margin-top: 0px;
     margin-bottom: 10px;
     text-align: left;
     margin-left: 10px;
     margin-top: 0px;
-   }
+}
 
-   .homePageP2{
+.homePageP2 {
     margin-top: 0px;
     margin-bottom: 10px;
     text-align: left;
     margin-left: 10px;
     margin-top: 0px;
     color: grey;
-   }
+}
 
-   .popup {
+.popup {
     display: none;
     position: fixed;
     top: 10;
@@ -527,6 +552,7 @@ background-color: white;
     justify-content: center;
     align-items: center;
 }
+
 .popup-content {
     background-color: #fff;
     padding: 20px;
@@ -535,12 +561,12 @@ background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.teamsDiv{
+.teamsDiv {
     display: flex;
     justify-content: right;
 }
 
-.loading{
+.loading {
     width: 100%;
     margin: 0 auto;
     padding-top: 80px;
@@ -559,19 +585,19 @@ background-color: white;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-  }
-  
-  .fullscreen-photo {
+}
+
+.fullscreen-photo {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-  }
+}
 
-  ul{
+ul {
     list-style-type: none;
     margin-top: 0px;
-  }
+}
 
-  li{
-    margin: 0 auto;     
-  }
+li {
+    margin: 0 auto;
+}

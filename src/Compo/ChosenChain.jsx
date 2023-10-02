@@ -130,7 +130,7 @@ export default function ChosenChain(props) {
         <div className="chosenProductDiv">
           <div style={{ margin: "0 auto" }}>
          <div>
-      <div className="photo-gallery" style={{ height: "300px" }}>
+      <div className="photo-gallery" style={{ height: "250px" }}>
         <div className="scrollable-container">
           <div className="photo-wrapper" onClick={() => openFullScreen(props.chosenChain.photo)}>
             {props.chosenChain.photo} 
@@ -153,7 +153,7 @@ export default function ChosenChain(props) {
 
           </div>
           <div style={{ margin: "0 auto" }}>
-            <h1 style={{ marginLeft: "10px" }}>{props.chosenChain.name}</h1>
+            <h1 style={{margin:'0px'}}>{props.chosenChain.name}</h1>
             <p style={{ marginTop: "50px" }}>
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>
