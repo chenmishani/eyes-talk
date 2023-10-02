@@ -83,7 +83,7 @@ export default function Title(props){
 
          <div className="mediaBar">
          <div className="bar3">
-        <div style={{display:'flex',width:'20%'}}>
+        <div style={{display:'flex',width:'25%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
         {/* <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
@@ -97,12 +97,12 @@ export default function Title(props){
     </div> */}
         </div> 
         <div style={{width:'60%'}}>
-        <div onClick={()=>{nav('/')}}> <h1 className="title" style={{fontSize:'25px'}}>EYES  TALK</h1></div>
+        <div onClick={()=>{nav('/')}}> <h1 className="title" style={{fontSize:'25px',marginTop:'15px'}}>EYES  TALK</h1></div>
         </div>
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
           
-          <div style={{width:'80px'}}>
+          <div style={{width:'80px',marginRight:'10px'}}>
       <div  style={{display:'flex',width:'20%'}}> 
       <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
       <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
