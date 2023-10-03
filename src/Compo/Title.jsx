@@ -100,7 +100,7 @@ export default function Title(props){
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
           
-          <div style={{width:'80px',marginRight:'12px'}}>
+          <div style={{width:'90px',marginRight:'3px'}}>
       <div  style={{display:'flex',width:'20%'}}> 
       <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
       <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
