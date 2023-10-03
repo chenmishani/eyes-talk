@@ -157,7 +157,7 @@ export default function ChosenChain(props) {
             <p style={{ marginTop: "50px" }}>
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>
-            <p>צבעים: {props.chosenChain.color} </p>
+            <p>צבע: {props.chosenChain.color} </p>
             <p>אורך: 55 ס"מ</p>
             <p
               style={{ fontSize: "25px", marginTop: "40px" }}
