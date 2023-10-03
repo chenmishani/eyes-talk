@@ -22,9 +22,7 @@ export default function Title(props){
     }
 
   const menuClass = isOpen && humFlag ? 'menu-container menu-open' : 'menu-container';
-  // const buttonClass = 'menu-button';
 
-  // const [flag,setFlag]=useState(false)
   
   const [open,setOpen]=useState(false)
 
@@ -42,33 +40,33 @@ export default function Title(props){
   }
 
  
-  const openPopup=()=>{
-    const passwordInput = document.getElementById('passwordInput');
-    const passwordPopup = document.getElementById('passwordPopup');
-    passwordPopup.style.display = 'block';
-    passwordInput.focus();
-  }
+  // const openPopup=()=>{
+  //   const passwordInput = document.getElementById('passwordInput');
+  //   const passwordPopup = document.getElementById('passwordPopup');
+  //   passwordPopup.style.display = 'block';
+  //   passwordInput.focus();
+  // }
 
-  const checkPassword=()=>{
-    const passwordInput = document.getElementById('passwordInput');
-    const passwordPopup = document.getElementById('passwordPopup');
-    const btn=document.getElementById('loginBtn');
-    const enteredPassword = passwordInput.value;
-    if (enteredPassword === '121315') {
-      alert('ברוך הבא יגבר על');
-      setLogin(true)
-      props.setLogin(true)
-      passwordPopup.style.display = 'none';
-      passwordInput.value = '';
-      btn.style.borderColor='#adcbd3'
+  // const checkPassword=()=>{
+  //   const passwordInput = document.getElementById('passwordInput');
+  //   const passwordPopup = document.getElementById('passwordPopup');
+  //   const btn=document.getElementById('loginBtn');
+  //   const enteredPassword = passwordInput.value;
+  //   if (enteredPassword === '121315') {
+  //     alert('ברוך הבא יגבר על');
+  //     setLogin(true)
+  //     props.setLogin(true)
+  //     passwordPopup.style.display = 'none';
+  //     passwordInput.value = '';
+  //     btn.style.borderColor='#adcbd3'
 
-  } else {
-      alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
-      passwordInput.value = '';
-      passwordPopup.style.display = 'none';
-  }
+  // } else {
+  //     alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
+  //     passwordInput.value = '';
+  //     passwordPopup.style.display = 'none';
+  // }
 
-  }
+  // }
 
 
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
@@ -102,7 +100,7 @@ export default function Title(props){
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
           
-          <div style={{width:'80px',marginRight:'10px'}}>
+          <div style={{width:'80px',marginRight:'12px'}}>
       <div  style={{display:'flex',width:'20%'}}> 
       <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
       <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
@@ -117,7 +115,6 @@ export default function Title(props){
   <Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
   <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
   <Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
-
   <Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
       </div>
     </div> 
