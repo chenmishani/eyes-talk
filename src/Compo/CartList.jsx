@@ -58,6 +58,7 @@ export default function CartList(props) {
                         fontSize: "120%",
                         margin: "0 auto",
                         marginTop: "20px",
+                        fontFamily:"Times New Roman Times serif"
                       }}
                     >{`₪ ${props.price} `}</p>
                   </div>

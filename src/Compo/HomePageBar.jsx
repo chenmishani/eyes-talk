@@ -26,7 +26,7 @@ function HomePageBar() {
   return (
     <div className='homePageBar'>
       {currentDiv=== 1 && <div style={{fontSize:'20px',fontFamily:'Times New Roman Times rubik'}}> אנו שמחים להציג את האתר החדש שלנו </div>}
-      {currentDiv=== 2 && <div onClick={()=>{nev('/chains')}} style={{fontSize:'20px',fontFamily:'Times New Roman Times rubik'}}> מבצע קיץ- כל השרשראות מלבד פנינים עד 130 ש"ח</div>}
+      {currentDiv=== 2 && <div onClick={()=>{nev('/chains')}} style={{fontSize:'20px',fontFamily:'Times New Roman Times rubik'}}> מבצע סוכות- כל השרשראות מלבד פנינים עד 130 ש"ח</div>}
       {currentDiv=== 3 && <div onClick={()=>{nev('/suprise')}} style={{fontSize:'20px',fontFamily:'Times New Roman Times rubik'}}> שרשרת בהפתעה!! לפרטים לחץ כאן</div>}
     
     </div>

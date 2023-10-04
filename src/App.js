@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import { useState } from 'react';
 
+import Timer from './Compo/Timer';
 import Title from './Compo/Title';
 import ChainsPage from './Compo/ChainsPage';
 import Bracelets from './Compo/BraceletsPage';
@@ -122,16 +123,16 @@ function App() {
 ])
 
 const [arrBracelets,setArrBracelets]= useState([
-  {photo: <img style={{width:'80%',height:'90%'}} src={l1} alt="logo" />,cnt:0,id:'50', photo1: <img style={{width:'80%'}} src={l1s} alt="logo" />, name:'L1',price:150,color:'פנינים'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />,cnt:0,id:'51', photo1: <img style={{width:'80%'}} src={l2} alt="logo" />, name:'L2',price:250,color:'כסף'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l3} alt="logo" />,cnt:0,id:'52', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l3s} alt="logo" />, name:'L3',price:100,color:'שחור,כסף'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l4} alt="logo" />,cnt:0,id:'53', photo1: <img style={{width:'80%'}} src={l4} alt="logo" />, name:'L4',price:100,color:'תכלת,כסף'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={l5} alt="logo" />,cnt:0,id:'54', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l5s} alt="logo" />, name:'L5',price:100,color:'כסף,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a1} alt="logo" />,cnt:0,id:'55', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a1s} alt="logo" />, name:'A1',price:130,color:'כסף,לבן'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a2} alt="logo" />,cnt:0,id:'56', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a2s} alt="logo" />, name:'A2',price:120,color:'תכלת,לבן,פנינים'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />,cnt:0,id:'57', photo1: <img style={{width:'80%'}} src={a3} alt="logo" />, name:'A3',price:100,color:'כסף'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a4} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a4} alt="logo" />, name:'A4',price:100,color:'כחול'},
-  {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a5s} alt="logo" />, name:'A5',price:100,color:'לבן,שחור'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l1} alt="logo" />,cnt:0,id:'50', photo1: <img style={{width:'80%'}} src={l1} alt="logo" />,about:'צמיד בעבודת יד שעשוי מפנינים איכותיים', name:'L1',price:150,color:'פנינים'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l2} alt="logo" />,cnt:0,id:'51', photo1: <img style={{width:'80%'}} src={l2} alt="logo" />,about:'צמיד בעבודת יד שעשוי מכסף אמיתי', name:'L2',price:250,color:'כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l3} alt="logo" />,cnt:0,id:'52', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l3s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'L3',price:100,color:'שחור,כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l4} alt="logo" />,cnt:0,id:'53', photo1: <img style={{width:'80%'}} src={l4} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'L4',price:100,color:'תכלת,כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={l5} alt="logo" />,cnt:0,id:'54', photo1: <img style={{width:'90%',marginTop:'40px'}} src={l5s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'L5',price:100,color:'כסף,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a1} alt="logo" />,cnt:0,id:'55', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a1s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'A1',price:130,color:'כסף,לבן'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a2} alt="logo" />,cnt:0,id:'56', photo1: <img style={{width:'90%',marginTop:'20px'}} src={a2s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מכסף אמיתי', name:'A2',price:120,color:'תכלת,לבן,פנינים'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a3} alt="logo" />,cnt:0,id:'57', photo1: <img style={{width:'80%'}} src={a3} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'A3',price:100,color:'כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a4} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a4} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'A4',price:100,color:'כחול'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a5s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'A5',price:100,color:'לבן,שחור'},
 ])
 
 
@@ -350,12 +351,14 @@ if(flag==true){
 
 const [login,setLogin]=useState(false)
 
+
+
   return (
 
     <div className="App" onClick={()=>{closeHumburger()}} >
        <BrowserRouter >
-       <Title cart={cart} num={num} flag={flag} setFlag={setFlag} login={login} setLogin={setLogin}/>
-    <Routes>
+      <Title cart={cart} num={num} flag={flag} setFlag={setFlag} login={login} setLogin={setLogin}/>
+      <Routes>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 

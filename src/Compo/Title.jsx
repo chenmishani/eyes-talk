@@ -8,7 +8,8 @@ import {CgMenuRound} from 'react-icons/cg'
 import {CgCloseO} from 'react-icons/cg'
 import {FaWhatsapp} from 'react-icons/fa'
 import {BsBasket} from 'react-icons/bs'
-import Humburger from "./Humburger";
+import Timer from "./Timer";
+
 
 
 
@@ -22,9 +23,7 @@ export default function Title(props){
     }
 
   const menuClass = isOpen && humFlag ? 'menu-container menu-open' : 'menu-container';
-  // const buttonClass = 'menu-button';
 
-  // const [flag,setFlag]=useState(false)
   
   const [open,setOpen]=useState(false)
 
@@ -42,39 +41,42 @@ export default function Title(props){
   }
 
  
-  const openPopup=()=>{
-    const passwordInput = document.getElementById('passwordInput');
-    const passwordPopup = document.getElementById('passwordPopup');
-    passwordPopup.style.display = 'block';
-    passwordInput.focus();
-  }
+  // const openPopup=()=>{
+  //   const passwordInput = document.getElementById('passwordInput');
+  //   const passwordPopup = document.getElementById('passwordPopup');
+  //   passwordPopup.style.display = 'block';
+  //   passwordInput.focus();
+  // }
 
-  const checkPassword=()=>{
-    const passwordInput = document.getElementById('passwordInput');
-    const passwordPopup = document.getElementById('passwordPopup');
-    const btn=document.getElementById('loginBtn');
-    const enteredPassword = passwordInput.value;
-    if (enteredPassword === '121315') {
-      alert('ברוך הבא יגבר על');
-      setLogin(true)
-      props.setLogin(true)
-      passwordPopup.style.display = 'none';
-      passwordInput.value = '';
-      btn.style.borderColor='#adcbd3'
+  // const checkPassword=()=>{
+  //   const passwordInput = document.getElementById('passwordInput');
+  //   const passwordPopup = document.getElementById('passwordPopup');
+  //   const btn=document.getElementById('loginBtn');
+  //   const enteredPassword = passwordInput.value;
+  //   if (enteredPassword === '121315') {
+  //     alert('ברוך הבא יגבר על');
+  //     setLogin(true)
+  //     props.setLogin(true)
+  //     passwordPopup.style.display = 'none';
+  //     passwordInput.value = '';
+  //     btn.style.borderColor='#adcbd3'
 
-  } else {
-      alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
-      passwordInput.value = '';
-      passwordPopup.style.display = 'none';
-  }
+  // } else {
+  //     alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
+  //     passwordInput.value = '';
+  //     passwordPopup.style.display = 'none';
+  // }
 
-  }
+  // }
 
 
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
   const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='23px'/>
 
+  const deadline = new Date('2023-10-07T23:59:59');
+
+  
 
     return (
 
@@ -82,6 +84,10 @@ export default function Title(props){
       <div className="titleDiv">
 
          <div className="mediaBar">
+          <div style={{display:'flex',flexDirection:'column',position:'fixed',height:'200px',width:'100%'}}>
+        <div style={{marginTop:'0px'}}>
+          <Timer deadline={deadline}/>
+          </div> 
          <div className="bar3">
         <div style={{display:'flex',width:'25%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
@@ -102,7 +108,7 @@ export default function Title(props){
         <div>     
         <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
           
-          <div style={{width:'80px',marginRight:'10px'}}>
+          <div style={{width:'90px',marginRight:'3px'}}>
       <div  style={{display:'flex',width:'20%'}}> 
       <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
       <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
@@ -117,7 +123,6 @@ export default function Title(props){
   <Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
   <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
   <Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
-
   <Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
       </div>
     </div> 
@@ -127,28 +132,29 @@ export default function Title(props){
            
          </div>
          </div>
+         </div>
          
          <div>
         <div style={{margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'40%',marginTop:'50px'}} autoPlay muted loop playsInline>
+        <video style={{width:'40%',marginTop:'120px'}} autoPlay muted loop playsInline>
         <source src={logo} type="video/mp4" />
         </video>
         
             </div> 
         </div>
         </div>
-        
-        
-      
+
         </div>
        
+
+       {/* div for web  */}
 
         <div className="webTitleDiv">
         <div style={{display:'flex',justifyContent:'space-between'}}>
         <div style={{width:'25%'}} >
           <div style={{display:'flex'}}>
-       <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
+       <div className='cartLogo' style={{marginTop:'20px'}} onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
         <div> <Link to={'/contact'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>צור קשר</button></Link> </div> 
         <div> <Link to={'/terms'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>תקנון</button></Link> </div> 

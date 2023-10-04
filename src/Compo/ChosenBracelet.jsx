@@ -33,7 +33,7 @@ export default function ChosenBracelet(props) {
             props.add()
           }}
         >
-          הוספה לסל
+          For sale
         </button>
       );
     } else {
@@ -101,10 +101,10 @@ export default function ChosenBracelet(props) {
               </div>
               <div style={{ margin: "0 auto" }}>
                 <h1 style={{margin:'0px'}}>{props.chosenBracelet.name}</h1>
-                <p> צמיד בעבודת יד שעשוי מחרוזים איכותיים </p>
-                <p>צבעים: {props.chosenBracelet.color} </p>
+                <p> {props.chosenBracelet.about}</p>
+                <p>צבע: {props.chosenBracelet.color} </p>
                 <p
-                  style={{ fontSize: "25px" }}
+                  style={{ fontSize: "25px" ,fontFamily:"Times New Roman Times serif"}}
                 >{`₪ ${props.chosenBracelet.price} `}</p>
                 <div
                   onClick={() => {
@@ -128,7 +128,7 @@ export default function ChosenBracelet(props) {
                 <p> צמיד בעבודת יד שעשוי מחרוזים איכותיים </p>
                 <p>צבעים: {props.chosenBracelet.color} </p>
                 <p
-                  style={{ fontSize: "25px" }}
+                  style={{ fontSize: "25px" ,fontFamily:"Times New Roman Times serif" }}
                 >{`₪ ${props.chosenBracelet.price} `}</p>
                 <div
                   onClick={() => {

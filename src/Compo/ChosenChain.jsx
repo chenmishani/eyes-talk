@@ -35,7 +35,7 @@ export default function ChosenChain(props) {
             props.add();
           }}
         >
-          הוספה לסל
+          For sale
         </button>
       );
     } else {
@@ -61,7 +61,7 @@ export default function ChosenChain(props) {
             props.add();
           }}
         >
-          הוספה לסל
+        For sale
         </button>
       );
     }
@@ -111,7 +111,7 @@ export default function ChosenChain(props) {
               שרשרת יחודית שמיוצרת לאדם אחד בלבד,הצבע אקראי ולא ניתן לבחירה
             </p>
             <p
-              style={{ fontSize: "25px", marginTop: "50px" }}
+              style={{ fontSize: "25px", marginTop: "50px",fontFamily: "Times New Roman Times serif"}}
             >{`₪ ${props.chosenChain.price} `}</p>
             <div
               onClick={() => {
@@ -157,10 +157,10 @@ export default function ChosenChain(props) {
             <p style={{ marginTop: "50px" }}>
               שרשרת בעבודת יד שעשויה מחרוזים איכותיים
             </p>
-            <p>צבעים: {props.chosenChain.color} </p>
+            <p>צבע: {props.chosenChain.color} </p>
             <p>אורך: 55 ס"מ</p>
             <p
-              style={{ fontSize: "25px", marginTop: "40px" }}
+              style={{ fontSize: "25px", marginTop: "40px",fontFamily:"Times New Roman Times serif"}}
             >{`₪ ${props.chosenChain.price} `}</p>
             <div
               onClick={() => {
@@ -172,6 +172,8 @@ export default function ChosenChain(props) {
           </div>
         </div>
         </div>
+
+        {/* div for web */}
         <div className="chosenChainWeb">
         <div className="chosenProductDiv">
         <div style={{ margin: "0 auto", display: "flex" }}>
@@ -186,7 +188,7 @@ export default function ChosenChain(props) {
             <p>צבעים: {props.chosenChain.color} </p>
             <p>אורך: 55 ס"מ</p>
             <p
-              style={{ fontSize: "25px", marginTop: "40px" }}
+              style={{ fontSize: "25px", marginTop: "40px",fontFamily:"Times New Roman Times serif" }}
             >{`₪ ${props.chosenChain.price} `}</p>
             <div
               onClick={() => {

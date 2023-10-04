@@ -14,7 +14,7 @@ export default function ChainsList(props) {
             props.add(props.index);
           }}
         >
-          הוספה לסל
+          For sale
         </button>
       );
     } else {
@@ -63,7 +63,7 @@ export default function ChainsList(props) {
         textAlign:'left',
         marginLeft:'10px',
         marginTop:'0px'}}
-        > <span className="sale">₪150</span> {`₪${props.price} `}</p> 
+        > <span className="sale" style={{fontFamily:"Times New Roman Times serif"}}>₪150</span> {`₪${props.price} `}</p> 
    
        </div>
     }
@@ -74,7 +74,8 @@ export default function ChainsList(props) {
        marginBottom: "10px",
        textAlign:'left',
        marginLeft:'10px',
-       marginTop:'0px'}}
+       marginTop:'0px',
+       fontFamily:"Times New Roman Times serif"}}
        > <span className="sale">₪150</span> {`₪${props.price} `}</p> 
   
       </div>
@@ -87,8 +88,8 @@ export default function ChainsList(props) {
         marginBottom: "10px",
         textAlign:'left',
         marginLeft:'10px',
-        marginTop:'0px'
-      }}
+        marginTop:'0px',
+        fontFamily:"Times New Roman Times serif"}}
     >{`₪ ${props.price} `}</p>
     }
   }
