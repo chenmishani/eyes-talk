@@ -51,7 +51,7 @@ export default function CartPage(props) {
           </div>
           <div style={{ width: "40%", margin: "0 auto" }}>
             <h2 style={{ fontSize: "120%" }}> :סהכ לתשלום</h2>
-            <h2 style={{ fontSize: "120%" }}>{`₪ ${props.temp} `}</h2>
+            <h2 style={{ fontSize: "120%",fontFamily:"Times New Roman Times serif"}}>{`₪ ${props.temp} `}</h2>
             <Link to={"/order"}>
               <button className="btn1">להמשך </button>
             </Link>

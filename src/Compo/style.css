@@ -103,10 +103,11 @@
 }
 
 .subtitle {
+    color: rgb(10, 153, 236);
     font-size: 250%;
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 50px;
+     margin-top: 10px;
     font-family: "Times New Roman", Times, 'rubik';
 }
 

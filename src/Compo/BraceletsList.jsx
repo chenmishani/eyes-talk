@@ -20,7 +20,7 @@ export default function BraceletsList(props) {
           props.add(props.index)
         }}
       >
-        הוספה לסל
+       For sale
       </button>
     }
     else {

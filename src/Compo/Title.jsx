@@ -8,7 +8,7 @@ import {CgMenuRound} from 'react-icons/cg'
 import {CgCloseO} from 'react-icons/cg'
 import {FaWhatsapp} from 'react-icons/fa'
 import {BsBasket} from 'react-icons/bs'
-import Humburger from "./Humburger";
+
 
 
 
@@ -135,17 +135,17 @@ export default function Title(props){
             </div> 
         </div>
         </div>
-        
-        
-      
+
         </div>
        
+
+       {/* div for web  */}
 
         <div className="webTitleDiv">
         <div style={{display:'flex',justifyContent:'space-between'}}>
         <div style={{width:'25%'}} >
           <div style={{display:'flex'}}>
-       <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
+       <div className='cartLogo' style={{marginTop:'20px'}} onClick={()=>{nav('/Cart')}}>{cart} </div>
         <div className="divNum">{showNun()}</div>
         <div> <Link to={'/contact'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>צור קשר</button></Link> </div> 
         <div> <Link to={'/terms'} > <button className="btnWeb" onClick={()=>{props.setFlag(!props.flag)}}>תקנון</button></Link> </div> 

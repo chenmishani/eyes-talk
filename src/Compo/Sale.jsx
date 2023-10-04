@@ -80,6 +80,7 @@ const [flag2,setFlag2]=useState(false)
             margin: "0 auto",
             marginTop: "20px",
             marginBottom: "10px",
+            fontFamily:"Times New Roman Times serif"
           }}
         >{`₪ ${props.price} `}</p>
       </div>

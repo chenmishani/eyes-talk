@@ -16,7 +16,7 @@ export default function ChainsList(props) {
         <button
           className="btn2"
           onClick={() => { props.add(props.index) }}>
-          הוספה לסל
+          For sale
         </button>
       )
     }

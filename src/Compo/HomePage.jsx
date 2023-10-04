@@ -12,6 +12,8 @@ import homePage3 from "./photos/homePage3.png";
 import homePage4 from "./photos/homePage4.png";
 import homePage5 from "./photos/homePage5.png";
 import homePageTitle from "./photos2/title.png";
+import subtitle from "./photos2/subtitle.png";
+import subtitle2 from "./photos2/subtitle2.png";
 import homePageVideo from "./photos2/homePageVideo.mp4";
 import HomePageBar from "./HomePageBar";
 import videoSource from './photos2/homePageVideo.mp4';
@@ -120,7 +122,7 @@ export default function HomePage(props) {
           </div>
         </Link>
 
-        <p className="subtitle">הנמכרים ביותר</p>
+        <img style={{ width: "100%" }} src={subtitle} alt="logo" />
         <div className="photo-gallery" style={{ height: "15%" }}>
           <div className="scrollable-container">
             <div className="photo-wrapper">
@@ -148,7 +150,7 @@ export default function HomePage(props) {
               <p className="homePageP2">
                 צמיד
               </p>
-              <p className="homePageP">
+              <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}>
                 ₪120
               </p>
             </div>
@@ -178,7 +180,7 @@ export default function HomePage(props) {
                 שרשרת
               </p>
               <div>
-                <p className="homePageP"> <span className="sale">₪150</span> {`₪${120} `}</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}> <span className="sale">₪150</span> {`₪${120} `}</p>
 
               </div>
             </div>
@@ -186,7 +188,7 @@ export default function HomePage(props) {
               <Link to={"/bracelet"}>
                 <div
                   onClick={() => {
-                    props.chosenBraceletCompo(7);
+                    props.chosenBraceletCompo(6);
                   }}
                   style={{
                     height: "200%",
@@ -207,7 +209,7 @@ export default function HomePage(props) {
                 צמיד
               </p>
               <div>
-                <p className="homePageP">₪120</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}>₪120</p>
 
               </div>
             </div>
@@ -235,14 +237,14 @@ export default function HomePage(props) {
                 שרשרת
               </p>
               <div>
-                <p className="homePageP"> <span className="sale">₪150</span> {`₪${120} `}</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}> <span className="sale">₪150</span> {`₪${120} `}</p>
 
               </div>
             </div>
           </div>
         </div>
 
-        <p className="subtitle">במיוחד בשבילך </p>
+       <div style={{marginBottom:'40px'}}> <img style={{ width: "100%" }} src={subtitle2} alt="logo" /> </div>
         <div className="photo-gallery" style={{ height: '15%' }}>
           <div className="scrollable-container">
             <div className="photo-wrapper">
@@ -316,7 +318,7 @@ export default function HomePage(props) {
        
         </div>
 
-         <p className="subtitle" style={{marginTop:'40px',marginBottom:'0px'}}>הנמכרים ביותר</p>
+        <div style={{marginBottom:'40px'}}> <img style={{ width: "40%" }} src={subtitle} alt="logo" /> </div>
           <div style={{display:'flex',margin:'0 auto',width:'90%',justifyContent:'space-between'}}>
             <div style={{margin:'40px'}}>
               <Link to={"/bracelet"}>
@@ -343,7 +345,7 @@ export default function HomePage(props) {
               <p className="homePageP2">
                 צמיד
               </p>
-              <p className="homePageP">
+              <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}>
                 ₪120
               </p>
             </div>
@@ -373,7 +375,7 @@ export default function HomePage(props) {
                 שרשרת
               </p>
               <div>
-                <p className="homePageP"> <span className="sale">₪150</span> {`₪${120} `}</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}> <span className="sale">₪150</span> {`₪${120} `}</p>
 
               </div>
             </div>
@@ -381,7 +383,7 @@ export default function HomePage(props) {
               <Link to={"/bracelet"}>
                 <div
                   onClick={() => {
-                    props.chosenBraceletCompo(2);
+                    props.chosenBraceletCompo(6);
                   }}
                   style={{
                     height: "350px",
@@ -402,7 +404,7 @@ export default function HomePage(props) {
                 צמיד
               </p>
               <div>
-                <p className="homePageP">₪120</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}>₪120</p>
 
               </div>
             </div>
@@ -430,13 +432,13 @@ export default function HomePage(props) {
                 שרשרת
               </p>
               <div>
-                <p className="homePageP"> <span className="sale">₪150</span> {`₪${120} `}</p>
+                <p className="homePageP" style={{fontFamily: "Times New Roman Times serif"}}> <span className="sale">₪150</span> {`₪${120} `}</p>
 
               </div>
             </div>
           </div>
 
-          <p className="subtitle" style={{marginTop:'40px',marginBottom:'0px'}}>במיוחד בשבילך</p>
+          <div style={{marginBottom:'40px'}}> <img style={{ width: "40%" }} src={subtitle2} alt="logo" /> </div>
           <div>
           <div style={{display:'flex',margin:'0 auto'}}>
             <div style={{margin:'40px'}}>
