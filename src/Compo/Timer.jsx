@@ -30,13 +30,26 @@ function CountdownTimer({ deadline }) {
 
     return (
         <div className="countdown-timer">
-            <h1 style={{ marginBottom:'5px',marginTop:'0px', fontSize: '15px' }}> מבצע סוכות!! כל השרשראות מלבד פנינים עד 130 ש"ח</h1>
+            <p className='timerTitle'> מבצע סוכות!! כל השרשראות מלבד פנינים עד 130 ש"ח</p>
             <div className="time">
-                <span style={{ margin: '5px' }}>{timeRemaining.days}d</span>/
-                <span>{timeRemaining.hours<10?`0${timeRemaining.hours}`:timeRemaining.hours}:</span>
-                <span>{timeRemaining.minutes<10?`0${timeRemaining.minutes}`:timeRemaining.minutes}:</span>
-                <span>{timeRemaining.seconds<10?`0${timeRemaining.seconds}`:timeRemaining.seconds}</span>
+                <div style={{margin:'2px'}}> <p className='timerP1'>{timeRemaining.days<10?`0${timeRemaining.days}`:timeRemaining.days}</p>
+                       <p className='timerP2'>ימים</p> 
+                </div> 
+                <div><p style={{fontSize:'15px',marginTop:'0px'}}>:</p></div>
+                 <div style={{margin:'2px'}}> <p className='timerP1'>{timeRemaining.hours<10?`0${timeRemaining.hours}`:timeRemaining.hours}</p>
+                       <p className='timerP2'>שעות</p> 
+                </div> 
+                <div><p style={{fontSize:'15px',marginTop:'0px'}}>:</p></div>
+                 <div style={{margin:'2px'}}> <p className='timerP1'>{timeRemaining.minutes<10?`0${timeRemaining.minutes}`:timeRemaining.minutes}</p>
+                       <p className='timerP2'>דקות</p> 
+                </div> 
+                <div><p style={{fontSize:'15px',marginTop:'0px'}}>:</p></div>
+                 <div style={{margin:'2px'}}> <p className='timerP1'>{timeRemaining.seconds<10?`0${timeRemaining.seconds}`:timeRemaining.seconds}</p>
+                       <p className='timerP2'>שניות</p> 
+                </div>
+               
             </div>
+      
         </div>
     );
 }

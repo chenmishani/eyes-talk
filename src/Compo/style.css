@@ -606,7 +606,10 @@ li {
   }
   
   .time {
-    font-weight: bold;
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+
   }
 
   .countdown-timer{
@@ -614,4 +617,22 @@ li {
     background-color: black;
     color: white;
     
+  }
+
+  .timerTitle{
+    margin-bottom:5px;
+    margin-top: 0px;
+    font-size:20px;
+    font-family:"Times, New Roman, Times serif" 
+  }
+
+  .timerP1{
+    margin-bottom:0px;
+    margin-top: 0px;
+    font-size:15px;
+  }
+
+  .timerP2{
+    margin-top: 0px;
+    font-size:10px;
   }
