@@ -292,7 +292,7 @@ export default function HomePage(props) {
         <div style={{width:'51%'}}>
         <Link to={"/Bracelets"}>
           <div >
-            <img style={{ width: "90%" }}  src={homePage4} alt="logo" />
+            <img style={{ width: "88%" }}  src={homePage4} alt="logo" />
           </div>
         </Link>
         </div>
