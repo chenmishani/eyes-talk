@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import { useState } from 'react';
 
+import Timer from './Compo/Timer';
 import Title from './Compo/Title';
 import ChainsPage from './Compo/ChainsPage';
 import Bracelets from './Compo/BraceletsPage';
@@ -350,12 +351,14 @@ if(flag==true){
 
 const [login,setLogin]=useState(false)
 
+
+
   return (
 
     <div className="App" onClick={()=>{closeHumburger()}} >
        <BrowserRouter >
-       <Title cart={cart} num={num} flag={flag} setFlag={setFlag} login={login} setLogin={setLogin}/>
-    <Routes>
+      <Title cart={cart} num={num} flag={flag} setFlag={setFlag} login={login} setLogin={setLogin}/>
+      <Routes>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
     <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 

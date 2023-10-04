@@ -8,6 +8,7 @@ import {CgMenuRound} from 'react-icons/cg'
 import {CgCloseO} from 'react-icons/cg'
 import {FaWhatsapp} from 'react-icons/fa'
 import {BsBasket} from 'react-icons/bs'
+import Timer from "./Timer";
 
 
 
@@ -73,6 +74,9 @@ export default function Title(props){
   const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='23px'/>
 
+  const deadline = new Date('2023-10-07T23:59:59');
+
+  
 
     return (
 
@@ -80,6 +84,10 @@ export default function Title(props){
       <div className="titleDiv">
 
          <div className="mediaBar">
+          <div style={{display:'flex',flexDirection:'column',position:'fixed',height:'200px',width:'100%'}}>
+        <div style={{marginTop:'0px'}}>
+          <Timer deadline={deadline}/>
+          </div> 
          <div className="bar3">
         <div style={{display:'flex',width:'25%'}}>
         <div className='cartLogo' onClick={()=>{nav('/Cart')}}>{cart} </div>
@@ -124,11 +132,12 @@ export default function Title(props){
            
          </div>
          </div>
+         </div>
          
          <div>
         <div style={{margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'40%',marginTop:'50px'}} autoPlay muted loop playsInline>
+        <video style={{width:'40%',marginTop:'100px'}} autoPlay muted loop playsInline>
         <source src={logo} type="video/mp4" />
         </video>
         
