@@ -3,12 +3,20 @@ import React, { useState, useEffect } from 'react';
 function CountdownTimer({ deadline }) {
     const calculateTimeRemaining = () => {
         const currentTime = new Date();
+<<<<<<< HEAD
         const timeRemaining = Math.max(deadline - currentTime, 0); 
+=======
+        const timeRemaining = Math.max(deadline - currentTime, 0); // Ensure it doesn't go negative
+>>>>>>> 68bfeb00f46a28731398e9db567e9a614410bfa2
         const seconds = Math.floor((timeRemaining / 1000) % 60);
         const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
         const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+<<<<<<< HEAD
      
+=======
+        // seconds = seconds < 10 ? "0" + seconds : seconds;
+>>>>>>> 68bfeb00f46a28731398e9db567e9a614410bfa2
         
         return { days, hours, minutes, seconds };
     };

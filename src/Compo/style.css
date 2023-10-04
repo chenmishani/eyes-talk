@@ -616,14 +616,21 @@ li {
     width: 100%;
     background-color: black;
     color: white;
+<<<<<<< HEAD
     padding: 5px;
+=======
+>>>>>>> 68bfeb00f46a28731398e9db567e9a614410bfa2
     
   }
 
   .timerTitle{
     margin-bottom:5px;
     margin-top: 0px;
+<<<<<<< HEAD
     font-size:18px;
+=======
+    font-size:20px;
+>>>>>>> 68bfeb00f46a28731398e9db567e9a614410bfa2
     font-family:"Times, New Roman, Times serif" 
   }
 
