@@ -110,7 +110,7 @@ export default function Title(props) {
     </div> */}
             </div>
             <div style={{ width: '60%' }}>
-              <div onClick={() => { nav('/') }}> <h1 className="title" style={{ fontSize: '25px', marginTop: '15px' }}>EYES  TALK</h1></div>
+              <div onClick={() => { nav('/') }}> <h1 className="title" style={{ fontSize: '150%', marginTop: '15px' }}>EYES  TALK</h1></div>
             </div>
             <div>
               <div style={{ display: 'flex', width: '20%' }}>
@@ -140,7 +140,7 @@ export default function Title(props) {
         </div>
 
         <div>
-          <div style={{ margin: '0 auto' }}>
+          <div style={{ margin: '0 auto',marginLeft:'20px' }}>
           <Link to={'/'} > <div style={{ margin: '0 auto' }} >
               <video style={{ width: '40%', marginTop: '130px' }} autoPlay muted loop playsInline>
                 <source src={logo} type="video/mp4" />

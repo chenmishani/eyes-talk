@@ -107,7 +107,7 @@ export default function HomePage(props) {
 
             </div>
 
-            <div onClick={()=>{nev('/Bracelets')}} >
+            <div >
               {videoPlayer()}
             </div>
 
