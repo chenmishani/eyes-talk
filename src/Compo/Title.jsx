@@ -2,10 +2,9 @@ import React,{ useState } from "react";
 import './style.css'
 import logo from './photos2/logo.mp4';
 import instegram from './photos2/InstagramLogo.png'
-import whatsapp from './photos2/whatsapp.png'
 import { useNavigate,Link } from "react-router-dom";
 import {CgMenuRound} from 'react-icons/cg'
-import {CgCloseO} from 'react-icons/cg'
+import {BsArrowRightCircle} from 'react-icons/bs'
 import {FaWhatsapp} from 'react-icons/fa'
 import {BsBasket} from 'react-icons/bs'
 import Timer from "./Timer";
@@ -16,16 +15,23 @@ import Timer from "./Timer";
 export default function Title(props){
 
   const [isOpen, setIsOpen] = useState(false);
+  const [open,setOpen]=useState(false)
+
   const humFlag= props.flag
+  
 
   const toggleMenu = () => {
       setIsOpen(!open);
-    }
+      }
+
+    const menuStyle = {
+      display: isOpen ? 'block' : 'none',
+    };
 
   const menuClass = isOpen && humFlag ? 'menu-container menu-open' : 'menu-container';
-
+ 
   
-  const [open,setOpen]=useState(false)
+  
 
   const [login,setLogin]=useState(false)
   
@@ -73,6 +79,7 @@ export default function Title(props){
   const burgerIcon = <CgMenuRound size='30px' onClick={()=>{props.setFlag(!props.flag)}}/>
   const whatsappLogo=<FaWhatsapp size='28px'/>
   const cart=<BsBasket size='23px'/>
+  const right=<BsArrowRightCircle size='23px'/>
 
   const deadline = new Date('2023-10-07T23:59:59');
 
@@ -105,28 +112,26 @@ export default function Title(props){
         <div style={{width:'60%'}}>
         <div onClick={()=>{nav('/')}}> <h1 className="title" style={{fontSize:'25px',marginTop:'15px'}}>EYES  TALK</h1></div>
         </div>
-        <div>     
-        <div style={{width:'20%',display:'flex',justifyContent:'space-between'}}>
-          
-          <div style={{width:'90px',marginRight:'3px'}}>
+        <div>           
       <div  style={{display:'flex',width:'20%'}}> 
       <a style={{marginTop:'12px',color:'black'}} href="https://wa.me/+972528775898">{whatsappLogo}</a>
       <div> <a href="https://www.instagram.com/eyes_talk_yd/" target="_blank" rel="noreferrer"> <img style={{ width:"25px",height:'25px',marginTop:'13px'}} src={instegram} alt="logo" /> </a></div>
       <div style={{marginTop:'10px'}} onClick={toggleMenu}> {burgerIcon} </div>
-      </div>
+ </div>
+          <div className={menuClass} style={menuStyle}>
+         <div className={'menuDiv'}>
 
-      <div className={menuClass}>
-     
-        <Link to={'/Bracelets'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צמידים</button> </Link>
-  <Link to={'/chains'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשראות</button> </Link>
-  <Link to={'/suprise'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשרת בהפתעה</button> </Link>
-  <Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
-  <Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
-  <Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
-  <Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
-      </div>
-    </div> 
-         </div>
+
+     <Link to={'/Bracelets'}> <button onClick={toggleMenu} className='humburgerBtn'>{right}</button> </Link>
+     <Link to={'/Bracelets'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צמידים</button> </Link>
+<Link to={'/chains'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשראות</button> </Link>
+<Link to={'/suprise'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >שרשרת בהפתעה</button> </Link>
+<Link to={'/sale'}>  <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn' >מבצעים</button> </Link>
+<Link to={'/contact'} > <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>צור קשר</button></Link>
+<Link to={'/'}> <button onClick={()=>{props.setFlag(!props.flag)}} className='humburgerBtn'>בית</button></Link>
+<Link to={'/Terms'}> <button className='humburgerBtn'>תקנון</button></Link>
+   </div>
+   </div>
         {/* {showCompo()} */}
         
            
@@ -137,7 +142,7 @@ export default function Title(props){
          <div>
         <div style={{margin:'0 auto'}}>
         <div onClick={()=>{nav('/')}} style={{margin:'0 auto'}} >
-        <video style={{width:'40%',marginTop:'120px'}} autoPlay muted loop playsInline>
+        <video style={{width:'40%',marginTop:'130px'}} autoPlay muted loop playsInline>
         <source src={logo} type="video/mp4" />
         </video>
         

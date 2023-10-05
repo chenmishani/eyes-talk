@@ -74,7 +74,6 @@ import d10s from './Compo/photos/d10s.JPG'
 import y2s from './Compo/photos/y2s.JPG'
 import y3s from './Compo/photos/y3s.JPG'
 import y4s from './Compo/photos/y4s.JPG'
-import y6s from './Compo/photos/y6s.JPG'
 import y7s from './Compo/photos/y7s.JPG'
 import y8s from './Compo/photos/y8s.JPG'
 import y9s from './Compo/photos/y9s.JPG'
@@ -113,7 +112,7 @@ function App() {
 {photo: <img style={{width:'90%',height:'90%'}} src={y2} alt="logo" />,cnt:0,id:'23', photo1: <img style={{width:'80%'}} src={y3s} alt="logo" />,name:'Y3',price:120,color:'כחול,כתום,ירוק,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y4} alt="logo" />,cnt:0,id:'24', photo1: <img style={{width:'80%'}} src={y4s} alt="logo" />,name:'Y4',price:130,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y5} alt="logo" />,cnt:0,id:'25', photo1: <img style={{width:'80%'}} src={y5} alt="logo" />,name:'Y5',price:120,color:'ירוק,סגול,לבן,שחור'},
-{photo: <img style={{width:'90%',height:'90%'}} src={y6} alt="logo" />,cnt:0,id:'26', photo1: <img style={{width:'80%'}} src={y6s} alt="logo" />,name:'Y6',price:120,color:'חום,אפור,לבן'},
+{photo: <img style={{width:'90%',height:'90%'}} src={y6} alt="logo" />,cnt:0,id:'26', photo1: <img style={{width:'80%'}} src={y6} alt="logo" />,name:'Y6',price:120,color:'חום,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y7} alt="logo" />,cnt:0,id:'27', photo1: <img style={{width:'100%'}} src={y7s} alt="logo" />,name:'Y7',price:120,color:'חום,,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y8} alt="logo" />,cnt:0,id:'28', photo1: <img style={{width:'80%'}} src={y8s} alt="logo" />,name:'Y8',price:120,color:'אפור,לבן,שחור'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y9} alt="logo" />,cnt:0,id:'29', photo1: <img style={{width:'80%'}} src={y9s} alt="logo" />,name:'Y9',price:120,color:'ירוק'},
