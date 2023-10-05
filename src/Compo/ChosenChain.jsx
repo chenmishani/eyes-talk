@@ -23,11 +23,10 @@ export default function ChosenChain(props) {
   };
 
   
-  const [flag, setFlag] = useState(false);
-
+  
 
   const showCnt = () => {
-    if (flag == false) {
+    if (props.chosenChain.cnt<1) {
       return (
         <button
           className="btn2"
@@ -49,10 +48,9 @@ export default function ChosenChain(props) {
       )
     }
   }
-
   const supriseDiv = () => {
-    if (flag == true || props.chosenChain.cnt > 0) {
-      return <img style={{ width: "40px" }} src={viBlue} alt="vi" />;
+    if (props.chosenChain.cnt > 0) {
+      return <div onClick={()=>{ props.delete(props.chosenChain.index)}}><img style={{ width: "40px" }} src={viBlue} alt="vi" /> </div> 
     } else {
       return (
         <button
@@ -113,12 +111,8 @@ export default function ChosenChain(props) {
             <p
               style={{ fontSize: "25px", marginTop: "50px",fontFamily: "Times New Roman Times serif"}}
             >{`₪ ${props.chosenChain.price} `}</p>
-            <div
-              onClick={() => {
-                setFlag(true);
-              }}
-            >
-              {supriseDiv()}
+            <div>
+                  {supriseDiv()}
             </div>
           </div>
         </div>
@@ -162,11 +156,7 @@ export default function ChosenChain(props) {
             <p
               style={{ fontSize: "25px", marginTop: "40px",fontFamily:"Times New Roman Times serif"}}
             >{`₪ ${props.chosenChain.price} `}</p>
-            <div
-              onClick={() => {
-                setFlag(true);
-              }}
-            >
+            <div>        
               {showCnt()}
             </div>
           </div>
@@ -190,11 +180,8 @@ export default function ChosenChain(props) {
             <p
               style={{ fontSize: "25px", marginTop: "40px",fontFamily:"Times New Roman Times serif" }}
             >{`₪ ${props.chosenChain.price} `}</p>
-            <div
-              onClick={() => {
-                setFlag(true);
-              }}
-            >
+            <div>
+                  
               {showCnt()}
             </div>
           </div>

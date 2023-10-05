@@ -11,21 +11,22 @@ export default function BraceletsList(props) {
   const minus = <AiOutlineMinusCircle size="18px" />;
 
 
-  const [flag, setFlag] = useState(false)
+  
 
   const showCnt = () => {
-    if (flag == false) {
-      return <button className="btn2"
+    if (props.cnt<1) {
+      return <div style={{height:'30px'}}>
+      <button className="btn2"
         onClick={() => {
           props.add(props.index)
-        }}
-      >
+        }}>
        For sale
       </button>
+      </div>
     }
     else {
       return (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center',height:'30px' }}>
           <div style={{ marginTop: '5px' }} onClick={() => { props.add2(props.index) }}> {plus}</div>
           <div style={{ marginLeft: '5px', marginRight: '5px', fontSize: '20px', border: '1px solid black', width: '25px' }}>{props.cnt}</div>
           <div style={{ marginTop: '5px' }} onClick={() => { props.delete(props.index); }}>{minus}</div>
@@ -82,11 +83,7 @@ export default function BraceletsList(props) {
         >{`₪ ${props.price} `}</p>
       </div>
       <div>
-        <div
-          onClick={() => {
-            setFlag(true)
-          }}
-        >
+        <div>
           {showCnt()}
         </div>
       </div>
