@@ -10,7 +10,7 @@ export default function ChosenBracelet(props) {
 
   const plus = <AiOutlinePlusCircle size="18px" />;
   const minus = <AiOutlineMinusCircle size="18px" />;
-  const [flag, setFlag] = useState(false);
+  
 
   const nev =useNavigate()
 
@@ -25,12 +25,12 @@ export default function ChosenBracelet(props) {
   };
  
   const showCnt = () => {
-    if (flag == false) {
+    if (props.chosenBracelet.cnt<1) {
       return (
         <button
           className="btn2"
           onClick={() => {
-            props.add()
+            props.add();
           }}
         >
           For sale
@@ -38,14 +38,12 @@ export default function ChosenBracelet(props) {
       );
     } else {
       return (
-           <div style={{display:'flex',justifyContent:'center'}}>
-                 <div style={{marginTop:'2px'}} onClick={()=>{ props.add()}}> {plus}</div>
-                 <div className="btn2" style={{width:'10%',marginLeft:'5px',marginRight:'5px',fontSize:'20px'}}>
-                  {props.chosenBracelet.cnt}</div>
-                 <div style={{marginTop:'2px'}} onClick={()=>{ props.delete()}}>{minus}</div>
+             <div style={{display:'flex',justifyContent:'center'}}>
+                 <div onClick={()=>{ props.add()}}> {plus}</div>
+                 <div className="btn2" style={{width:'15%',marginLeft:'5px',marginRight:'5px',fontSize:'20px'}}>{props.chosenBracelet.cnt}</div>
+                 <div onClick={()=>{ props.delete(props.chosenBracelet.index)}}>{minus}</div>
                  
                 </div>       
-        
       )
     }
   }
@@ -106,11 +104,8 @@ export default function ChosenBracelet(props) {
                 <p
                   style={{ fontSize: "25px" ,fontFamily:"Times New Roman Times serif"}}
                 >{`₪ ${props.chosenBracelet.price} `}</p>
-                <div
-                  onClick={() => {
-                    setFlag(true);
-                  }}
-                >
+                <div>
+                            
                   {showCnt()}
                 </div>
               </div>
@@ -130,11 +125,8 @@ export default function ChosenBracelet(props) {
                 <p
                   style={{ fontSize: "25px" ,fontFamily:"Times New Roman Times serif" }}
                 >{`₪ ${props.chosenBracelet.price} `}</p>
-                <div
-                  onClick={() => {
-                    setFlag(true);
-                  }}
-                >
+                <div>
+                               
                   {showCnt()}
                 </div>
               </div>

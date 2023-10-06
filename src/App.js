@@ -5,13 +5,15 @@ import { useState } from 'react';
 
 import Timer from './Compo/Timer';
 import Title from './Compo/Title';
-import ChainsPage from './Compo/ChainsPage';
+import Chains from './Compo/ChainsPage';
 import Bracelets from './Compo/BraceletsPage';
+import Rings from './Compo/RingsPage';
 import HomePage from './Compo/HomePage';
 import CartPage from './Compo/CartPage';
 import Finish from './Compo/Finish';
 import ChosenChain from './Compo/ChosenChain';
 import ChosenBracelet from './Compo/ChosenBracelet';
+import ChosenRing from './Compo/ChosenRing';
 import Order from './Compo/Order';
 import Contact from './Compo/Contact';
 import Sale from './Compo/SalePage';
@@ -60,6 +62,9 @@ import a3 from './Compo/bracelets/a3.png'
 import a4 from './Compo/bracelets/a4.png'
 import a5 from './Compo/bracelets/a5.png'
 
+import c1 from './Compo/bracelets/c1.png'
+import c2 from './Compo/bracelets/c2.png'
+
 
 import d1s from './Compo/photos/d1s.JPG'
 import d2s from './Compo/photos/d2s.JPG'
@@ -74,7 +79,6 @@ import d10s from './Compo/photos/d10s.JPG'
 import y2s from './Compo/photos/y2s.JPG'
 import y3s from './Compo/photos/y3s.JPG'
 import y4s from './Compo/photos/y4s.JPG'
-import y6s from './Compo/photos/y6s.JPG'
 import y7s from './Compo/photos/y7s.JPG'
 import y8s from './Compo/photos/y8s.JPG'
 import y9s from './Compo/photos/y9s.JPG'
@@ -113,7 +117,7 @@ function App() {
 {photo: <img style={{width:'90%',height:'90%'}} src={y2} alt="logo" />,cnt:0,id:'23', photo1: <img style={{width:'80%'}} src={y3s} alt="logo" />,name:'Y3',price:120,color:'כחול,כתום,ירוק,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y4} alt="logo" />,cnt:0,id:'24', photo1: <img style={{width:'80%'}} src={y4s} alt="logo" />,name:'Y4',price:130,color:'צהוב,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y5} alt="logo" />,cnt:0,id:'25', photo1: <img style={{width:'80%'}} src={y5} alt="logo" />,name:'Y5',price:120,color:'ירוק,סגול,לבן,שחור'},
-{photo: <img style={{width:'90%',height:'90%'}} src={y6} alt="logo" />,cnt:0,id:'26', photo1: <img style={{width:'80%'}} src={y6s} alt="logo" />,name:'Y6',price:120,color:'חום,אפור,לבן'},
+{photo: <img style={{width:'90%',height:'90%'}} src={y6} alt="logo" />,cnt:0,id:'26', photo1: <img style={{width:'80%'}} src={y6} alt="logo" />,name:'Y6',price:120,color:'חום,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y7} alt="logo" />,cnt:0,id:'27', photo1: <img style={{width:'100%'}} src={y7s} alt="logo" />,name:'Y7',price:120,color:'חום,,אפור,לבן'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y8} alt="logo" />,cnt:0,id:'28', photo1: <img style={{width:'80%'}} src={y8s} alt="logo" />,name:'Y8',price:120,color:'אפור,לבן,שחור'},
 {photo: <img style={{width:'90%',height:'90%'}} src={y9} alt="logo" />,cnt:0,id:'29', photo1: <img style={{width:'80%'}} src={y9s} alt="logo" />,name:'Y9',price:120,color:'ירוק'},
@@ -135,6 +139,11 @@ const [arrBracelets,setArrBracelets]= useState([
   {photo: <img style={{width:'80%',height:'90%'}} src={a5} alt="logo" />,cnt:0,id:'58', photo1: <img style={{width:'80%'}} src={a5s} alt="logo" />,about:'צמיד בעבודת יד שעשוי מחרוזים איכותיים', name:'A5',price:100,color:'לבן,שחור'},
 ])
 
+const [arrRings,setArrRings]= useState([
+  {photo: <img style={{width:'80%',height:'90%'}} src={c1} alt="logo" />,cnt:0,id:'70', photo1: <img style={{width:'80%'}} src={c1} alt="logo" />,about:'טבעת בעבודת יד שעשויה מכסף אמיתי ', name:'C1',price:100,color:'כסף'},
+  {photo: <img style={{width:'80%',height:'90%'}} src={c2} alt="logo" />,cnt:0,id:'71', photo1: <img style={{width:'80%'}} src={c2} alt="logo" />,about:'טבעת בעבודת יד שעשויה מכסף אמיתי ', name:'C2',price:100,color:'כסף'},
+])
+
 
 const [arrSales,setArrSales]=useState([
   {photo: <img style={{width:'70%',height:'100%',marginTop:'10px'}} src={sale1} alt="logo" />,cnt:0, id:'80', name:'שרשרת + צמיד ',price:200},
@@ -147,6 +156,7 @@ const [temp,settemp]=useState(0)
 const [cart,setcart]= useState([])
 const [chosenChain,setChosenChain]=useState(0)
 const [chosenBracelet,setChosenBracelet]=useState(0)
+const [chosenRing,setChosenRing]=useState(0)
 
 const addChain=(index)=>{
   if(arrChains[index].cnt<1){
@@ -201,6 +211,33 @@ const addBracelets=(index)=>{
       arrBracelets[index].cnt=arrBracelets[index].cnt+1
       }
 
+      const addRing=(index)=>{
+        if(arrRings[index].cnt<1){
+          setcart([...cart,arrRings[index]])
+        }
+      settemp(temp+arrRings[index].price)
+      setNum(num+1)
+      arrRings[index].cnt=arrRings[index].cnt+1
+      }
+      
+      const addRing2=()=>{
+        if(chosenRing.cnt<1){
+          setcart([...cart,chosenRing])
+        }
+        settemp(temp+chosenRing.price)
+        setNum(num+1)
+        chosenRing.cnt=chosenRing.cnt+1
+            
+        }
+      
+      
+        const addRing3=(index)=>{
+          settemp(temp+arrRings[index].price)
+          setNum(num+1)
+          arrRings[index].cnt=arrRings[index].cnt+1
+          }
+      
+
     const addSale=(index)=>{
       if(arrSales[index].cnt<1){
         setcart([...cart,arrSales[index]])
@@ -222,6 +259,9 @@ const deleteCart=()=>{
     for (let i = 0; i < arrBracelets.length; i++) {
       arrBracelets[i].cnt=0
       }
+      for (let i = 0; i < arrRings.length; i++) {
+        arrRings[i].cnt=0
+        }
       for (let i = 0; i < arrSales.length; i++) {
         arrSales[i].cnt=0
         }
@@ -238,13 +278,22 @@ if(cart[index].id>9&&cart[index].id<49){
     }
   }
   }
-    if(cart[index].id>49&&cart[index].id<80){
+    if(cart[index].id>49&&cart[index].id<70){
       for (let i = 0; i < arrBracelets.length; i++) {
         if(cart[index].id==arrBracelets[i].id){
           arrBracelets[i].cnt=arrBracelets[i].cnt-1 
             settemp(temp-arrBracelets[i].price)
             setNum(num-1)
         }}}
+
+        if(cart[index].id>69&&cart[index].id<80){
+          for (let i = 0; i < arrRings.length; i++) {
+            if(cart[index].id==arrRings[i].id){
+              arrRings[i].cnt=arrRings[i].cnt-1 
+                settemp(temp-arrRings[i].price)
+                setNum(num-1)
+            }}}
+        
         if(cart[index].id>79&&cart[index].id<100){
           for (let i = 0; i < arrSales.length; i++) {
             if(cart[index].id==arrSales[i].id){
@@ -265,13 +314,20 @@ const addProduct=(index)=>{
       }
     }
     }
-      if(cart[index].id>49&&cart[index].id<80){
+      if(cart[index].id>49&&cart[index].id<70){
         for (let i = 0; i < arrBracelets.length; i++) {
           if(cart[index].id==arrBracelets[i].id){
             arrBracelets[i].cnt=arrBracelets[i].cnt+1 
               settemp(temp+arrBracelets[i].price)
               setNum(num+1)
           }}}
+          if(cart[index].id>69&&cart[index].id<79){
+            for (let i = 0; i < arrRings.length; i++) {
+              if(cart[index].id==arrRings[i].id){
+                arrRings[i].cnt=arrRings[i].cnt+1 
+                  settemp(temp+arrRings[i].price)
+                  setNum(num+1)
+              }}}
           if(cart[index].id>79&&cart[index].id<100){
             for (let i = 0; i < arrSales.length; i++) {
               if(cart[index].id==arrSales[i].id){
@@ -279,7 +335,7 @@ const addProduct=(index)=>{
                   settemp(temp+arrSales[i].price)
                   setNum(num+1)
               }}}
-              console.log(cart);
+                        
   }
 
 const deleteChain=(i)=>{
@@ -296,6 +352,24 @@ const deleteChain2=(i)=>{
   if(chosenChain.cnt>0){
  chosenChain.cnt=chosenChain.cnt-1 
  settemp(temp-chosenChain.price)
+ setNum(num-1)
+}
+}
+
+const deleteRing=(i)=>{
+  
+  if(arrRings[i].cnt>0){
+    arrRings[i].cnt=arrRings[i].cnt-1 
+ settemp(temp-arrRings[i].price)
+ setNum(num-1)
+}
+}
+
+const deleteRing2=(i)=>{
+  
+  if(chosenRing.cnt>0){
+    chosenRing.cnt=chosenRing.cnt-1 
+ settemp(temp-chosenRing.price)
  setNum(num-1)
 }
 }
@@ -341,6 +415,12 @@ const chosenBraceletCompo =(i)=>{
  
 }
 
+const chosenRingCompo =(i)=>{
+  setChosenRing(arrRings[i])
+ 
+}
+
+
 const [flag,setFlag]= useState(false)
 
 const closeHumburger=()=>{
@@ -361,10 +441,12 @@ const [login,setLogin]=useState(false)
       <Routes>
     <Route path='/' element= {<HomePage arrChains={arrChains} arrBracelets={arrBracelets} saleArr={arrSales} addChain={addChain} deleteChain={deleteChain} addBracletes={addBracelets} deleteBracelet={deleteBracelet} chosenChainCompo={chosenChainCompo} chosenBraceletCompo={chosenBraceletCompo} addSale={addSale} />} /> 
     <Route path='/Bracelets' element= {<Bracelets arrBracelets={arrBracelets} delete={deleteBracelet} chosenBraceletCompo={chosenBraceletCompo} add={addBracelets} add2={addBracelets3}/>} /> 
-    <Route path='/Chains' element= {<ChainsPage addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
+    <Route path='/Rings' element= {<Rings arrRings={arrRings} delete={deleteRing} chosenRingCompo={chosenRingCompo} add={addRing} add2={addRing3}/>} /> 
+    <Route path='/Chains' element= {<Chains addChain={addChain} add2={addChain3} delete={deleteChain} arrChains={arrChains} chosenChainCompo={chosenChainCompo}  />} /> 
     <Route path='/Cart' element= {<CartPage cart={cart} temp={temp} deleteCart={deleteCart} setCart={setcart} deleteProdauct={deleteProduct} addProduct={addProduct}/>}  /> 
     <Route path='/chain' element= {<ChosenChain chosenChain={chosenChain} add={addChain2} delete={deleteChain2}/>} /> 
     <Route path='/bracelet' element= {<ChosenBracelet chosenBracelet={chosenBracelet} add={addBracelets2} delete={deleteBracelet2}/>} /> 
+    <Route path='/Ring' element= {<ChosenRing chosenRing={chosenRing} add={addRing2} delete={deleteRing2}/>} /> 
     <Route path='/sale' element= {<Sale  saleArr={arrSales} add={addSale} delete={deleteSale}/>} /> 
     <Route path='/order' element= {<Order cart={cart} deleteCart={deleteCart} />}/> 
     <Route path='/finish' element= {<Finish />}/> 
