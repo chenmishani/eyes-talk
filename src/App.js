@@ -20,6 +20,7 @@ import Sale from './Compo/SalePage';
 
 
 
+
 import d1 from './Compo/chains/d1.png'
 import d2 from './Compo/chains/d2.png'
 import d3 from './Compo/chains/d3.png'
