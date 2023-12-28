@@ -96,9 +96,9 @@ export default function Title(props) {
           {/* <div style={{ marginTop: '0px' }}>
             <Timer deadline={deadline} />
           </div> */}
-             
-        <img style={{width:'100%',height:'120px',paddingTop:'5px'}} src={israel} alt="logo" />
-  
+             <div style={{backgroundColor:'white',paddingTop:'5px',marginBottom:'0px',height:'120px'}}>
+        <img style={{width:'100%',height:'120px'}} src={israel} alt="logo" />
+  </div>
   
           <div className="bar3">
             <div style={{ display: 'flex', width: '25%' }}>
