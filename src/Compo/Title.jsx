@@ -97,7 +97,7 @@ export default function Title(props) {
             <Timer deadline={deadline} />
           </div> */}
              
-        <img style={{width:'100%',height:'120px',marginTop:'5px'}} src={israel} alt="logo" />
+        <img style={{width:'100%',height:'120px',paddingTop:'5px'}} src={israel} alt="logo" />
   
   
           <div className="bar3">
