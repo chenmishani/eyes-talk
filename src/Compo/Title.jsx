@@ -8,6 +8,7 @@ import { BsArrowRightCircle } from 'react-icons/bs'
 import { FaWhatsapp } from 'react-icons/fa'
 import { BsBasket } from 'react-icons/bs'
 import Timer from "./Timer";
+import israel from './photos/israel.JPG'
 
 
 
@@ -65,6 +66,13 @@ export default function Title(props) {
           <div style={{ marginTop: '0px' }}>
             {/* <Timer deadline={deadline} /> */}
           </div>
+          {/* <div style={{ marginTop: '0px' }}>
+            <Timer deadline={deadline} />
+          </div> */}
+             <div style={{backgroundColor:'white',paddingTop:'5px',marginBottom:'0px',height:'120px'}}>
+        <img style={{width:'100%',height:'120px'}} src={israel} alt="logo" />
+  </div>
+  
           <div className="bar3">
             <div style={{ display: 'flex', width: '25%' }}>
               <div className='cartLogo' onClick={() => { nav('/Cart') }}>{cart} </div>
@@ -105,6 +113,8 @@ export default function Title(props) {
           <div style={{ margin: '0 auto' }}>
             <div style={{ margin: '0 auto' }} >
               <video style={{ width: '40%', marginTop: '130px' }} autoPlay muted loop playsInline>
+           <div style={{ margin: '0 auto' }} >
+              <video style={{ width: '40%', marginTop: '165px',marginLeft:'15px' }} autoPlay muted loop playsInline>
                 <source src={logo} type="video/mp4" />
               </video>
             </div>
