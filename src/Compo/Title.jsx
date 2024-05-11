@@ -63,9 +63,6 @@ export default function Title(props) {
 
       <div className="mediaBar">
         <div style={{ display: 'flex', flexDirection: 'column', position: 'fixed', height: '200px', width: '100%' }}>
-          <div style={{ marginTop: '0px' }}>
-            {/* <Timer deadline={deadline} /> */}
-          </div>
           {/* <div style={{ marginTop: '0px' }}>
             <Timer deadline={deadline} />
           </div> */}
