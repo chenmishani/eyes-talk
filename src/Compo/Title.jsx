@@ -8,7 +8,6 @@ import { BsArrowRightCircle } from 'react-icons/bs'
 import { FaWhatsapp } from 'react-icons/fa'
 import { BsBasket } from 'react-icons/bs'
 import Timer from "./Timer";
-import israel from './photos/israel.JPG'
 
 
 
