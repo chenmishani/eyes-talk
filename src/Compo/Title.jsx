@@ -107,7 +107,7 @@ export default function Title(props) {
 
         <Link to={'/'}>
           <div style={{ margin: '0 auto' }}>
-            <video style={{ width: '40%', marginTop: '50px', marginLeft: '15px' }} autoPlay muted loop playsInline>
+            <video style={{ width: '40%', marginTop: '51px', marginLeft: '15px' }} autoPlay muted loop playsInline>
               <source src={logo} type="video/mp4" />
             </video>
           </div>
