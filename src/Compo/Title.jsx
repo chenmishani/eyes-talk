@@ -46,36 +46,6 @@ export default function Title(props) {
     }
   }
 
-
-  // const openPopup=()=>{
-  //   const passwordInput = document.getElementById('passwordInput');
-  //   const passwordPopup = document.getElementById('passwordPopup');
-  //   passwordPopup.style.display = 'block';
-  //   passwordInput.focus();
-  // }
-
-  // const checkPassword=()=>{
-  //   const passwordInput = document.getElementById('passwordInput');
-  //   const passwordPopup = document.getElementById('passwordPopup');
-  //   const btn=document.getElementById('loginBtn');
-  //   const enteredPassword = passwordInput.value;
-  //   if (enteredPassword === '121315') {
-  //     alert('ברוך הבא יגבר על');
-  //     setLogin(true)
-  //     props.setLogin(true)
-  //     passwordPopup.style.display = 'none';
-  //     passwordInput.value = '';
-  //     btn.style.borderColor='#adcbd3'
-
-  // } else {
-  //     alert('סיסמא לא נכונה,הכניסה למנהלים בלבד');
-  //     passwordInput.value = '';
-  //     passwordPopup.style.display = 'none';
-  // }
-
-  // }
-
-
   const burgerIcon = <CgMenuRound size='30px' onClick={() => { props.setFlag(!props.flag) }} />
   const whatsappLogo = <FaWhatsapp size='28px' />
   const cart = <BsBasket size='23px' />
@@ -93,21 +63,12 @@ export default function Title(props) {
       <div className="mediaBar">
         <div style={{ display: 'flex', flexDirection: 'column', position: 'fixed', height: '200px', width: '100%' }}>
           <div style={{ marginTop: '0px' }}>
-            <Timer deadline={deadline} />
+            {/* <Timer deadline={deadline} /> */}
           </div>
           <div className="bar3">
             <div style={{ display: 'flex', width: '25%' }}>
               <div className='cartLogo' onClick={() => { nav('/Cart') }}>{cart} </div>
               <div className="divNum">{showNun()}</div>
-              {/* <div><button id="loginBtn" style={{marginTop:'19px',border:'2px solid black',borderRadius:'40%',backgroundColor:"white"}}onClick={()=>{openPopup()}} >M</button></div>
-    <div id="passwordPopup" className="popup">
-        <div class="popup-content">
-            <h2>כניסת מנהל</h2>
-            <button id="submitPasswordBtn" style={{marginRight:'10px'}} onClick={()=>{checkPassword()}}>אישור</button>  
-
-            <input style={{textAlign:'right'}} type="password" id="passwordInput" placeholder="הכנס סיסמא"/>
-     </div>
-    </div> */}
             </div>
             <div style={{ width: '60%' }}>
               <div onClick={() => { nav('/') }}> <h1 className="title" style={{ fontSize: '150%', marginTop: '15px' }}>EYES  TALK</h1></div>
@@ -142,12 +103,12 @@ export default function Title(props) {
 
         <Link to={'/'}> <div>
           <div style={{ margin: '0 auto' }}>
-           <div style={{ margin: '0 auto' }} >
+            <div style={{ margin: '0 auto' }} >
               <video style={{ width: '40%', marginTop: '130px' }} autoPlay muted loop playsInline>
                 <source src={logo} type="video/mp4" />
               </video>
             </div>
-            
+
           </div>
         </div></Link>
 
