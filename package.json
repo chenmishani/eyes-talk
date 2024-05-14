@@ -2,7 +2,7 @@
   "name": "eyes-talk",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://eyestalk.shop/",
+  "homepage": "https://chenmishani.github.io/eyes-talk/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",
