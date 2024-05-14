@@ -345,26 +345,37 @@
     text-decoration: underline;
 }
 
-.menu-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin: 10px;
-}
-
 .menu-container {
-    border: 1px solid white;
-    background-color: black;
-    width: 90px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease-out;
-}
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+  
 
-.menu-open {
-    max-height: 600px;
-}
+  .menu-open {
+    transform: translateX(0%);
+  }
+  
+
+  .menuDiv {
+    padding-top: 20%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+ 
 
 .supriseBtn {
     width: 220px;
