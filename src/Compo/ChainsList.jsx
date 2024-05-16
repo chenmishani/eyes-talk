@@ -3,55 +3,59 @@ import { Link } from "react-router-dom";
 import { AiOutlinePlusCircle } from "react-icons/ai"
 import { AiOutlineMinusCircle } from "react-icons/ai"
 import viBlue from "./photos2/vi.png";
+import { useEffect } from "react";
 
 export default function ChainsList(props) {
 
   const plus = <AiOutlinePlusCircle size="18px" />;
   const minus = <AiOutlineMinusCircle size="18px" />;
 
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const showCnt = () => {
-    if(props.price==180){
+    if (props.price == 180) {
       if (props.cnt > 0) {
-        return <div style={{height:'30px'}} onClick={()=>{props.delete(props.index)}}><img style={{ width: "40px" }} src={viBlue} alt="vi" /> </div> 
+        return <div style={{ height: '30px' }} onClick={() => { props.delete(props.index) }}><img style={{ width: "40px" }} src={viBlue} alt="vi" /> </div>
       } else {
-        return ( <div style={{height:'30px'}}>
+        return (<div style={{ height: '30px' }}>
           <button
             className="btn2"
             onClick={() => {
               props.add(props.index);
             }}>
-          For sale
+            For sale
           </button>
-          </div>
+        </div>
         )
       }
     }
-    else{
-    if (props.cnt<1) {
-      return (
-        <div style={{height:'30px'}}> 
-        <button
-          className="btn2"
-          onClick={() => {props.add(props.index) }}>
-          For sale
-        </button>
-        </div>
-      )
-    }
-
     else {
-      return (
-        <div style={{ display: 'flex', justifyContent: 'center',height:'30px' }}>
-          <div style={{ marginTop: '5px' }} onClick={() => { props.add2(props.index) }}> {plus}</div>
-          <div style={{ marginLeft: '5px', marginRight: '5px', fontSize: '20px', border: '1px solid black', width: '25px' }}>{props.cnt}</div>
-          <div style={{ marginTop: '5px' }} onClick={() => { props.delete(props.index)}}>{minus}</div>
-        </div>
+      if (props.cnt < 1) {
+        return (
+          <div style={{ height: '30px' }}>
+            <button
+              className="btn2"
+              onClick={() => { props.add(props.index) }}>
+              For sale
+            </button>
+          </div>
+        )
+      }
 
-      )
+      else {
+        return (
+          <div style={{ display: 'flex', justifyContent: 'center', height: '30px' }}>
+            <div style={{ marginTop: '5px' }} onClick={() => { props.add2(props.index) }}> {plus}</div>
+            <div style={{ marginLeft: '5px', marginRight: '5px', fontSize: '20px', border: '1px solid black', width: '25px' }}>{props.cnt}</div>
+            <div style={{ marginTop: '5px' }} onClick={() => { props.delete(props.index) }}>{minus}</div>
+          </div>
+
+        )
+      }
     }
   }
-}
 
   const showPrice = () => {
     if (props.price == 130) {
@@ -103,7 +107,7 @@ export default function ChainsList(props) {
         width: "45%",
         margin: "0 auto",
         marginTop: "10px",
-        
+
       }}>
 
       <div style={{ height: "100%" }}>
@@ -115,7 +119,7 @@ export default function ChainsList(props) {
               width: "100%",
               margin: "0 auto",
               paddingTop: '10px',
-              
+
             }}
             onClick={() => { props.func(props.index) }}>
             {props.photo}
@@ -134,7 +138,7 @@ export default function ChainsList(props) {
       </div>
       <div>
         <div>
-            {showCnt()}
+          {showCnt()}
         </div>
       </div>
     </div>

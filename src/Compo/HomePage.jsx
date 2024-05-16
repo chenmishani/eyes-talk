@@ -111,18 +111,19 @@ export default function HomePage(props) {
               {videoPlayer()}
             </div>
 
-            
-              <div onClick={()=>{nev('/Bracelets')}}>
-                <img style={{ width: "100%" }} src={homePage4} alt="logo" />
-              </div>
-            
+
+            <div onClick={() => { nev('/Bracelets') }}>
+              <img style={{ width: "100%" }} src={homePage4} alt="logo" />
+            </div>
+
             <Link to={"/chains"}>
               <div>
                 <img style={{ width: "100%" }} src={homePage5} alt="logo" />
               </div>
             </Link>
 
-            <img style={{ width: "100%" }} src={subtitle} alt="logo" />
+            {/* <img style={{ width: "100%" }} src={subtitle} alt="logo" /> */}
+            <h2 style={{ fontSize: "40px", fontFamily: "Times New Roman Times serif", marginBottom: "0px" }}>The most loved</h2>
             <div className="photo-gallery" style={{ height: "15%" }}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
@@ -244,7 +245,12 @@ export default function HomePage(props) {
               </div>
             </div>
 
-            <div style={{ marginBottom: '40px' }}> <img style={{ width: "100%" }} src={subtitle2} alt="logo" /> </div>
+            <div style={{ marginBottom: '40px' }}>
+              {/* <img style={{ width: "100%" }} src={subtitle2} alt="logo" /> */}
+              <h2 style={{
+                fontSize: "40px", fontFamily: "Times New Roman Times serif", marginBottom: "0px"
+              }}>Special for you</h2>
+            </div>
             <div className="photo-gallery" style={{ height: '15%' }}>
               <div className="scrollable-container">
                 <div className="photo-wrapper">
@@ -477,6 +483,6 @@ export default function HomePage(props) {
         </div>
 
       </div>
-    </div>
+    </div >
   );
 }

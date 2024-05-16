@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlinePlusCircle } from "react-icons/ai"
 import { AiOutlineMinusCircle } from "react-icons/ai"
+import { useEffect } from "react";
 
 
 
@@ -10,23 +11,25 @@ export default function RingsList(props) {
   const plus = <AiOutlinePlusCircle size="18px" />;
   const minus = <AiOutlineMinusCircle size="18px" />;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  
 
   const showCnt = () => {
-    if (props.cnt<1) {
-      return <div style={{height:'30px'}}>
-      <button className="btn2"
-        onClick={() => {
-          props.add(props.index)
-        }}>
-       For sale
-      </button>
+    if (props.cnt < 1) {
+      return <div style={{ height: '30px' }}>
+        <button className="btn2"
+          onClick={() => {
+            props.add(props.index)
+          }}>
+          For sale
+        </button>
       </div>
     }
     else {
       return (
-        <div style={{ display: 'flex', justifyContent: 'center',height:'30px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', height: '30px' }}>
           <div style={{ marginTop: '5px' }} onClick={() => { props.add2(props.index) }}> {plus}</div>
           <div style={{ marginLeft: '5px', marginRight: '5px', fontSize: '20px', border: '1px solid black', width: '25px' }}>{props.cnt}</div>
           <div style={{ marginTop: '5px' }} onClick={() => { props.delete(props.index); }}>{minus}</div>
